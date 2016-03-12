@@ -14,6 +14,8 @@
 		241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */; };
 		241406401C6BC0FF00DD19DF /* UniAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414063F1C6BC0FF00DD19DF /* UniAidTests.swift */; };
 		2414064B1C6BC0FF00DD19DF /* UniAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */; };
+		7E643E331C94A52D00B30FBD /* Recorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E643E321C94A52D00B30FBD /* Recorder.storyboard */; };
+		7E643E351C94A6E600B30FBD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E643E341C94A6E600B30FBD /* MobileCoreServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		241406461C6BC0FF00DD19DF /* UniAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAidUITests.swift; sourceTree = "<group>"; };
 		2414064C1C6BC0FF00DD19DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E643E321C94A52D00B30FBD /* Recorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recorder.storyboard; sourceTree = "<group>"; };
+		7E643E341C94A6E600B30FBD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E643E351C94A6E600B30FBD /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +82,7 @@
 		2414061E1C6BC0FF00DD19DF = {
 			isa = PBXGroup;
 			children = (
+				7E643E341C94A6E600B30FBD /* MobileCoreServices.framework */,
 				241406291C6BC0FF00DD19DF /* UniAid */,
 				2414063E1C6BC0FF00DD19DF /* UniAidTests */,
 				241406491C6BC0FF00DD19DF /* UniAidUITests */,
@@ -102,6 +108,7 @@
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
+				7E643E321C94A52D00B30FBD /* Recorder.storyboard */,
 				241406361C6BC0FF00DD19DF /* Info.plist */,
 			);
 			path = UniAid;
@@ -229,6 +236,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E643E331C94A52D00B30FBD /* Recorder.storyboard in Resources */,
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
@@ -482,6 +490,7 @@
 				241406511C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		241406521C6BC0FF00DD19DF /* Build configuration list for PBXNativeTarget "UniAidTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +499,7 @@
 				241406541C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		241406551C6BC0FF00DD19DF /* Build configuration list for PBXNativeTarget "UniAidUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +508,7 @@
 				241406571C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
