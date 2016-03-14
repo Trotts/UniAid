@@ -14,6 +14,8 @@
 		241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */; };
 		241406401C6BC0FF00DD19DF /* UniAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414063F1C6BC0FF00DD19DF /* UniAidTests.swift */; };
 		2414064B1C6BC0FF00DD19DF /* UniAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */; };
+		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
+		24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C71C971F750041D492 /* BackTableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,10 @@
 		241406461C6BC0FF00DD19DF /* UniAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAidUITests.swift; sourceTree = "<group>"; };
 		2414064C1C6BC0FF00DD19DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24FCC2C31C971BFA0041D492 /* UniAid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniAid-Bridging-Header.h"; sourceTree = "<group>"; };
+		24FCC2C41C971BFA0041D492 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		24FCC2C71C971F750041D492 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
+				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
-				241406361C6BC0FF00DD19DF /* Info.plist */,
+				24FCC2C21C971BCA0041D492 /* Supporting Files */,
 			);
 			path = UniAid;
 			sourceTree = "<group>";
@@ -123,6 +130,17 @@
 				2414064C1C6BC0FF00DD19DF /* Info.plist */,
 			);
 			path = UniAidUITests;
+			sourceTree = "<group>";
+		};
+		24FCC2C21C971BCA0041D492 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				24FCC2C41C971BFA0041D492 /* SWRevealViewController.h */,
+				24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */,
+				241406361C6BC0FF00DD19DF /* Info.plist */,
+				24FCC2C31C971BFA0041D492 /* UniAid-Bridging-Header.h */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +276,8 @@
 			files = (
 				2414062D1C6BC0FF00DD19DF /* ViewController.swift in Sources */,
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
+				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
+				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +417,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UniAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.UniAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UniAid/UniAid-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,10 +431,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UniAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = home.UniAid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UniAid/UniAid-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -482,6 +507,7 @@
 				241406511C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		241406521C6BC0FF00DD19DF /* Build configuration list for PBXNativeTarget "UniAidTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +516,7 @@
 				241406541C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		241406551C6BC0FF00DD19DF /* Build configuration list for PBXNativeTarget "UniAidUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +525,7 @@
 				241406571C6BC0FF00DD19DF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
