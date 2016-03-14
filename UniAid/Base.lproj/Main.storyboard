@@ -37,6 +37,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="lM3-qh-afD">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="w0Z-Wb-rPK" kind="relationship" relationship="rootViewController" id="lDE-CD-dI4"/>
                     </connections>
@@ -59,7 +63,7 @@
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ckO-1y-J3Y">
-                        <barButtonItem key="leftBarButtonItem" title="Menu" id="v0j-1M-g0C"/>
+                        <barButtonItem key="leftBarButtonItem" image="ic_menu_black_24dp" id="v0j-1M-g0C"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -106,7 +110,10 @@
             <point key="canvasLocation" x="762" y="-443"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_menu_black_24dp" width="24" height="24"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lqT-kM-vQe"/>
+        <segue reference="lDE-CD-dI4"/>
     </inferredMetricsTieBreakers>
 </document>
