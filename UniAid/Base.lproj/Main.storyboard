@@ -49,7 +49,7 @@
             </objects>
             <point key="canvasLocation" x="762" y="434"/>
         </scene>
-        <!--View Controller-->
+        <!--UniAid-->
         <scene sceneID="Y6S-ep-j2v">
             <objects>
                 <viewController id="w0Z-Wb-rPK" customClass="ViewController" customModule="UniAid" customModuleProvider="target" sceneMemberID="viewController">
@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ckO-1y-J3Y">
+                    <navigationItem key="navigationItem" title="UniAid" id="ckO-1y-J3Y">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
                         <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S"/>
                     </navigationItem>
