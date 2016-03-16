@@ -60,7 +60,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E643E351C94A6E600B30FBD /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +83,6 @@
 		2414061E1C6BC0FF00DD19DF = {
 			isa = PBXGroup;
 			children = (
-				7E643E341C94A6E600B30FBD /* MobileCoreServices.framework */,
 				241406291C6BC0FF00DD19DF /* UniAid */,
 				2414063E1C6BC0FF00DD19DF /* UniAidTests */,
 				241406491C6BC0FF00DD19DF /* UniAidUITests */,
@@ -249,7 +247,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E643E331C94A52D00B30FBD /* Recorder.storyboard in Resources */,
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,

@@ -63,14 +63,8 @@
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="ckO-1y-J3Y">
-                        <barButtonItem key="leftBarButtonItem" image="ic_menu_black_24dp" id="v0j-1M-g0C"/>
-                        <barButtonItem key="rightBarButtonItem" image="plusbutton" style="plain" id="1s5-7w-pT3">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3Fs-yy-xZV">
-                                <rect key="frame" x="371" y="10" width="23" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="plusbutton"/>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
+                        <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -118,7 +112,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_menu_black_24dp" width="24" height="24"/>
+        <image name="menu" width="24" height="24"/>
         <image name="plusbutton" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
