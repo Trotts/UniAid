@@ -31,7 +31,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         
         myLocation.coordinate=location
-        myLocation.title = "My Location"
+        myLocation.title = "UniAid"
         myLocation.subtitle = "CS building"
         map.addAnnotation(myLocation)
         
@@ -44,7 +44,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         myPosition = newLocation.coordinate
         
         
-        let span = MKCoordinateSpanMake(0.01, 0.03)
+        let span = MKCoordinateSpanMake(0.01, 0.01)
         let region = MKCoordinateRegion(center: newLocation.coordinate, span: span)
         map.setRegion(region, animated: true)
         locationManager.stopUpdatingLocation()
