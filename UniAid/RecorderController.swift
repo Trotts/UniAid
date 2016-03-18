@@ -13,8 +13,8 @@ class RecorderController: UIViewController, AVAudioPlayerDelegate, AVAudioRecord
     
     @IBOutlet weak var RecordButton: UIButton!
     @IBOutlet weak var PlayButton: UIButton!
-    
     @IBOutlet var open: UIBarButtonItem!
+    
     var soundRecorder :  AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     var fileName = "audioFile.m4a"
@@ -22,9 +22,9 @@ class RecorderController: UIViewController, AVAudioPlayerDelegate, AVAudioRecord
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Allows for the inclusion of the Navigation Menu
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
-        
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
