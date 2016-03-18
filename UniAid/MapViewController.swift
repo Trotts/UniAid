@@ -55,5 +55,5 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-   
+  // http://www.dal.ca/campus-maps/building-directory.html get the addresses of all the buildings
 }
