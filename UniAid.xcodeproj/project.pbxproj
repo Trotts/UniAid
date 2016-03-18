@@ -130,6 +130,7 @@
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
 				24FCC2C21C971BCA0041D492 /* Supporting Files */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
+				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
 			);
 			path = UniAid;
 			sourceTree = "<group>";
@@ -301,6 +302,7 @@
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
 				7EB0458C1C9C8B3C00B40C32 /* RecorderController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
+				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
