@@ -127,6 +127,9 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="KXR-nK-JaB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="PcV-aM-Rr4"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -147,6 +150,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="-755"/>
+        </scene>
+        <!--Recorder-->
+        <scene sceneID="fiq-8G-PkJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recorder" id="KXR-nK-JaB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OlS-3d-QZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1143.5" y="-638"/>
         </scene>
     </scenes>
     <resources>
