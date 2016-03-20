@@ -119,6 +119,7 @@
 		241406291C6BC0FF00DD19DF /* UniAid */ = {
 			isa = PBXGroup;
 			children = (
+				7EB0458B1C9C8B3C00B40C32 /* RecorderController.swift */,
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
@@ -267,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EB0458F1C9C8BF000B40C32 /* Recorder.storyboard in Resources */,
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
@@ -299,6 +301,7 @@
 				2414062D1C6BC0FF00DD19DF /* ViewController.swift in Sources */,
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
+				7EB0458C1C9C8B3C00B40C32 /* RecorderController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
