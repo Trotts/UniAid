@@ -128,6 +128,18 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="csz-2C-vcS">
+                                <rect key="frame" x="0.0" y="204" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csz-2C-vcS" id="91G-p2-viF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.83137254901960789" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="nzT-n9-pcD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FXR-4e-Zsm"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="etO-e6-v4E" id="CJu-tf-v09"/>
@@ -147,6 +159,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="-755"/>
+        </scene>
+        <!--CourseDetailsView-->
+        <scene sceneID="bOH-yw-w36">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="nzT-n9-pcD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-HX-379" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="-615"/>
         </scene>
     </scenes>
     <resources>

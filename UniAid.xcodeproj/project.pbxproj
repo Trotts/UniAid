@@ -21,6 +21,7 @@
 		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
 		24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C71C971F750041D492 /* BackTableVC.swift */; };
 		7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */; };
+		7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		24FCC2C71C971F750041D492 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
 		7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
+		7CCAD7AE1C9E124C0065DEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CourseDetailsView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
+				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 				24119A461C9C473200843F96 /* Map.storyboard */,
 				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
+				7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */,
 				24119A481C9C473200843F96 /* Map.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +359,14 @@
 				241406341C6BC0FF00DD19DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CCAD7AE1C9E124C0065DEEC /* Base */,
+			);
+			name = CourseDetailsView.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

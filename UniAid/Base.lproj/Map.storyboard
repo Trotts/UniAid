@@ -53,7 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYe-xH-DIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1451" y="434"/>
+            <point key="canvasLocation" x="1447" y="492"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9Y7-00-vUE">
@@ -86,7 +86,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.94901960784313721" green="0.83137254901960789" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="owA-Wb-gCL">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -131,6 +131,18 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="zaE-8S-fsA">
+                                <rect key="frame" x="0.0" y="204" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zaE-8S-fsA" id="5Hm-ZF-Jnm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.95963541666666663" green="0.81684367366201638" blue="0.093568016197613915" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="gXA-Tu-UMX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="oSp-c0-r16"/>
+                                </connections>
+                            </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="f8c-hI-PTt" id="ES0-e3-Ygh"/>
@@ -141,7 +153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6u-Xd-91Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="-443"/>
+            <point key="canvasLocation" x="762" y="-347"/>
         </scene>
         <!--Main-->
         <scene sceneID="pbf-oL-EB9">
@@ -149,7 +161,15 @@
                 <viewControllerPlaceholder storyboardName="Main" id="LMe-Pk-rmv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqh-e3-SLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086.5" y="-785"/>
+            <point key="canvasLocation" x="1058" y="-669"/>
+        </scene>
+        <!--CourseDetailsView-->
+        <scene sceneID="B3d-S0-CWz">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="gXA-Tu-UMX" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E6n-LJ-BFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1094" y="-494"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOE-YR-qsa">
@@ -170,7 +190,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8SP-Ad-qUN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="762" y="434"/>
+            <point key="canvasLocation" x="762" y="492"/>
         </scene>
     </scenes>
     <resources>
