@@ -10,21 +10,40 @@ import Foundation
 import UIKit
 
 
-class CDView: UIViewController{
+class CDView: UIViewController, UITableViewDataSource, UITableViewDelegate{
   
-    @IBOutlet var open: UIBarButtonItem!
   
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        open.target = self.revealViewController()
-        open.action = Selector("revealToggle:")
-        
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-    }
+  @IBOutlet var open: UIBarButtonItem!
+  @IBOutlet weak var details: UITableView!
+  
+  var courseVar = [String]()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+    open.target = self.revealViewController()
+    open.action = Selector("revealToggle:")
+    
+    self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+  
+    details.delegate = self
+    details.dataSource = self
+    
+    courseVar = ["Name", "Number", "Inst. Name", "Inst. Email", "Schedule", "Location"]
+  }
+  
+  override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+  }
+
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return courseVar.count
+  }
+  
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCellWithIdentifier(courseVar[indexPath.row], forIndexPath: indexPath) as UITableViewCell
+        cell.textLabel?.text = courseVar[indexPath.row]
+        return cell
+  }
 }
