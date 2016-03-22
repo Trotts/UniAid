@@ -18,21 +18,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-ir-fK5">
-                                <rect key="frame" x="183" y="525" width="49" height="30"/>
-                                <state key="normal" title="Record"/>
+                                <rect key="frame" x="112" y="394" width="190" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Record">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="Record:" destination="QLZ-up-WjN" eventType="touchUpInside" id="Vo7-z3-1Ok"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-mX-0Vd">
-                                <rect key="frame" x="187" y="568" width="40" height="31"/>
-                                <state key="normal" title="Play"/>
+                                <rect key="frame" x="112" y="503" width="190" height="101"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="PlayRecord:" destination="QLZ-up-WjN" eventType="touchUpInside" id="fV4-FR-w34"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.46380750879999999" green="0.7234454481" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="W45-Uu-Mg4">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="mVB-Da-Jtr"/>
@@ -149,7 +155,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="ecs-yD-OQl" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ghc-SL-xna"/>
+                                    <segue destination="yty-1u-2Tf" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="M47-D4-fnX"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="xs5-rL-L5b">
@@ -206,7 +212,15 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="2CA-F4-tya" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pzu-u2-OOa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1188" y="-551"/>
+            <point key="canvasLocation" x="1188" y="-527"/>
+        </scene>
+        <!--Recorder-->
+        <scene sceneID="R4G-EP-Tp6">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recorder" id="yty-1u-2Tf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4Z-gy-Vkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="-573"/>
         </scene>
     </scenes>
     <resources>
