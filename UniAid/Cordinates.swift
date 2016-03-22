@@ -18,4 +18,5 @@ class Cordinates
         self.Latitude = latitude
         self.Longtitude = longtitude
     }
+    //sda
 }
