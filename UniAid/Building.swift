@@ -20,6 +20,5 @@ class Building
         self.BuildingName = BuildingName
         self.cordinates = cordinatesList[buldings.indexOf(BuildingName)!]
     }
-    //sda
 }
 
