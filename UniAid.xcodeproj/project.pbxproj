@@ -18,6 +18,11 @@
 		241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */; };
 		241406401C6BC0FF00DD19DF /* UniAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414063F1C6BC0FF00DD19DF /* UniAidTests.swift */; };
 		2414064B1C6BC0FF00DD19DF /* UniAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */; };
+		24A816A81CA1A58800EE4705 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A816A71CA1A58800EE4705 /* Course.swift */; };
+		24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDC1CA1B250003D4F8E /* Building.swift */; };
+		24B0FEDF1CA1B272003D4F8E /* Cordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */; };
+		24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */; };
+		24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */; };
 		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
 		24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C71C971F750041D492 /* BackTableVC.swift */; };
 		7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */; };
@@ -59,6 +64,11 @@
 		241406461C6BC0FF00DD19DF /* UniAidUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UniAidUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAidUITests.swift; sourceTree = "<group>"; };
 		2414064C1C6BC0FF00DD19DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24A816A71CA1A58800EE4705 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		24B0FEDC1CA1B250003D4F8E /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
+		24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cordinates.swift; sourceTree = "<group>"; };
+		24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recorder.storyboard; sourceTree = "<group>"; };
+		24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderController.swift; sourceTree = "<group>"; };
 		24FCC2C31C971BFA0041D492 /* UniAid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniAid-Bridging-Header.h"; sourceTree = "<group>"; };
 		24FCC2C41C971BFA0041D492 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -119,10 +129,12 @@
 		241406291C6BC0FF00DD19DF /* UniAid */ = {
 			isa = PBXGroup;
 			children = (
-				7EB0458B1C9C8B3C00B40C32 /* RecorderController.swift */,
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
+				24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */,
+				24A816A61CA1A56D00EE4705 /* Classes */,
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
+				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 				24119A461C9C473200843F96 /* Map.storyboard */,
@@ -151,6 +163,16 @@
 				2414064C1C6BC0FF00DD19DF /* Info.plist */,
 			);
 			path = UniAidUITests;
+			sourceTree = "<group>";
+		};
+		24A816A61CA1A56D00EE4705 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				24A816A71CA1A58800EE4705 /* Course.swift */,
+				24B0FEDC1CA1B250003D4F8E /* Building.swift */,
+				24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		24FCC2C21C971BCA0041D492 /* Supporting Files */ = {
@@ -268,9 +290,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EB0458F1C9C8BF000B40C32 /* Recorder.storyboard in Resources */,
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
+				24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
 				7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */,
 				24119A481C9C473200843F96 /* Map.storyboard in Resources */,
@@ -298,10 +320,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A816A81CA1A58800EE4705 /* Course.swift in Sources */,
+				24B0FEDF1CA1B272003D4F8E /* Cordinates.swift in Sources */,
+				24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */,
 				2414062D1C6BC0FF00DD19DF /* ViewController.swift in Sources */,
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
-				7EB0458C1C9C8B3C00B40C32 /* RecorderController.swift in Sources */,
+				24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
@@ -460,6 +485,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UniAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,6 +500,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = UniAid/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

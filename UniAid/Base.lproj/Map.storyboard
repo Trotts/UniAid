@@ -161,7 +161,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="LMe-Pk-rmv" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqh-e3-SLl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1058" y="-669"/>
+            <point key="canvasLocation" x="1113" y="-684"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="B3d-S0-CWz">
@@ -169,7 +169,7 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="gXA-Tu-UMX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6n-LJ-BFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1094" y="-494"/>
+            <point key="canvasLocation" x="1155" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOE-YR-qsa">
