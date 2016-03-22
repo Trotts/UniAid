@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -68,7 +69,57 @@
                     <view key="view" contentMode="scaleToFill" id="pKk-AK-Ghb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="82" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k7O-Ol-Dx9">
+                                <rect key="frame" x="31" y="111" width="352" height="529"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexTrackingBackgroundColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="82" id="Xte-iy-2I2" customClass="CoursesCellsTableViewCell" customModule="UniAid" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="92" width="352" height="82"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Xte-iy-2I2" id="Wjj-8T-Wce">
+                                            <rect key="frame" x="0.0" y="0.0" width="319" height="81"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-2h-W4n">
+                                                    <rect key="frame" x="26" y="8" width="285" height="65"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </tableViewCellContentView>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="courseLable" destination="ISJ-2h-W4n" id="bfi-2o-h8x"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="w0Z-Wb-rPK" id="tEN-TM-2KK"/>
+                                    <outlet property="delegate" destination="w0Z-Wb-rPK" id="gmU-dp-mn0"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your courses today" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqx-q4-L80">
+                                <rect key="frame" x="31" y="111" width="352" height="57"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.97714930772781372" green="0.76910597085952759" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k7O-Ol-Dx9" firstAttribute="centerX" secondItem="pKk-AK-Ghb" secondAttribute="centerX" id="f2n-av-x8E"/>
+                            <constraint firstItem="oGO-mb-LWQ" firstAttribute="top" secondItem="k7O-Ol-Dx9" secondAttribute="bottom" constant="96" id="jel-IF-M6Z"/>
+                            <constraint firstItem="k7O-Ol-Dx9" firstAttribute="leading" secondItem="pKk-AK-Ghb" secondAttribute="leadingMargin" constant="11" id="qkB-i2-aw7"/>
+                            <constraint firstItem="k7O-Ol-Dx9" firstAttribute="top" secondItem="TnM-3F-80q" secondAttribute="bottom" constant="47" id="rh6-cv-wiX"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ckO-1y-J3Y">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
@@ -81,6 +132,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
+                        <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQM-A1-iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
