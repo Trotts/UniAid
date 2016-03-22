@@ -18,6 +18,7 @@ class RecorderController: UIViewController, AVAudioPlayerDelegate, AVAudioRecord
     var soundRecorder :  AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     var fileName = "audioFile.m4a"
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
