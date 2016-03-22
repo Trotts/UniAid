@@ -11,19 +11,20 @@ import Foundation
 class Course
 {
     var Course:String = ""
+    var CourseNumber:Int=0;
     var Prof:String = ""
     var ProfEmail:String = ""
     var BuildingName:String = ""
     var scheduale = [String]()
     
     
-    init (course: String, prof: String, profEmail: String,buildingName: String,scheduale:[String]) {
+    init (course: String,courseNum:Int, prof: String, profEmail: String,buildingName: String,scheduale:[String]) {
         self.Course = course
+        self.CourseNumber = courseNum
         self.Prof = prof
         self.ProfEmail = profEmail
         self.BuildingName = buildingName
         self.scheduale = scheduale
-        
         
     }
 }
