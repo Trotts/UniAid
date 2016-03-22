@@ -27,5 +27,4 @@ class Course
         self.scheduale = scheduale
         
     }
-    //sda
 }
