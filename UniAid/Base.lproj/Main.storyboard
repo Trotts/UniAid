@@ -128,7 +128,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="PFO-JO-3Ly" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="pEu-g9-zpE"/>
+                                    <segue destination="PFO-JO-3Ly" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="iZD-t5-BRN"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="csz-2C-vcS">
@@ -161,7 +161,7 @@
                 <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1086" y="-755"/>
+            <point key="canvasLocation" x="1145" y="-728"/>
         </scene>
         <!--Recorder-->
         <scene sceneID="z5C-As-Ghi">
@@ -169,7 +169,7 @@
                 <viewControllerPlaceholder storyboardName="Recorder" id="PFO-JO-3Ly" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65n-rn-yle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1170.5" y="-695"/>
+            <point key="canvasLocation" x="1160" y="-686"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="bOH-yw-w36">
@@ -177,7 +177,7 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="nzT-n9-pcD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-HX-379" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="-615"/>
+            <point key="canvasLocation" x="1189" y="-645"/>
         </scene>
     </scenes>
     <resources>
