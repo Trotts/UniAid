@@ -269,7 +269,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             return buildings[row]
     }
     
-    
+    //test
     
     //Add a cousre action
     @IBAction func addCourseButton(sender: AnyObject) {
