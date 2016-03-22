@@ -21,6 +21,7 @@
 		24A816A81CA1A58800EE4705 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A816A71CA1A58800EE4705 /* Course.swift */; };
 		24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDC1CA1B250003D4F8E /* Building.swift */; };
 		24B0FEDF1CA1B272003D4F8E /* Cordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */; };
+		24DE222E1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24DE222D1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift */; };
 		24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */; };
 		24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */; };
 		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
@@ -67,6 +68,7 @@
 		24A816A71CA1A58800EE4705 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		24B0FEDC1CA1B250003D4F8E /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cordinates.swift; sourceTree = "<group>"; };
+		24DE222D1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoursesCellsTableViewCell.swift; sourceTree = "<group>"; };
 		24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recorder.storyboard; sourceTree = "<group>"; };
 		24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderController.swift; sourceTree = "<group>"; };
 		24FCC2C31C971BFA0041D492 /* UniAid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniAid-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				24FCC2C21C971BCA0041D492 /* Supporting Files */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
 				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
+				24DE222D1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift */,
 			);
 			path = UniAid;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
 				24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */,
+				24DE222E1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
