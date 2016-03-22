@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Home-->
+        <scene sceneID="Tcl-pe-12t">
+            <objects>
+                <viewController id="QLZ-up-WjN" customClass="RecorderController" customModule="UniAid" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KE5-xX-zVw"/>
+                        <viewControllerLayoutGuide type="bottom" id="sC3-Dz-4Yc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FO5-g9-d65">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Y9-ir-fK5">
+                                <rect key="frame" x="183" y="525" width="49" height="30"/>
+                                <state key="normal" title="Record"/>
+                                <connections>
+                                    <action selector="Record:" destination="QLZ-up-WjN" eventType="touchUpInside" id="Vo7-z3-1Ok"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMd-mX-0Vd">
+                                <rect key="frame" x="187" y="568" width="40" height="31"/>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <action selector="PlayRecord:" destination="QLZ-up-WjN" eventType="touchUpInside" id="fV4-FR-w34"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.46380750879999999" green="0.7234454481" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="W45-Uu-Mg4">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="mVB-Da-Jtr"/>
+                        <barButtonItem key="rightBarButtonItem" image="plusbutton" id="lmr-C8-XUt"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="PlayButton" destination="VMd-mX-0Vd" id="uPh-QD-8LK"/>
+                        <outlet property="RecordButton" destination="2Y9-ir-fK5" id="WVD-Tu-T6f"/>
+                        <outlet property="open" destination="mVB-Da-Jtr" id="IN0-Xu-HyD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gzD-K3-Fq4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1569" y="-113"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="menu" width="24" height="24"/>
+        <image name="plusbutton" width="24" height="24"/>
+    </resources>
+</document>

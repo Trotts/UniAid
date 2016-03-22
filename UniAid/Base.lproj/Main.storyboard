@@ -127,6 +127,9 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="PFO-JO-3Ly" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="pEu-g9-zpE"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="csz-2C-vcS">
                                 <rect key="frame" x="0.0" y="204" width="414" height="44"/>
@@ -159,6 +162,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086" y="-755"/>
+        </scene>
+        <!--Recorder-->
+        <scene sceneID="z5C-As-Ghi">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Recorder" id="PFO-JO-3Ly" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65n-rn-yle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1170.5" y="-695"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="bOH-yw-w36">
