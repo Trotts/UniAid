@@ -26,6 +26,9 @@
 		24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */; };
 		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
 		24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C71C971F750041D492 /* BackTableVC.swift */; };
+		3DFAFD361CA1F43C00BB2FD7 /* AddCourse.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */; };
+		3DFAFD391CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */; };
+		3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */; };
 		7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */; };
 		7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */; };
 /* End PBXBuildFile section */
@@ -75,6 +78,9 @@
 		24FCC2C41C971BFA0041D492 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		24FCC2C71C971F750041D492 /* BackTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackTableVC.swift; sourceTree = "<group>"; };
+		3DFAFD351CA1F43C00BB2FD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/AddCourse.storyboard; sourceTree = "<group>"; };
+		3DFAFD381CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_UniAid.xcdatamodel; sourceTree = "<group>"; };
+		3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseController.swift; sourceTree = "<group>"; };
 		7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
 		7CCAD7AE1C9E124C0065DEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CourseDetailsView.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,6 +144,9 @@
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
+				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
+				3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */,
+				3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */,
 				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 				24119A461C9C473200843F96 /* Map.storyboard */,
 				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
@@ -294,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
+				3DFAFD361CA1F43C00BB2FD7 /* AddCourse.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
@@ -329,8 +339,9 @@
 				2414062D1C6BC0FF00DD19DF /* ViewController.swift in Sources */,
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
+				3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */,
 				24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */,
-				24DE222E1CA1EC4300790ED3 /* CoursesCellsTableViewCell.swift in Sources */,
+				3DFAFD391CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
@@ -391,6 +402,14 @@
 				241406341C6BC0FF00DD19DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DFAFD351CA1F43C00BB2FD7 /* Base */,
+			);
+			name = AddCourse.storyboard;
 			sourceTree = "<group>";
 		};
 		7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */ = {
@@ -602,6 +621,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3DFAFD381CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodel */,
+			);
+			currentVersion = 3DFAFD381CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodel */;
+			path = Project_UniAid.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 2414061F1C6BC0FF00DD19DF /* Project object */;
 }

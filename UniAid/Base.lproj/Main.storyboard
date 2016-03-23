@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -49,6 +49,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osn-dD-3Od" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="434"/>
+        </scene>
+        <!--AddCourse-->
+        <scene sceneID="cU2-25-OF0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCourse" id="gaw-I8-MNK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VhV-oo-wX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1766" y="225"/>
         </scene>
         <!--Home-->
         <scene sceneID="Y6S-ep-j2v">
@@ -115,7 +123,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ckO-1y-J3Y">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
-                        <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S"/>
+                        <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S">
+                            <connections>
+                                <segue destination="gaw-I8-MNK" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Pcz-8P-zd4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -169,6 +181,9 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="K8L-SG-dwQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="77V-Oc-XLh"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="DUQ-1R-Y5B">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
@@ -230,6 +245,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-HX-379" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1189" y="-645"/>
+        </scene>
+        <!--AddCourse-->
+        <scene sceneID="HAw-rs-ONv">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCourse" id="K8L-SG-dwQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FaX-aZ-01t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1166" y="-599"/>
         </scene>
     </scenes>
     <resources>
