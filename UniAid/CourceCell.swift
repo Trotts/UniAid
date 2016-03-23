@@ -1,20 +1,21 @@
 //
-//  CoursesCellsTableViewCell.swift
+//  CourceCell.swift
 //  UniAid
 //
-//  Created by igor epshtein on 2016-03-22.
+//  Created by igor epshtein on 2016-03-23.
 //  Copyright © 2016 igor epshtein. All rights reserved.
 //
 
 import UIKit
 
-class CoursesCellsTableViewCell: UITableViewCell {
+class CourceCell: UITableViewCell {
+    @IBOutlet var courseName: UILabel!
 
-    @IBOutlet var courseLable: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let view = UIView()
+        view.backgroundColor = UIColor.orangeColor()
+        selectedBackgroundView = view
     }
 
     override func setSelected(selected: Bool, animated: Bool) {
