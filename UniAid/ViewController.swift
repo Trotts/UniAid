@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
-        
+        self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     
@@ -34,6 +34,9 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         courseName += " "
         
         cell.courseName.text = courseName
+        cell.layer.borderWidth = 2.0
+        cell.layer.cornerRadius = 12
+        cell.layer.borderColor = UIColor.clearColor().CGColor
         
         return cell
         
