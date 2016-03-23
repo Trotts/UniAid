@@ -135,7 +135,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
                         <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S">
                             <connections>
-                                <segue destination="gaw-I8-MNK" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Pcz-8P-zd4"/>
+                                <segue destination="gaw-I8-MNK" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="Pcz-8P-zd4"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
+                        <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="ahe-Ma-DXC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQM-A1-iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -269,4 +270,7 @@
         <image name="menu" width="24" height="24"/>
         <image name="plusbutton" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ahe-Ma-DXC"/>
+    </inferredMetricsTieBreakers>
 </document>

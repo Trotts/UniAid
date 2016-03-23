@@ -13,7 +13,9 @@ class CourceCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        let view = UIView()
+        view.backgroundColor = UIColor.orangeColor()
+        selectedBackgroundView = view
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

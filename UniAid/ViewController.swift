@@ -32,14 +32,26 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         let courseNum = String(studentCorses[indexPath.row].CourseNumber)
         print(courseNum)
         courseName += " "
-        
         cell.courseName.text = courseName
         cell.layer.borderWidth = 2.0
         cell.layer.cornerRadius = 12
         cell.layer.borderColor = UIColor.clearColor().CGColor
-        
         return cell
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    //xcz
+    
+    func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
+    {
+        let directions = UITableViewRowAction(style: .Normal, title: "Directions") { (action: UITableViewRowAction!, indexpath:NSIndexPath!) -> Void in
+            
+            self.performSegueWithIdentifier("map", sender: self)
+            
+        }
+        directions.backgroundColor = UIColor.orangeColor()
+        return [directions]
+    }
+    
 }
