@@ -291,7 +291,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+        let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
         
         newCourse.setValue(courseNameTextField.text, forKey: "name")
         newCourse.setValue(courseNumTextField.text, forKey: "number")
@@ -309,7 +309,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         do {
             try context.save()
-            var alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
             
