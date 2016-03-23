@@ -26,13 +26,14 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CoursesCellsTableViewCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CourceCell
+        
         var courseName = studentCorses[indexPath.row].Course
         let courseNum = String(studentCorses[indexPath.row].CourseNumber)
         print(courseNum)
         courseName += " "
         
-        cell.courseLable.text = courseName
+        cell.courseName.text = courseName
         
         return cell
         
