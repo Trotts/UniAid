@@ -80,12 +80,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-VD-BCZ">
-                                <rect key="frame" x="103" y="321" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY3-Y7-SI2">
                                 <rect key="frame" x="104" y="357" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -147,6 +141,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1s-VD-BCZ">
+                                <rect key="frame" x="101" y="321" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -158,7 +158,7 @@
                             <constraint firstItem="97K-Qv-lVS" firstAttribute="leading" secondItem="dCk-ys-Nn1" secondAttribute="trailing" constant="69" id="4Nh-Nt-vIM"/>
                             <constraint firstItem="aqU-Zb-Gh0" firstAttribute="top" secondItem="UeT-PO-ANb" secondAttribute="bottom" constant="17" id="4bY-9T-mcU"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gzn-IG-vFU" secondAttribute="trailing" constant="84" id="5gT-CF-I6Y"/>
-                            <constraint firstItem="V22-JK-1Ak" firstAttribute="leading" secondItem="j1s-VD-BCZ" secondAttribute="trailing" constant="69" id="7or-vh-hAJ"/>
+                            <constraint firstItem="V22-JK-1Ak" firstAttribute="leading" secondItem="j1s-VD-BCZ" secondAttribute="trailing" constant="71" id="7or-vh-hAJ"/>
                             <constraint firstItem="Exz-Kj-0W0" firstAttribute="top" secondItem="Fxm-Ju-HJg" secondAttribute="bottom" constant="18" id="84m-2O-bUZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="HX2-sC-Od3" secondAttribute="trailing" constant="109" id="An5-T4-Niy"/>
                             <constraint firstItem="HX2-sC-Od3" firstAttribute="leading" secondItem="dkP-cY-zzH" secondAttribute="leadingMargin" constant="109" id="C4n-WM-UWX"/>
@@ -178,7 +178,7 @@
                             <constraint firstItem="HX2-sC-Od3" firstAttribute="top" secondItem="Exz-Kj-0W0" secondAttribute="bottom" constant="28" id="UMA-2u-9QZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="97K-Qv-lVS" secondAttribute="trailing" constant="83" id="ZM8-WS-czR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bSi-Lh-644" secondAttribute="trailing" constant="48" id="ZUN-wQ-Ev1"/>
-                            <constraint firstItem="j1s-VD-BCZ" firstAttribute="leading" secondItem="dkP-cY-zzH" secondAttribute="leadingMargin" constant="83" id="bfV-ip-TGr"/>
+                            <constraint firstItem="j1s-VD-BCZ" firstAttribute="leading" secondItem="dkP-cY-zzH" secondAttribute="leadingMargin" constant="81" id="bfV-ip-TGr"/>
                             <constraint firstItem="97K-Qv-lVS" firstAttribute="top" secondItem="0T2-m6-P6Z" secondAttribute="bottom" constant="6" id="blJ-30-6Yu"/>
                             <constraint firstItem="aqU-Zb-Gh0" firstAttribute="leading" secondItem="dkP-cY-zzH" secondAttribute="leadingMargin" constant="83" id="dgs-oE-CWc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bQ3-XT-7wc" secondAttribute="trailing" constant="83" id="eOq-nP-ydP"/>
@@ -220,6 +220,7 @@
                         <outlet property="courseNumTextField" destination="UeT-PO-ANb" id="M4A-T3-a0s"/>
                         <outlet property="fridaySwitch" destination="97K-Qv-lVS" id="M9w-6N-DBW"/>
                         <outlet property="mondaySwitch" destination="gzn-IG-vFU" id="Vxw-G7-Kal"/>
+                        <outlet property="open" destination="xgS-rx-Mim" id="k89-sC-WEm"/>
                         <outlet property="profEmailTextField" destination="Exz-Kj-0W0" id="V68-hj-PwV"/>
                         <outlet property="profNameTextField" destination="Fxm-Ju-HJg" id="iZP-4c-iaY"/>
                         <outlet property="thursdaySwitch" destination="0T2-m6-P6Z" id="0Ny-Fb-ktD"/>

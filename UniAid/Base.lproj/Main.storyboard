@@ -84,8 +84,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-2h-W4n">
-                                                    <rect key="frame" x="26" y="8" width="285" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-2h-W4n">
+                                                    <rect key="frame" x="21" y="3" width="285" height="65"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -94,10 +94,10 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ISJ-2h-W4n" secondAttribute="trailing" constant="62" id="Ozs-0S-MAY"/>
-                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="top" secondItem="Wjj-8T-Wce" secondAttribute="topMargin" id="fsa-wc-Fzq"/>
-                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="leading" secondItem="Wjj-8T-Wce" secondAttribute="leadingMargin" constant="18" id="wUa-zY-1XM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ISJ-2h-W4n" secondAttribute="bottom" constant="8" id="wpN-lM-dTk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ISJ-2h-W4n" secondAttribute="trailing" constant="67" id="Ozs-0S-MAY"/>
+                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="top" secondItem="Wjj-8T-Wce" secondAttribute="topMargin" constant="-5" id="fsa-wc-Fzq"/>
+                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="leading" secondItem="Wjj-8T-Wce" secondAttribute="leadingMargin" constant="13" id="wUa-zY-1XM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ISJ-2h-W4n" secondAttribute="bottom" constant="-5" id="wpN-lM-dTk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
