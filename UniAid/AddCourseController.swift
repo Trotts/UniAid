@@ -190,7 +190,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     var daysSelectedArr = [String]()
     
-    var buildings = ["CS", "Henry Hicks", "Management", "Life Science"]
+    var buildings = ["Dentistry Building","Goldberg Computer Science Building","Howe Hall","Boulden Building","Burbidge Building","Chase Building","Chemical Engineering","Chemistry","Kenneth C. Rowe Management Building","Killam Library","Life Sciences Centre","Marion McCain Arts and Social Sciences","Mona Campbell Building","Dalhousie Arts Centre","Dalplex","Sir James Dunn Building","Student Union Building","Weldon Law Building","Tupper Building"]
    
     
     
@@ -303,6 +303,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         newCourse.setValue(profNameTextField.text, forKey: "profName")
         newCourse.setValue(profEmailTextField.text, forKey: "profEmail")
         
+        
         //now save it to the db
         //we do that be calling the context
         
@@ -393,7 +394,6 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
         picker.delegate = self
         picker.dataSource = self
       
