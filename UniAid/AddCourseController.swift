@@ -221,11 +221,11 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         //we do that be calling the context
         do {
             try context.save()
-            let alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+//            let alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
-            let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
-            alert.addAction(confirmAdd)
-            showViewController(alert, sender: self)
+//            let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
+//            alert.addAction(confirmAdd)
+//            showViewController(alert, sender: self)
             
             //clear text fields
             courseNameTextField.text = ""
