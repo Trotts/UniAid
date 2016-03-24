@@ -7,7 +7,6 @@
 //
 
 import UIKit
-//Test
 
 protocol NoteViewDelegate {
     func didUpdateNoteWithTitle(newTitle : String, andBody newBody :
