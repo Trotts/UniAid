@@ -34,7 +34,6 @@
 		7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD51CA496A000EB1705 /* NotesViewController.swift */; };
 		7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD61CA496A000EB1705 /* TableViewController.swift */; };
 		7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E114AD91CA496BB00EB1705 /* Notes.storyboard */; };
-		7E114ADC1CA4971800EB1705 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E114ADB1CA4971800EB1705 /* Notes.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,7 +89,6 @@
 		7E114AD51CA496A000EB1705 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		7E114AD61CA496A000EB1705 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E114AD91CA496BB00EB1705 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
-		7E114ADB1CA4971800EB1705 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,16 +150,13 @@
 				24119A441C9C432800843F96 /* MapViewController.swift */,
 				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
 				24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */,
-				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
 				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
 				7E114AD91CA496BB00EB1705 /* Notes.storyboard */,
 				7E114AD51CA496A000EB1705 /* NotesViewController.swift */,
 				7E114AD61CA496A000EB1705 /* TableViewController.swift */,
-				3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */,
 				3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */,
-				7E114ADB1CA4971800EB1705 /* Notes.storyboard */,
 				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 				24119A461C9C473200843F96 /* Map.storyboard */,
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
@@ -319,7 +314,6 @@
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				3DFAFD361CA1F43C00BB2FD7 /* AddCourse.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
-				7E114ADC1CA4971800EB1705 /* Notes.storyboard in Resources */,
 				7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */,
 				24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
