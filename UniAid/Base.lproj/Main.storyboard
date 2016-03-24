@@ -179,9 +179,6 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="7zk-T7-qKk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="g8L-gU-deK"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="17U-ed-kvO">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
@@ -193,7 +190,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="K8L-SG-dwQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="77V-Oc-XLh"/>
+                                    <segue destination="aVI-Is-NHB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="V3J-Ca-JpJ"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="DUQ-1R-Y5B">
@@ -257,20 +254,17 @@
             </objects>
             <point key="canvasLocation" x="1189" y="-645"/>
         </scene>
-        <!--AddCourse-->
-        <scene sceneID="HAw-rs-ONv">
+        <!--Notes-->
+        <scene sceneID="q3c-9r-hpS">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddCourse" id="K8L-SG-dwQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FaX-aZ-01t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Notes" id="aVI-Is-NHB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-Cd-E2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-599"/>
+            <point key="canvasLocation" x="1150" y="-581"/>
         </scene>
     </scenes>
     <resources>
         <image name="menu" width="24" height="24"/>
         <image name="plusbutton" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ahe-Ma-DXC"/>
-    </inferredMetricsTieBreakers>
 </document>
