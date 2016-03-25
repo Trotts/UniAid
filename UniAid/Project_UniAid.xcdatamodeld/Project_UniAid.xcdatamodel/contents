@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15D21" minimumToolsVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9525" systemVersion="15C50" minimumToolsVersion="Automatic">
     <entity name="Assignment" syncable="YES">
-        <attribute name="dueDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <entity name="Course" syncable="YES">
@@ -14,8 +15,14 @@
         <attribute name="timeFrom" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="timeTo" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="Exam" syncable="YES">
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dueDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="Assignment" positionX="-63" positionY="27" width="128" height="75"/>
+        <element name="Assignment" positionX="-63" positionY="27" width="128" height="90"/>
         <element name="Course" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Exam" positionX="-63" positionY="45" width="128" height="90"/>
     </elements>
 </model>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="762" y="434"/>
         </scene>
-        <!--AddCourse-->
+        <!--AddView-->
         <scene sceneID="cU2-25-OF0">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddCourse" id="gaw-I8-MNK" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddView" id="gaw-I8-MNK" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VhV-oo-wX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1766" y="225"/>
@@ -135,7 +135,7 @@
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
                         <barButtonItem key="rightBarButtonItem" image="plusbutton" id="oai-Ea-H5S">
                             <connections>
-                                <segue destination="gaw-I8-MNK" kind="custom" identifier="" customClass="SWRevealViewControllerSeguePushController" id="Pcz-8P-zd4"/>
+                                <segue destination="gaw-I8-MNK" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="HgF-e3-Osu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -234,8 +234,8 @@
         <!--Map-->
         <scene sceneID="0Dt-8X-x8w">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145" y="-728"/>
         </scene>
