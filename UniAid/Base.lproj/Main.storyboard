@@ -234,8 +234,8 @@
         <!--Map-->
         <scene sceneID="0Dt-8X-x8w">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1145" y="-728"/>
         </scene>
