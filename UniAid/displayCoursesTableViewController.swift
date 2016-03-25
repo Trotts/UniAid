@@ -12,7 +12,7 @@ import CoreData
 class displayCoursesTableViewController: UITableViewController {
     
 
-    //
+    
     
    var returnCourses = [String]()
     

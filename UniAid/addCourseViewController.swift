@@ -58,7 +58,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             }
             
         }
-        //
+        
         
         else {
             if daysSelectedArr.contains("Monday"){
