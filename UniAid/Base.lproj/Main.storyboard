@@ -118,6 +118,10 @@
                                 <color key="textColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-sX-8tf">
+                                <rect key="frame" x="152" y="88" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.52941176470588236" green="0.75686274509803919" blue="0.75686274509803919" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -130,6 +134,11 @@
                             <constraint firstItem="k7O-Ol-Dx9" firstAttribute="top" secondItem="pKk-AK-Ghb" secondAttribute="top" id="sPs-tO-WEI"/>
                             <constraint firstItem="k7O-Ol-Dx9" firstAttribute="bottom" secondItem="oGO-mb-LWQ" secondAttribute="top" id="x0n-Mg-h8l"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="DCs-sX-8tf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="ckO-1y-J3Y">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="v0j-1M-g0C"/>
