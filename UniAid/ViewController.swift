@@ -1,15 +1,19 @@
 import UIKit
+import CoreData
 
 class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSource {
     
+    @IBOutlet var todayLabel: UILabel!
     @IBOutlet var open: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
     
-    var studentCorses = [Course(course: "CSCI", courseNum: 4414, prof: "Nauzer", profEmail: "profEmail: aaa@gmail.com", buildingName: "Howe", scheduale: ["s","w","f"])]
+    var studentCorses = [Course]()
+    var directionCor = Cordinates(latitude: 0.0, longtitude: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        deleteAllData("Course")
+        fatchData()
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
@@ -21,7 +25,60 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
     
+    func fatchData()
+    {
+        let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
+        let context: NSManagedObjectContext = appDel.managedObjectContext
+  
+        let request = NSFetchRequest(entityName: "Course")
+        request.returnsObjectsAsFaults = false
+        do
+        {
+            let resault : NSArray = try context.executeFetchRequest(request)
+            if(resault.count > 0)
+            {
+                for res in resault
+                {
+                    studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("location") as! String, scheduale: ["w","f"]))
+                    
+                }
+            }
+            else
+            {
+                print("error1")
+            }
+        }
+        catch {
+            print("error fetch failed ")
+        }
+        
+    }
+
+    func deleteAllData(entity: String)
+    {
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let managedContext = appDelegate.managedObjectContext
+        let fetchRequest = NSFetchRequest(entityName: entity)
+        fetchRequest.returnsObjectsAsFaults = false
+        
+        do
+        {
+            let results = try managedContext.executeFetchRequest(fetchRequest)
+            for managedObject in results
+            {
+                let managedObjectData:NSManagedObject = managedObject as! NSManagedObject
+                managedContext.deleteObject(managedObjectData)
+            }
+        } catch let error as NSError {
+            print("Detele all data in \(entity) error : \(error) \(error.userInfo)")
+        }
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(studentCorses.count == 0)
+        {
+            todayLabel.text="No courses for today!"
+        }
         return studentCorses.count
     }
     
@@ -30,8 +87,8 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         
         var courseName = studentCorses[indexPath.row].Course
         let courseNum = String(studentCorses[indexPath.row].CourseNumber)
-        print(courseNum)
-        courseName += " "
+        courseName.appendContentsOf(" ")
+        courseName.appendContentsOf(courseNum)
         cell.courseName.text = courseName
         cell.layer.borderWidth = 2.0
         cell.layer.cornerRadius = 12
@@ -46,6 +103,10 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
     {
         let directions = UITableViewRowAction(style: .Normal, title: "Directions") { (action: UITableViewRowAction!, indexpath:NSIndexPath!) -> Void in
+            
+            let building = self.studentCorses[indexPath.row].BuildingName
+            
+            NSUserDefaults.standardUserDefaults().setValue(building, forKey: "buildingName")
             
             self.performSegueWithIdentifier("map", sender: self)
             

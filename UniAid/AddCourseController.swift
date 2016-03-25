@@ -20,57 +20,36 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     //textfields
     @IBOutlet weak var courseNameTextField: UITextField!
-    
-    @IBOutlet weak var courseNumTextField: UITextField! 
-   
+    @IBOutlet weak var courseNumTextField: UITextField!
     @IBOutlet weak var courseLocationTextField: UITextField!
-
     @IBOutlet weak var profNameTextField: UITextField!
-    
     @IBOutlet weak var profEmailTextField: UITextField!
-    
-    
-    
     //switches
-    
     @IBOutlet weak var mondaySwitch: UISwitch!
-    
     @IBOutlet weak var tuesdaySwitch: UISwitch!
-   
     @IBOutlet weak var wednesdaySwitch: UISwitch!
-    
     @IBOutlet weak var thursdaySwitch: UISwitch!
-    
     @IBOutlet weak var fridaySwitch: UISwitch!
-    
-    
+    //Button for NavBar
+     @IBOutlet var open: UIBarButtonItem!
     
     
     //handle switches for each day
     //Monday switch changed
     @IBAction func mondaySwitchChanged(sender: AnyObject) {
-        
         if mondaySwitch.on {
             print("Monday changed to on")
-           
-          
             if !daysSelectedArr.contains("Monday") {
                 daysSelectedArr.append("Monday")
             }
-            
         }
-        
-        
         else {
             if daysSelectedArr.contains("Monday"){
                 let indexReturn = daysSelectedArr.indexOf("Monday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
              print("Monday changed to off")
         }
-        
         print("Array:")
         print(daysSelectedArr)
     }
@@ -79,25 +58,17 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func tuesdaySwitchChanged(sender: AnyObject) {
         if tuesdaySwitch.on {
             print("Tuesday changed to on")
-            
-            
             if !daysSelectedArr.contains("Tuesday") {
                 daysSelectedArr.append("Tuesday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Tuesday"){
                 let indexReturn = daysSelectedArr.indexOf("Tuesday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
             print("Tuesday changed to off")
         }
-        
         print("Array:")
         print(daysSelectedArr)
     }
@@ -106,109 +77,72 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBAction func wednesdaySwitchChanged(sender: AnyObject) {
         if wednesdaySwitch.on {
             print("Wednesday changed to on")
-            
-            
             if !daysSelectedArr.contains("Wednesday") {
                 daysSelectedArr.append("Wednesday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Wednesday"){
                 let indexReturn = daysSelectedArr.indexOf("Wednesday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
             print("Wednesday changed to off")
         }
-        
         print("Array:")
         print(daysSelectedArr)
-
     }
     
     //Thursday switch changed
     @IBAction func thursdaySwitchChanged(sender: AnyObject) {
         if thursdaySwitch.on {
             print("Thursday changed to on")
-            
-            
             if !daysSelectedArr.contains("Thursday") {
                 daysSelectedArr.append("Thursday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Thursday"){
                 let indexReturn = daysSelectedArr.indexOf("Thursday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
             print("Thursday changed to off")
         }
-        
         print("Array:")
         print(daysSelectedArr)
     }
+    
+    
     
     //Friday switch changed
     @IBAction func fridaySwitchChanged(sender: AnyObject) {
         if fridaySwitch.on {
             print("Friday changed to on")
-            
-            
             if !daysSelectedArr.contains("Friday") {
                 daysSelectedArr.append("Friday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Friday"){
                 let indexReturn = daysSelectedArr.indexOf("Friday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
             print("Friday changed to off")
         }
-        
         print("Array:")
         print(daysSelectedArr)
     }
-    
-    
-    
-    
     //var daysOfWeekSelected = ""
     
     var daysSelectedArr = [String]()
     
-    var buildings = ["CS", "Henry Hicks", "Management", "Life Science"]
-   
-    
+    var buildings = ["Dentistry Building","Goldberg Computer Science Building","Howe Hall","Boulden Building","Burbidge Building","Chase Building","Chemical Engineering","Chemistry","Kenneth C. Rowe Management Building","Killam Library","Life Sciences Centre","Marion McCain Arts and Social Sciences","Mona Campbell Building","Dalhousie Arts Centre","Dalplex","Sir James Dunn Building","Student Union Building","Weldon Law Building","Tupper Building"]
     
     var picker = UIPickerView()
-    
-    
-    
-    
     /*******************************************************/
     //new picker for time
-    
-    
-    
     //Time of classes code starts here
     
     @IBOutlet weak var timeFromTextField: UITextField!
-    
     @IBOutlet weak var timeToTextField: UITextField!
     
     //functions to handle time - from
@@ -233,9 +167,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         datePickerView.datePickerMode = UIDatePickerMode.Time
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: Selector("handleToTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
-        
     }
-    
     
     func handleToTimePicker(sender: UIDatePicker) {
         let timeFormatter = NSDateFormatter()
@@ -246,15 +178,9 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     //end of time functions and pickers
     
-    
-   
-    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    
-    
     // returns the # of rows in each component..
 
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -270,12 +196,8 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             return buildings[row]
     }
     
-    //test
-    
-    //Add a cousre action
+    //Add a course action
     @IBAction func addCourseButton(sender: AnyObject) {
-        
-        
         var daysSelected = ""
         
         for r in daysSelectedArr {
@@ -292,7 +214,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+        let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
         
         newCourse.setValue(courseNameTextField.text, forKey: "name")
         newCourse.setValue(courseNumTextField.text, forKey: "number")
@@ -303,16 +225,12 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         newCourse.setValue(timeToTextField.text, forKey: "timeTo")
         newCourse.setValue(profNameTextField.text, forKey: "profName")
         newCourse.setValue(profEmailTextField.text, forKey: "profEmail")
-        
+
         //now save it to the db
         //we do that be calling the context
-        
-        
         do {
             try context.save()
-            var alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
+//            let alert = UIAlertController(title: "Course Added", message: "Course was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             
             alert.addAction(confirmAdd)
@@ -328,17 +246,10 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             timeToTextField.text = ""
             profNameTextField.text = ""
             profEmailTextField.text = ""
-            
-            
-            
         }
         catch {
             print("there was a problem")
         }
-        
-        
-        
-        
         //retrive data
         //do that by creating a request
         let request = NSFetchRequest(entityName: "Course")
@@ -349,8 +260,6 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         do {
             //now we need a var to store data that we get back from it
             let results = try context.executeFetchRequest(request)
-            
-            
             if results.count > 0 {
                 print("Course Details")
                 print(results.count)
@@ -367,13 +276,6 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
                     print(result.valueForKey("timeTo")!)
                     print(result.valueForKey("profName")!)
                     print(result.valueForKey("profEmail")!)
-
-
-
-
-                    
-                    
-                    
                 }
             }
             
@@ -381,36 +283,24 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         catch {
             print("error fetch failed ")
         }
-        
-
-        
-        
-        
-        
-        
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       
         picker.delegate = self
         picker.dataSource = self
-      
-        
-        
         courseLocationTextField.inputView = picker
       
-        
-        
+        // Allows for the inclusion of the Navigation Menu
+        open.target = self.revealViewController()
+        open.action = Selector("revealToggle:")
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

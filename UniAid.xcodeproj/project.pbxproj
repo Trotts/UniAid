@@ -31,6 +31,9 @@
 		3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */; };
 		7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */; };
 		7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */; };
+		7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD51CA496A000EB1705 /* NotesViewController.swift */; };
+		7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD61CA496A000EB1705 /* TableViewController.swift */; };
+		7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E114AD91CA496BB00EB1705 /* Notes.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +86,9 @@
 		3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseController.swift; sourceTree = "<group>"; };
 		7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
 		7CCAD7AE1C9E124C0065DEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CourseDetailsView.storyboard; sourceTree = "<group>"; };
+		7E114AD51CA496A000EB1705 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
+		7E114AD61CA496A000EB1705 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		7E114AD91CA496BB00EB1705 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,22 +145,25 @@
 			children = (
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
 				24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */,
-				24A816A61CA1A56D00EE4705 /* Classes */,
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
-				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
-				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
-				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
-				3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */,
-				3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */,
-				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
-				24119A461C9C473200843F96 /* Map.storyboard */,
-				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
-				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
-				24FCC2C21C971BCA0041D492 /* Supporting Files */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
 				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
 				24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */,
+				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
+				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
+				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
+				7E114AD91CA496BB00EB1705 /* Notes.storyboard */,
+				7E114AD51CA496A000EB1705 /* NotesViewController.swift */,
+				7E114AD61CA496A000EB1705 /* TableViewController.swift */,
+				3DFAFD341CA1F43C00BB2FD7 /* AddCourse.storyboard */,
+				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
+				24119A461C9C473200843F96 /* Map.storyboard */,
+				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
+				3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */,
+				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
+				24A816A61CA1A56D00EE4705 /* Classes */,
+				24FCC2C21C971BCA0041D492 /* Supporting Files */,
 			);
 			path = UniAid;
 			sourceTree = "<group>";
@@ -180,8 +189,8 @@
 		24A816A61CA1A56D00EE4705 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24A816A71CA1A58800EE4705 /* Course.swift */,
 				24B0FEDC1CA1B250003D4F8E /* Building.swift */,
+				24A816A71CA1A58800EE4705 /* Course.swift */,
 				24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */,
 			);
 			name = Classes;
@@ -305,6 +314,7 @@
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				3DFAFD361CA1F43C00BB2FD7 /* AddCourse.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
+				7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */,
 				24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
 				7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */,
@@ -343,8 +353,10 @@
 				3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */,
 				24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */,
 				3DFAFD391CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld in Sources */,
+				7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
+				7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

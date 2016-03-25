@@ -198,14 +198,6 @@
             </objects>
             <point key="canvasLocation" x="1144" y="-655"/>
         </scene>
-        <!--Recorder-->
-        <scene sceneID="G4W-OP-IHd">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Recorder" id="ecs-yD-OQl" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oxp-Al-PGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1159" y="-613"/>
-        </scene>
         <!--CourseDetailsView-->
         <scene sceneID="caz-jk-pN3">
             <objects>

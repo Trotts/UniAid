@@ -84,20 +84,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-2h-W4n">
-                                                    <rect key="frame" x="26" y="8" width="285" height="65"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Course name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISJ-2h-W4n">
+                                                    <rect key="frame" x="21" y="3" width="285" height="65"/>
                                                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ISJ-2h-W4n" secondAttribute="trailing" constant="62" id="Ozs-0S-MAY"/>
-                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="top" secondItem="Wjj-8T-Wce" secondAttribute="topMargin" id="fsa-wc-Fzq"/>
-                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="leading" secondItem="Wjj-8T-Wce" secondAttribute="leadingMargin" constant="18" id="wUa-zY-1XM"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ISJ-2h-W4n" secondAttribute="bottom" constant="8" id="wpN-lM-dTk"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ISJ-2h-W4n" secondAttribute="trailing" constant="67" id="Ozs-0S-MAY"/>
+                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="top" secondItem="Wjj-8T-Wce" secondAttribute="topMargin" constant="-5" id="fsa-wc-Fzq"/>
+                                                <constraint firstItem="ISJ-2h-W4n" firstAttribute="leading" secondItem="Wjj-8T-Wce" secondAttribute="leadingMargin" constant="13" id="wUa-zY-1XM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ISJ-2h-W4n" secondAttribute="bottom" constant="-5" id="wpN-lM-dTk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
+                        <outlet property="todayLabel" destination="CKT-bx-R1D" id="zgq-kD-p55"/>
                         <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="ahe-Ma-DXC"/>
                     </connections>
                 </viewController>
@@ -179,9 +180,6 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="7zk-T7-qKk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="g8L-gU-deK"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="17U-ed-kvO">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
@@ -193,7 +191,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="K8L-SG-dwQ" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="77V-Oc-XLh"/>
+                                    <segue destination="aVI-Is-NHB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="V3J-Ca-JpJ"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="DUQ-1R-Y5B">
@@ -236,8 +234,8 @@
         <!--Map-->
         <scene sceneID="0Dt-8X-x8w">
             <objects>
-                <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
             </objects>
             <point key="canvasLocation" x="1145" y="-728"/>
         </scene>
@@ -247,7 +245,7 @@
                 <viewControllerPlaceholder storyboardName="Recorder" id="PFO-JO-3Ly" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65n-rn-yle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1160" y="-686"/>
+            <point key="canvasLocation" x="1160" y="-492"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="bOH-yw-w36">
@@ -257,20 +255,17 @@
             </objects>
             <point key="canvasLocation" x="1189" y="-645"/>
         </scene>
-        <!--AddCourse-->
-        <scene sceneID="HAw-rs-ONv">
+        <!--Notes-->
+        <scene sceneID="q3c-9r-hpS">
             <objects>
-                <viewControllerPlaceholder storyboardName="AddCourse" id="K8L-SG-dwQ" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FaX-aZ-01t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="Notes" id="aVI-Is-NHB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-Cd-E2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1166" y="-599"/>
+            <point key="canvasLocation" x="1150" y="-581"/>
         </scene>
     </scenes>
     <resources>
         <image name="menu" width="24" height="24"/>
         <image name="plusbutton" width="24" height="24"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="ahe-Ma-DXC"/>
-    </inferredMetricsTieBreakers>
 </document>
