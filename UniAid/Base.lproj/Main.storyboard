@@ -143,6 +143,7 @@
                     <connections>
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
+                        <outlet property="todayLabel" destination="CKT-bx-R1D" id="zgq-kD-p55"/>
                         <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="ahe-Ma-DXC"/>
                     </connections>
                 </viewController>

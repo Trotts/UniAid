@@ -189,8 +189,8 @@
 		24A816A61CA1A56D00EE4705 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				24A816A71CA1A58800EE4705 /* Course.swift */,
 				24B0FEDC1CA1B250003D4F8E /* Building.swift */,
+				24A816A71CA1A58800EE4705 /* Course.swift */,
 				24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */,
 			);
 			name = Classes;

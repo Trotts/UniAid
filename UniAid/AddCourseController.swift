@@ -104,6 +104,8 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         print(daysSelectedArr)
     }
     
+    
+    
     //Friday switch changed
     @IBAction func fridaySwitchChanged(sender: AnyObject) {
         if fridaySwitch.on {
