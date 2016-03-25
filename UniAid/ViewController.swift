@@ -8,11 +8,11 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     
     var studentCorses = [Course]()
-    
-//    [Course(course: "CSCI", courseNum: 4414, prof: "Nauzer", profEmail: "profEmail: aaa@gmail.com", buildingName: "Howe", scheduale: ["s","w","f"])]
+    var directionCor = Cordinates(latitude: 0.0, longtitude: 0.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        deleteAllData("Course")
         fatchData()
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
             {
                 for res in resault
                 {
-                    studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("profEmail") as! String, scheduale: ["w","f"]))
+                    studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("location") as! String, scheduale: ["w","f"]))
                     
                 }
             }
@@ -53,7 +53,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         }
         
     }
-    
+
     func deleteAllData(entity: String)
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -103,6 +103,10 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
     {
         let directions = UITableViewRowAction(style: .Normal, title: "Directions") { (action: UITableViewRowAction!, indexpath:NSIndexPath!) -> Void in
+            
+            let building = self.studentCorses[indexPath.row].BuildingName
+            
+            NSUserDefaults.standardUserDefaults().setValue(building, forKey: "buildingName")
             
             self.performSegueWithIdentifier("map", sender: self)
             
