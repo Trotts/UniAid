@@ -220,6 +220,7 @@
                         <outlet property="courseNumTextField" destination="UeT-PO-ANb" id="M4A-T3-a0s"/>
                         <outlet property="fridaySwitch" destination="97K-Qv-lVS" id="M9w-6N-DBW"/>
                         <outlet property="mondaySwitch" destination="gzn-IG-vFU" id="Vxw-G7-Kal"/>
+                        <outlet property="open" destination="xgS-rx-Mim" id="mtR-SB-FPc"/>
                         <outlet property="profEmailTextField" destination="Exz-Kj-0W0" id="V68-hj-PwV"/>
                         <outlet property="profNameTextField" destination="Fxm-Ju-HJg" id="iZP-4c-iaY"/>
                         <outlet property="thursdaySwitch" destination="0T2-m6-P6Z" id="0Ny-Fb-ktD"/>

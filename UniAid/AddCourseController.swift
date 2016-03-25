@@ -14,6 +14,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     
     
     
+    @IBOutlet weak var open: UIBarButtonItem!
     
     
     
@@ -317,7 +318,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             alert.addAction(confirmAdd)
             
 
-            showViewController(alert, sender: self)
+            //showViewController(alert, sender: self)
             
             //clear text fields
             courseNameTextField.text = ""
