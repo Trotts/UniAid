@@ -8,12 +8,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet var map: MKMapView!
     @IBOutlet var buildingTitle: UILabel!
     
+    var cordi = Building(BuildingName: NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String).cordinates
     var locationManager = CLLocationManager()
     var myPosition = CLLocationCoordinate2D()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("buildingName")
+        print(cordi.Latitude)
+        print(cordi.Longtitude)
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
         
