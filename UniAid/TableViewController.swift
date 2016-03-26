@@ -22,7 +22,7 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             arrNotes = newNotes
         }
         open.target = self.revealViewController()
-        open.action = Selector("revealToggle:")
+        open.action = #selector(SWRevealViewController.revealToggle(_:))
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
@@ -56,6 +56,13 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             notesEditorVC.strBodyText =
                 arrNotes[self.selectedIndex]["body"]
             notesEditorVC.delegate = self
+    }
+    
+    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            arrNotes.removeAtIndex(indexPath.row)
+            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+        }
     }
 
     @IBAction func newNote() {
