@@ -12,7 +12,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var myPosition = CLLocationCoordinate2D()
     var destination: MKMapItem = MKMapItem()
-    
+    //sa
     
     override func viewDidLoad() {
         super.viewDidLoad()
