@@ -12,7 +12,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var myPosition = CLLocationCoordinate2D()
     var destination: MKMapItem = MKMapItem()
-    //sa
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         print(cordi.Latitude)
         print(cordi.Longtitude)
         open.target = self.revealViewController()
-        open.action = Selector("revealToggle:")
+        open.action = #selector(SWRevealViewController.revealToggle(_:))
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
