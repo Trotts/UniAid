@@ -1,7 +1,3 @@
-//
-//  ViewController.swift
-//  NotesTest
-//
 //  Created by Cameron Trotter on 24/03/2016.
 //  Copyright © 2016 Cameron Trotter. All rights reserved.
 //
@@ -30,7 +26,6 @@ class TableViewController: UITableViewController, NoteViewDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
     // Get the number of notes to show
     override func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {

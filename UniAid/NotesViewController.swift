@@ -1,6 +1,3 @@
-//  NotesViewController.swift
-//  NotesTest
-//
 //  Created by Cameron Trotter on 24/03/2016.
 //  Copyright © 2016 Cameron Trotter. All rights reserved.
 //
