@@ -4,6 +4,7 @@
 //  Created by Cameron Trotter on 24/03/2016.
 //  Copyright © 2016 Cameron Trotter. All rights reserved.
 //
+// This file controls the Note when being typed
 
 import UIKit
 import AVFoundation

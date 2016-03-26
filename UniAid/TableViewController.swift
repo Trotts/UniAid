@@ -5,6 +5,7 @@
 //  Created by Cameron Trotter on 24/03/2016.
 //  Copyright © 2016 Cameron Trotter. All rights reserved.
 //
+// This file controls the Notes list
 
 import UIKit
 
@@ -30,10 +31,12 @@ class TableViewController: UITableViewController, NoteViewDelegate {
         super.didReceiveMemoryWarning()
     }
 
+    // Get the number of notes to show
     override func tableView(tableView: UITableView,
         numberOfRowsInSection section: Int) -> Int {
             return arrNotes.count
     }
+    // Names the cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath
         indexPath: NSIndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCellWithIdentifier("Cell")!
@@ -41,12 +44,13 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             cell.textLabel!.text = arrNotes[indexPath.row]["title"]
             return cell
     }
+    // What to do when a note is selected
     override func tableView(tableView: UITableView,
         didSelectRowAtIndexPath indexPath: NSIndexPath) {
             self.selectedIndex = indexPath.row
             performSegueWithIdentifier("showEditorSegue", sender: nil)
     }
-    
+    // Loads data needed for the segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender:
         AnyObject?) {
             let notesEditorVC = segue.destinationViewController as!
@@ -57,7 +61,6 @@ class TableViewController: UITableViewController, NoteViewDelegate {
                 arrNotes[self.selectedIndex]["body"]
             notesEditorVC.delegate = self
     }
-    
     // Deleting notes
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
@@ -69,7 +72,7 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             saveNotesArray()
         }
     }
-
+    // Function called when Plus button is clicked
     @IBAction func newNote() {
         let newDict = ["title" : "",
             "body" : ""]
@@ -79,7 +82,7 @@ class TableViewController: UITableViewController, NoteViewDelegate {
         saveNotesArray()
         performSegueWithIdentifier("showEditorSegue", sender: nil)
     }
-    
+    // Updates the note's title as typed
     func didUpdateNoteWithTitle(newTitle: String, andBody newBody:
         String) {
             self.arrNotes[self.selectedIndex]["title"] = newTitle
@@ -87,7 +90,7 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             self.tableView.reloadData()
             saveNotesArray()
     }
-    
+    // Call to save the Notes Array as needed
     func saveNotesArray() {
         NSUserDefaults.standardUserDefaults().setObject(arrNotes,
             forKey: "notes")
