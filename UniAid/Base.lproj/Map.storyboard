@@ -18,8 +18,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-Dl-2Oj">
-                                <rect key="frame" x="0.0" y="58" width="414" height="678"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-Dl-2Oj">
+                                <rect key="frame" x="0.0" y="108" width="414" height="437"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outlet property="delegate" destination="0f2-RA-EHC" id="sgt-zj-eNR"/>
+                                    <outletCollection property="gestureRecognizers" destination="Zy8-h3-qEX" appends="YES" id="INs-l2-xjY"/>
+                                </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Building Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yP-GN-8DE">
                                 <rect key="frame" x="0.0" y="72" width="414" height="28"/>
@@ -27,17 +32,49 @@
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zsY-Dw-3y7">
+                                <rect key="frame" x="0.0" y="544" width="414" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="Zqu-b8-zJN"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="2YH-ER-t1i">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2YH-ER-t1i" id="TgI-bH-mwU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXs-c9-GWr">
+                                <rect key="frame" x="289" y="129" width="85" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="wjm-Fy-Xwz"/>
+                                </constraints>
+                                <state key="normal" title="Directions"/>
+                                <connections>
+                                    <action selector="showDirections:" destination="0f2-RA-EHC" eventType="touchUpInside" id="0Bd-0U-o3T"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zsY-Dw-3y7" secondAttribute="trailing" id="1O4-ey-Ora"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kXs-c9-GWr" secondAttribute="trailing" constant="20" id="4V7-Jq-iRd"/>
+                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="top" secondItem="6yP-GN-8DE" secondAttribute="bottom" constant="8" symbolic="YES" id="5Bk-kd-MzO"/>
                             <constraint firstItem="mPK-Rb-aQJ" firstAttribute="top" secondItem="6yP-GN-8DE" secondAttribute="bottom" constant="636" id="825-1g-ANr"/>
-                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="leading" secondItem="cNK-Zt-j4f" secondAttribute="leading" id="Cha-7j-yqx"/>
-                            <constraint firstAttribute="trailing" secondItem="e5F-Dl-2Oj" secondAttribute="trailing" id="Gxb-D6-o6e"/>
+                            <constraint firstItem="kXs-c9-GWr" firstAttribute="top" secondItem="6yP-GN-8DE" secondAttribute="bottom" constant="29" id="BKZ-lw-6S1"/>
+                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="leading" secondItem="6yP-GN-8DE" secondAttribute="leading" id="FC4-U9-RFv"/>
+                            <constraint firstItem="zsY-Dw-3y7" firstAttribute="leading" secondItem="6yP-GN-8DE" secondAttribute="leading" id="JC1-lJ-6cy"/>
                             <constraint firstItem="6yP-GN-8DE" firstAttribute="top" secondItem="cMf-Bk-9NU" secondAttribute="bottom" constant="8" symbolic="YES" id="Roz-Yp-Lyr"/>
-                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="bottom" secondItem="mPK-Rb-aQJ" secondAttribute="top" id="kaz-8I-VHn"/>
-                            <constraint firstItem="6yP-GN-8DE" firstAttribute="leading" secondItem="e5F-Dl-2Oj" secondAttribute="leading" id="mJz-ym-qIw"/>
-                            <constraint firstItem="6yP-GN-8DE" firstAttribute="trailing" secondItem="e5F-Dl-2Oj" secondAttribute="trailing" id="nXb-Vv-Eh4"/>
-                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="top" secondItem="cNK-Zt-j4f" secondAttribute="topMargin" constant="58" id="uM4-d8-HrZ"/>
+                            <constraint firstItem="mPK-Rb-aQJ" firstAttribute="top" secondItem="e5F-Dl-2Oj" secondAttribute="bottom" constant="191" id="S2E-XY-MI9"/>
+                            <constraint firstItem="e5F-Dl-2Oj" firstAttribute="trailing" secondItem="6yP-GN-8DE" secondAttribute="trailing" id="aIb-1n-Pwf"/>
+                            <constraint firstItem="zsY-Dw-3y7" firstAttribute="bottom" secondItem="mPK-Rb-aQJ" secondAttribute="top" id="b3R-pU-kGx"/>
+                            <constraint firstItem="zsY-Dw-3y7" firstAttribute="trailing" secondItem="6yP-GN-8DE" secondAttribute="trailing" id="phh-sS-HHI"/>
+                            <constraint firstItem="zsY-Dw-3y7" firstAttribute="leading" secondItem="cNK-Zt-j4f" secondAttribute="leading" id="sQB-HL-BJr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="BaZ-PQ-oez">
@@ -52,6 +89,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYe-xH-DIs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="Zy8-h3-qEX">
+                    <connections>
+                        <action selector="addPin:" destination="0f2-RA-EHC" id="8YF-uR-SFN"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1447" y="492"/>
         </scene>

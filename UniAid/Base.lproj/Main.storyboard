@@ -144,7 +144,7 @@
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
                         <outlet property="todayLabel" destination="CKT-bx-R1D" id="zgq-kD-p55"/>
-                        <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="ahe-Ma-DXC"/>
+                        <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="OSS-44-89L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQM-A1-iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -234,10 +234,10 @@
         <!--Map-->
         <scene sceneID="0Dt-8X-x8w">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="-728"/>
+            <point key="canvasLocation" x="1382" y="-342"/>
         </scene>
         <!--Recorder-->
         <scene sceneID="z5C-As-Ghi">
