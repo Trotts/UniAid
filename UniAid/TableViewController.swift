@@ -58,10 +58,15 @@ class TableViewController: UITableViewController, NoteViewDelegate {
             notesEditorVC.delegate = self
     }
     
+    // Deleting notes
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete {
+            tableView.beginUpdates()
+            NSUserDefaults.standardUserDefaults().removeObjectForKey("title")
             arrNotes.removeAtIndex(indexPath.row)
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+            self.tableView.endUpdates()
+            saveNotesArray()
         }
     }
 
