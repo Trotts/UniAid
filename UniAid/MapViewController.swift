@@ -2,28 +2,30 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate,UITableViewDelegate ,UITableViewDataSource {
     
+    @IBOutlet var tb: UITableView!
     @IBOutlet var open: UIBarButtonItem!
     @IBOutlet var map: MKMapView!
     @IBOutlet var buildingTitle: UILabel!
     
     var cordi = Building(BuildingName: NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String).cordinates
     var locationManager = CLLocationManager()
+    var buildingName = NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String
     var myPosition = CLLocationCoordinate2D()
     var destination: MKMapItem = MKMapItem()
+    var dirArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDir()
+        buildingTitle.text = "Directions to \(buildingName)"
         NSUserDefaults.standardUserDefaults().removeObjectForKey("buildingName")
-        print(cordi.Latitude)
-        print(cordi.Longtitude)
         open.target = self.revealViewController()
-        open.action = #selector(SWRevealViewController.revealToggle(_:))
+        open.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
-        map.layer.cornerRadius = 12
         locationManager.delegate=self
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
@@ -39,18 +41,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         myPosition = newLocation.coordinate
         
-        
-        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let span = MKCoordinateSpanMake(0.002, 0.002)
         let region = MKCoordinateRegion(center: newLocation.coordinate, span: span)
         map.setRegion(region, animated: true)
-//        locationManager.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         
     }
     
-    @IBAction func addPin(sender: UILongPressGestureRecognizer) {
+     func getDir() {
         
-        let location = sender.locationInView(self.map)
-        let locCoord = self.map.convertPoint(location, toCoordinateFromView: self.map)
+        let locCoord = CLLocationCoordinate2D(latitude: cordi.Latitude, longitude: cordi.Longtitude)
         
         let annotation = MKPointAnnotation()
         
@@ -61,9 +61,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         
         self.map.removeAnnotations(map.annotations)
         self.map.addAnnotation(annotation)
-    }
-    
-    @IBAction func showDirections(sender: UIButton) {
         let request = MKDirectionsRequest()
         request.source = MKMapItem.mapItemForCurrentLocation()
         request.requestsAlternateRoutes = false
@@ -85,11 +82,15 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
                     self.map.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
                     
                     for next in route.steps {
-                        print(next.instructions)
+                        self.dirArray.append(next.instructions)
                     }
+                    self.tb.dataSource = self
+                    self.tb.delegate = self
+                    self.tb.reloadData()
                 }
             }
-        }}
+        }
+    }
     
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer!
     {
@@ -97,6 +98,21 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         drew.strokeColor = UIColor.orangeColor()
         drew.lineWidth = 3.0
         return drew
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dirArray.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = self.tb.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DirectionCell
+        
+        cell.directionsTitle.text = dirArray[indexPath.row]
+        cell.layer.borderWidth = 2.0
+        cell.layer.cornerRadius = 12
+        cell.layer.borderColor = UIColor.clearColor().CGColor
+        return cell
     }
     
 }

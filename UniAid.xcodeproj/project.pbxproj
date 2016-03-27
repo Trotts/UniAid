@@ -22,6 +22,7 @@
 		24AAE6D31CA5CCEE00E44EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AAE6D21CA5CCEE00E44EC3 /* UIKit.framework */; };
 		24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDC1CA1B250003D4F8E /* Building.swift */; };
 		24B0FEDF1CA1B272003D4F8E /* Cordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */; };
+		24B8516E1CA7542900541B16 /* DirectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8516D1CA7542900541B16 /* DirectionCell.swift */; };
 		24EAF1CC1CA23F63005F5B31 /* CourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */; };
 		24F3B2A21CA1A02E0095AEF3 /* Recorder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */; };
 		24F3B2A41CA1A0DB0095AEF3 /* RecorderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */; };
@@ -81,6 +82,7 @@
 		24AAE6D21CA5CCEE00E44EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24B0FEDC1CA1B250003D4F8E /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cordinates.swift; sourceTree = "<group>"; };
+		24B8516D1CA7542900541B16 /* DirectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionCell.swift; sourceTree = "<group>"; };
 		24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourceCell.swift; sourceTree = "<group>"; };
 		24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Recorder.storyboard; sourceTree = "<group>"; };
 		24F3B2A31CA1A0DB0095AEF3 /* RecorderController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecorderController.swift; sourceTree = "<group>"; };
@@ -163,21 +165,16 @@
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
-				24119A461C9C473200843F96 /* Map.storyboard */,
+				24B851711CA761B100541B16 /* StoryBoards */,
 				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
-				24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */,
-				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
-				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
-				3DDAD44F1CA5D01200C11372 /* AddView.storyboard */,
+				24B851701CA7618400541B16 /* Costum cells */,
 				3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */,
 				3DDAD4581CA5D8FB00C11372 /* addAssignViewController.swift */,
 				3DDAD4561CA5D85A00C11372 /* addCourseViewController.swift */,
 				3DDAD4521CA5D32B00C11372 /* AddViewController.swift */,
 				3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */,
-				7E114AD91CA496BB00EB1705 /* Notes.storyboard */,
 				7E114AD51CA496A000EB1705 /* NotesViewController.swift */,
 				7E114AD61CA496A000EB1705 /* TableViewController.swift */,
-				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 				241406331C6BC0FF00DD19DF /* LaunchScreen.storyboard */,
 				3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */,
 				241406311C6BC0FF00DD19DF /* Assets.xcassets */,
@@ -213,6 +210,28 @@
 				24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		24B851701CA7618400541B16 /* Costum cells */ = {
+			isa = PBXGroup;
+			children = (
+				24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */,
+				24B8516D1CA7542900541B16 /* DirectionCell.swift */,
+			);
+			name = "Costum cells";
+			sourceTree = "<group>";
+		};
+		24B851711CA761B100541B16 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				24119A461C9C473200843F96 /* Map.storyboard */,
+				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
+				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
+				3DDAD44F1CA5D01200C11372 /* AddView.storyboard */,
+				7E114AD91CA496BB00EB1705 /* Notes.storyboard */,
+				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
+			);
+			name = StoryBoards;
 			sourceTree = "<group>";
 		};
 		24FCC2C21C971BCA0041D492 /* Supporting Files */ = {
@@ -369,6 +388,7 @@
 				3DDAD4591CA5D8FB00C11372 /* addAssignViewController.swift in Sources */,
 				24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */,
 				2414062D1C6BC0FF00DD19DF /* ViewController.swift in Sources */,
+				24B8516E1CA7542900541B16 /* DirectionCell.swift in Sources */,
 				2414062B1C6BC0FF00DD19DF /* AppDelegate.swift in Sources */,
 				24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */,
 				3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */,
