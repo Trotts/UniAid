@@ -86,16 +86,6 @@ class CDView: UIViewController, UITableViewDataSource, UITableViewDelegate{
                     courseVar[1] = "amr"
                     //now we can access the info
                     
-                    /*
-                    print(result.valueForKey("name")!)
-                    print(result.valueForKey("number")!)
-                    print(result.valueForKey("location")!)
-                    print(result.valueForKey("days")!)
-                    print(result.valueForKey("timeFrom")!)
-                    print(result.valueForKey("timeTo")!)
-                    print(result.valueForKey("profName")!)
-                    print(result.valueForKey("profEmail")!)
-                    */
                     
                     print("Found ya loai")
                     

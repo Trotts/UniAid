@@ -291,7 +291,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+        let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
         
         newCourse.setValue(courseNameTextField.text, forKey: "name")
         newCourse.setValue(courseNumTextField.text, forKey: "number")
