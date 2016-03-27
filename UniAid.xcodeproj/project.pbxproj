@@ -34,7 +34,7 @@
 		3DDAD45B1CA5DB6A00C11372 /* displayCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */; };
 		3DFAFD391CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD371CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld */; };
 		3DFAFD3B1CA1F64D00BB2FD7 /* AddCourseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */; };
-		7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */; };
+		7C682A631C9C8AA500B6657F /* CDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C682A621C9C8AA500B6657F /* CDView.swift */; };
 		7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */; };
 		7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD51CA496A000EB1705 /* NotesViewController.swift */; };
 		7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD61CA496A000EB1705 /* TableViewController.swift */; };
@@ -94,7 +94,7 @@
 		3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = displayCoursesTableViewController.swift; sourceTree = "<group>"; };
 		3DFAFD381CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Project_UniAid.xcdatamodel; sourceTree = "<group>"; };
 		3DFAFD3A1CA1F64D00BB2FD7 /* AddCourseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseController.swift; sourceTree = "<group>"; };
-		7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseDetailsView.swift; sourceTree = "<group>"; };
+		7C682A621C9C8AA500B6657F /* CDView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CDView.swift; sourceTree = "<group>"; };
 		7CCAD7AE1C9E124C0065DEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CourseDetailsView.storyboard; sourceTree = "<group>"; };
 		7E114AD51CA496A000EB1705 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		7E114AD61CA496A000EB1705 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +161,7 @@
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
 				24B851711CA761B100541B16 /* StoryBoards */,
-				7C682A621C9C8AA500B6657F /* CourseDetailsView.swift */,
+				7C682A621C9C8AA500B6657F /* CDView.swift */,
 				24B851701CA7618400541B16 /* Costum cells */,
 				3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */,
 				3DDAD4581CA5D8FB00C11372 /* addAssignViewController.swift */,
@@ -220,7 +220,6 @@
 			isa = PBXGroup;
 			children = (
 				24119A461C9C473200843F96 /* Map.storyboard */,
-				24F3B2A11CA1A02E0095AEF3 /* Recorder.storyboard */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				3DDAD44F1CA5D01200C11372 /* AddView.storyboard */,
 				7E114AD91CA496BB00EB1705 /* Notes.storyboard */,
@@ -392,7 +391,7 @@
 				7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
 				3DDAD45B1CA5DB6A00C11372 /* displayCoursesTableViewController.swift in Sources */,
-				7C682A631C9C8AA500B6657F /* CourseDetailsView.swift in Sources */,
+				7C682A631C9C8AA500B6657F /* CDView.swift in Sources */,
 				3DDAD4571CA5D85A00C11372 /* addCourseViewController.swift in Sources */,
 				7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */,
 				24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */,
