@@ -82,7 +82,6 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         return studentCorses.count
     }
     
-    //
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CourceCell

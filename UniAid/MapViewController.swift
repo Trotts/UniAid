@@ -16,7 +16,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
     var destination: MKMapItem = MKMapItem()
     var dirArray = [String]()
     
-    //
     
     override func viewDidLoad() {
         super.viewDidLoad()
