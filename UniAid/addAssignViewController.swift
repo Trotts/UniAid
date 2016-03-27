@@ -103,7 +103,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newAssign = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: context)
+        let newAssign = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: context)
         
         newAssign.setValue(assignNameTextField.text, forKey: "name")
         newAssign.setValue(dueDateTextField.text, forKey: "dueDate")
@@ -116,7 +116,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         do {
             try context.save()
-            var alert = UIAlertController(title: "Assignment Added", message: "Assignment was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Assignment Added", message: "Assignment was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
             

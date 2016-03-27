@@ -151,7 +151,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newExam = NSEntityDescription.insertNewObjectForEntityForName("Exam", inManagedObjectContext: context)
+        let newExam = NSEntityDescription.insertNewObjectForEntityForName("Exam", inManagedObjectContext: context)
         
         newExam.setValue(examNameTextField.text, forKey: "name")
         newExam.setValue(dueDateTextField.text, forKey: "dueDate")
@@ -164,7 +164,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         do {
             try context.save()
-            var alert = UIAlertController(title: "Exam Added", message: "Exam was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Exam Added", message: "Exam was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
             

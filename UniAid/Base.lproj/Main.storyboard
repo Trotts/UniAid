@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -158,7 +158,7 @@
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
                         <outlet property="todayLabel" destination="CKT-bx-R1D" id="zgq-kD-p55"/>
-                        <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="ahe-Ma-DXC"/>
+                        <segue destination="7zk-T7-qKk" kind="custom" identifier="map" customClass="SWRevealViewControllerSeguePushController" id="OSS-44-89L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EQM-A1-iev" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,7 +251,7 @@
                 <viewControllerPlaceholder storyboardName="Map" id="7zk-T7-qKk" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba5-pz-mI1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1145" y="-728"/>
+            <point key="canvasLocation" x="1382" y="-342"/>
         </scene>
         <!--Recorder-->
         <scene sceneID="z5C-As-Ghi">

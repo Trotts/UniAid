@@ -19,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
+    //
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -81,6 +82,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         }
         return studentCorses.count
     }
+    
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CourceCell
