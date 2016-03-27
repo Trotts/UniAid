@@ -9,9 +9,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
     @IBOutlet var map: MKMapView!
     @IBOutlet var buildingTitle: UILabel!
     
-    var cordi = Building(BuildingName: NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String).cordinates
+    var cordi = Building(BuildingName: NSUserDefaults.standardUserDefaults().valueForKey("building")! as! String).cordinates
     var locationManager = CLLocationManager()
-    var buildingName = NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String
+    var buildingName = NSUserDefaults.standardUserDefaults().valueForKey("building")! as! String
     var myPosition = CLLocationCoordinate2D()
     var destination: MKMapItem = MKMapItem()
     var dirArray = [String]()
@@ -22,7 +22,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         super.viewDidLoad()
         getDir()
         buildingTitle.text = "Directions to \(buildingName)"
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("buildingName")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("building")
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
         

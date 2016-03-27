@@ -104,6 +104,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="courseName" destination="ISJ-2h-W4n" id="b2N-HP-DfI"/>
+                                            <segue destination="nzT-n9-pcD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="r1w-2S-I7x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -185,7 +186,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="zmY-Jp-0Ks">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="zmY-Jp-0Ks">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zmY-Jp-0Ks" id="hEa-ca-QcZ">
@@ -194,8 +195,11 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="aVI-Is-NHB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uqM-Tk-vKF"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="17U-ed-kvO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="17U-ed-kvO">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="17U-ed-kvO" id="Xsy-Up-wbt">
@@ -205,10 +209,10 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="aVI-Is-NHB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="V3J-Ca-JpJ"/>
+                                    <segue destination="PFO-JO-3Ly" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="M1T-IQ-mbE"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="DUQ-1R-Y5B">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="DUQ-1R-Y5B">
                                 <rect key="frame" x="0.0" y="160" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DUQ-1R-Y5B" id="thL-Nh-IPD">
@@ -217,11 +221,8 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <connections>
-                                    <segue destination="PFO-JO-3Ly" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="gTJ-bl-9Ap"/>
-                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="csz-2C-vcS">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="csz-2C-vcS">
                                 <rect key="frame" x="0.0" y="204" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="csz-2C-vcS" id="91G-p2-viF">
@@ -229,9 +230,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.83137254901960789" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="nzT-n9-pcD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="FXR-4e-Zsm"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -267,7 +265,7 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="nzT-n9-pcD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-HX-379" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1189" y="-645"/>
+            <point key="canvasLocation" x="1752" y="177"/>
         </scene>
         <!--Notes-->
         <scene sceneID="q3c-9r-hpS">

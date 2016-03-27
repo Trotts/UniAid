@@ -15,10 +15,10 @@ class Course
     var Prof:String = ""
     var ProfEmail:String = ""
     var BuildingName:String = ""
-    var scheduale = [String]()
+    var scheduale: String = ""
     
     
-    init (course: String,courseNum:String, prof: String, profEmail: String,buildingName: String,scheduale:[String]) {
+    init (course: String,courseNum:String, prof: String, profEmail: String,buildingName: String,scheduale:String) {
         self.Course = course
         self.CourseNumber = courseNum
         self.Prof = prof

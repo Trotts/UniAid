@@ -18,6 +18,7 @@ class CDView: UIViewController, UITableViewDataSource, UITableViewDelegate{
   @IBOutlet weak var details: UITableView!
   
   var courseVar = [String]()
+  var courseDetails = [String]()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -31,84 +32,34 @@ class CDView: UIViewController, UITableViewDataSource, UITableViewDelegate{
     details.dataSource = self
     
     courseVar = ["Name", "Number", "Inst. Name", "Inst. Email", "Schedule", "Location"]
-   displayCourse()
+//   displayCourse()
   }
   
   override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
   }
-
+    
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
       return courseVar.count
   }
   
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier(courseVar[indexPath.row], forIndexPath: indexPath) as UITableViewCell
+        setDetails()
         cell.textLabel?.text = courseVar[indexPath.row]
+        cell.detailTextLabel?.text = courseDetails[indexPath.row]
         return cell
   }
     
-    func displayCourse(){
-        
-        //we will use appDelegate to connect to our core data
-        //this is the default app delegate
-        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-        
-        //create a context
-        //a handler for us to be able to access the database
-        let context: NSManagedObjectContext = appDel.managedObjectContext
-        
-        //add user to db
-        //first we need to describe our entity that we would want to enter our user to
-        var newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
-
-        
-        //retrive data
-        //do that by creating a request
-        let request = NSFetchRequest(entityName: "Course")
-        
-        //u need this to actually return the data itself and not just info about it
-        request.returnsObjectsAsFaults = false
-        
-        do {
-            //now we need a var to store data that we get back from it
-            let results = try context.executeFetchRequest(request)
-            
-            
-            if results.count > 0 {
-                print("Course Details")
-                print(results.count)
-                
-                //by defualt results will contain ... therefore cast it
-                for result in results as! [NSManagedObject] {
-                    
-                    courseVar[1] = "amr"
-                    //now we can access the info
-                    
-                    
-                    print("Found ya loai")
-                    
-                    
-                    
-                    
-                    
-                    
-                }
-            }
-            
-        }
-        catch {
-            print("error fetch failed ")
-        }
-        
-        
-
-        
-        
-        
-        
-        
+    func setDetails()
+    {
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("Course")! as! String)
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("CourseNumber")! as! String)
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("Prof")! as! String)
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("ProfEmail")! as! String)
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("scheduale")! as! String)
+        courseDetails.append(NSUserDefaults.standardUserDefaults().valueForKey("buildingName")! as! String)
     }
     
 
