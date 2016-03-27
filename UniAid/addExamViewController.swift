@@ -50,7 +50,29 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         picker.dataSource = self
         
         
-       courseNameTextField.inputView = picker
+        
+        //the following will be used to display the courses picker view with a "done" and a "cancel" buttons
+        var toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Bordered, target: self, action: "donePicker")
+        var spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        var cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Bordered, target: self, action: "cancelPicker")
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        
+        courseNameTextField.inputView = picker
+        courseNameTextField.inputAccessoryView = toolBar
+        
+        
+       
         
         
         
@@ -248,6 +270,17 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         
     }
+    
+    //these two functions will handle the done and the cancel buttons on the courses picker
+    func donePicker(){
+        courseNameTextField.resignFirstResponder()
+    }
+    
+    func cancelPicker(){
+        //courseNameTextField.text = ""
+        courseNameTextField.resignFirstResponder()
+    }
+
 
     
     

@@ -24,6 +24,8 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var courseLocationTextField: UITextField!
     @IBOutlet weak var profNameTextField: UITextField!
     @IBOutlet weak var profEmailTextField: UITextField!
+    
+    
     //switches
     @IBOutlet weak var mondaySwitch: UISwitch!
     @IBOutlet weak var tuesdaySwitch: UISwitch!
@@ -302,5 +304,6 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 }
 
