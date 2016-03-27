@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RJE-cz-yXe">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -104,7 +104,6 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="courseName" destination="ISJ-2h-W4n" id="b2N-HP-DfI"/>
-                                            <segue destination="nzT-n9-pcD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="r1w-2S-I7x"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -258,14 +257,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65n-rn-yle" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1160" y="-492"/>
-        </scene>
-        <!--CourseDetailsView-->
-        <scene sceneID="bOH-yw-w36">
-            <objects>
-                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="nzT-n9-pcD" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uf2-HX-379" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1752" y="177"/>
         </scene>
         <!--Notes-->
         <scene sceneID="q3c-9r-hpS">
