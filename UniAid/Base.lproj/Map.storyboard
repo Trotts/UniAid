@@ -53,7 +53,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                                     <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -161,6 +161,9 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="gXA-Tu-UMX" kind="custom" identifier="courseDetails" customClass="SWRevealViewControllerSeguePushController" id="mXC-YJ-2dA"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="Ly9-SH-fGh">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
@@ -190,9 +193,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.95963541666666663" green="0.81684367366201638" blue="0.093568016197613915" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="gXA-Tu-UMX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="oSp-c0-r16"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -220,7 +220,7 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="gXA-Tu-UMX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6n-LJ-BFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1155" y="-557"/>
+            <point key="canvasLocation" x="1222" y="-547"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOE-YR-qsa">
