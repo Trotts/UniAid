@@ -366,8 +366,9 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
         //add user to db
-        //first we need to describe our entity that we would want to enter our user to
-        let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+      //first we need to describe our entity that we would want to enter our user to
+      //let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
+      
         
         let profEmail = profEmailTextField.text
         let profName = profNameTextField.text
@@ -426,6 +427,8 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         //finally: if the previous two steps successed then put everything inside the database
         do {
+          
+            let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
           
             newCourse.setValue(courseNameTextField.text, forKey: "name")
             newCourse.setValue(courseNumTextField.text, forKey: "number")
