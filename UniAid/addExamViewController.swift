@@ -49,8 +49,30 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         picker.delegate = self
         picker.dataSource = self
         
+         //
         
-       courseNameTextField.inputView = picker
+        //the following will be used to display the courses picker view with a "done" and a "cancel" buttons
+        var toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Bordered, target: self, action: "donePicker")
+        var spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        var cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Bordered, target: self, action: "cancelPicker")
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        
+        courseNameTextField.inputView = picker
+        courseNameTextField.inputAccessoryView = toolBar
+        
+        
+       
         
         
         
@@ -129,7 +151,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newExam = NSEntityDescription.insertNewObjectForEntityForName("Exam", inManagedObjectContext: context)
+        let newExam = NSEntityDescription.insertNewObjectForEntityForName("Exam", inManagedObjectContext: context)
         
         newExam.setValue(examNameTextField.text, forKey: "name")
         newExam.setValue(dueDateTextField.text, forKey: "dueDate")
@@ -142,7 +164,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         do {
             try context.save()
-            var alert = UIAlertController(title: "Exam Added", message: "Exam was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Exam Added", message: "Exam was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
             
@@ -248,6 +270,17 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         
     }
+    
+    //these two functions will handle the done and the cancel buttons on the courses picker
+    func donePicker(){
+        courseNameTextField.resignFirstResponder()
+    }
+    
+    func cancelPicker(){
+        //courseNameTextField.text = ""
+        courseNameTextField.resignFirstResponder()
+    }
+
 
     
     

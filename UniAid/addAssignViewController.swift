@@ -103,7 +103,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         //add user to db
         //first we need to describe our entity that we would want to enter our user to
-        var newAssign = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: context)
+        let newAssign = NSEntityDescription.insertNewObjectForEntityForName("Assignment", inManagedObjectContext: context)
         
         newAssign.setValue(assignNameTextField.text, forKey: "name")
         newAssign.setValue(dueDateTextField.text, forKey: "dueDate")
@@ -116,7 +116,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         do {
             try context.save()
-            var alert = UIAlertController(title: "Assignment Added", message: "Assignment was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Assignment Added", message: "Assignment was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
             let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
             
@@ -200,7 +200,30 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         picker.dataSource = self
         
         
+        
+        //the following will be used to display the courses picker view with a "done" and a "cancel" buttons
+        var toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+         //
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Bordered, target: self, action: "donePicker")
+        var spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        var cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Bordered, target: self, action: "cancelPicker")
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        
         courseNameTextField.inputView = picker
+        courseNameTextField.inputAccessoryView = toolBar
+        
+
+        
+        
         
         
         
@@ -245,6 +268,18 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
 
         
     }
+    
+    
+    //these two functions will handle the done and the cancel buttons on the courses picker
+    func donePicker(){
+        courseNameTextField.resignFirstResponder()
+    }
+    
+    func cancelPicker(){
+        //courseNameTextField.text = ""
+        courseNameTextField.resignFirstResponder()
+    }
+
 
     
     
