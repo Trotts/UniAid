@@ -184,8 +184,8 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         print(daysSelectedArr)
     }
     
-    
-    
+  // Comment
+  
     
     //var daysOfWeekSelected = ""
     
