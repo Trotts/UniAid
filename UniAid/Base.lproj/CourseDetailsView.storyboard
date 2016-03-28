@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3q6-yG-cvq">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Reveal View Controller-->
@@ -292,9 +292,6 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.83137254901960789" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="Iba-x5-BJU" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Yep-i5-BFE"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="8vZ-gr-ORg">
                                 <rect key="frame" x="0.0" y="204" width="414" height="44"/>
@@ -337,14 +334,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb3-Md-2a5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2136" y="-1322"/>
-        </scene>
-        <!--Recorder-->
-        <scene sceneID="cE0-tL-ql2">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Recorder" id="Iba-x5-BJU" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qKi-1o-Iwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2151" y="-1265"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="aPB-QI-Fv5">

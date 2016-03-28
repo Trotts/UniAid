@@ -191,7 +191,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     var daysSelectedArr = [String]()
     
-    var buildings = ["Choose", "CS", "Henry Hicks", "Management", "Life Science"]
+    var buildings = ["Dentistry Building","Goldberg Computer Science Building","Howe Hall","Boulden Building","Burbidge Building","Chase Building","Chemical Engineering","Chemistry","Kenneth C. Rowe Management Building","Killam Library","Life Sciences Centre","Marion McCain Arts and Social Sciences","Mona Campbell Building","Dalhousie Arts Centre","Dalplex","Sir James Dunn Building","Student Union Building","Weldon Law Building","Tupper Building"]
    
     
     
