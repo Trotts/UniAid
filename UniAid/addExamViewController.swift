@@ -25,7 +25,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: #selector(addExamViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
         
     }
     
@@ -59,9 +59,9 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         toolBar.sizeToFit()
         
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addExamViewController.donePicker))
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addExamViewController.cancelPicker))
         
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)

@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
 //        deleteAllData("Course")
         fatchData()
         open.target = self.revealViewController()
-        open.action = Selector("revealToggle:")
+        open.action = #selector(SWRevealViewController.revealToggle(_:))
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
