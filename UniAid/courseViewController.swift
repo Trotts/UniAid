@@ -153,7 +153,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Time
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(courseViewController.handleFromTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: Selector("handleFromTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func handleFromTimePicker(sender: UIDatePicker) {
@@ -168,7 +168,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Time
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(courseViewController.handleToTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: Selector("handleToTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func handleToTimePicker(sender: UIDatePicker) {
@@ -296,7 +296,7 @@ class courseViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
       
         // Allows for the inclusion of the Navigation Menu
         open.target = self.revealViewController()
-        open.action = #selector(SWRevealViewController.revealToggle(_:))
+        open.action = Selector("revealToggle:")
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
 

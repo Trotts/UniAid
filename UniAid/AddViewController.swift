@@ -17,7 +17,7 @@ class addViewController: UIViewController {
         
         //code for swipe in -- needed
         open.target = self.revealViewController()
-        open.action = #selector(SWRevealViewController.revealToggle(_:))
+        open.action = Selector("revealToggle:")
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
     }
     

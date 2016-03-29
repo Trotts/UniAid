@@ -26,7 +26,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         sender.inputView = datePickerView
-        datePickerView.addTarget(self, action: #selector(addAssignViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         
     }
     
