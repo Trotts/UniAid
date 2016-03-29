@@ -157,7 +157,7 @@
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
 				7E67D5CC1CAA099300710E6E /* ViewControllers */,
 				24B851711CA761B100541B16 /* StoryBoards */,
-				24B851701CA7618400541B16 /* Custom cells. */,
+				24B851701CA7618400541B16 /* Custom cells */,
 				3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */,
 				3DDAD4581CA5D8FB00C11372 /* addAssignViewController.swift */,
 				3DDAD4561CA5D85A00C11372 /* addCourseViewController.swift */,
@@ -202,13 +202,13 @@
 			name = Classes;
 			sourceTree = "<group>";
 		};
-		24B851701CA7618400541B16 /* Custom cells. */ = {
+		24B851701CA7618400541B16 /* Custom cells */ = {
 			isa = PBXGroup;
 			children = (
 				24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */,
 				24B8516D1CA7542900541B16 /* DirectionCell.swift */,
 			);
-			name = "Custom cells.";
+			name = "Custom cells";
 			sourceTree = "<group>";
 		};
 		24B851711CA761B100541B16 /* StoryBoards */ = {
