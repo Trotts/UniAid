@@ -222,9 +222,9 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addCourseViewController.donePickerTimeFor))
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeFor")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addCourseViewController.cancelPickerTimeFor))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeFor")
         
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
@@ -238,7 +238,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         sender.inputView = datePickerView
         sender.inputAccessoryView = toolBar
 
-        datePickerView.addTarget(self, action: #selector(addCourseViewController.handleFromTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: Selector("handleFromTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
     func handleFromTimePicker(sender: UIDatePicker) {
@@ -268,9 +268,9 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addCourseViewController.donePickerTimeTo))
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeTo")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addCourseViewController.cancelPickerTimeTo))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeTo")
         
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
@@ -285,7 +285,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         sender.inputView = datePickerView
         sender.inputAccessoryView = toolBar
 
-        datePickerView.addTarget(self, action: #selector(addCourseViewController.handleToTimePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        datePickerView.addTarget(self, action: Selector("handleToTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
        // timeToTextField.endEditing(true)
         
     }
@@ -562,9 +562,9 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         //
         
-        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: #selector(addCourseViewController.donePicker))
+        let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: #selector(addCourseViewController.cancelPicker))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelPicker")
 
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
