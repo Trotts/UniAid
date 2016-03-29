@@ -37,6 +37,14 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         dateFormatter.timeStyle = .ShortStyle
         dueDateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
+    
+    
+    
+    
+    
+    
+    
+    
     var emptylist = ["no courses"]
     var picker = UIPickerView()
     var returnCourses = [String]()
@@ -44,7 +52,8 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
-
+    
+    
     // returns the # of rows in each component..
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
        print("picker 1 first")
@@ -54,6 +63,8 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         else {
             return emptylist.count
         }
+        
+        
     }
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -63,6 +74,8 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         else {
            courseNameTextField.text =  emptylist[row]
         }
+      
+        
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
@@ -117,10 +130,18 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
             assignNameTextField.text = ""
             dueDateTextField.text = ""
             courseNameTextField.text = ""
+            
+            
+            
+            
+            
         }
         catch {
             print("there was a problem")
         }
+        
+        
+        
         
         //retrive data
         //do that by creating a request
@@ -145,6 +166,13 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
                     print(result.valueForKey("name")!)
                     print(result.valueForKey("dueDate")!)
                     print(result.valueForKey("course")!)
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                 }
             }
             
@@ -152,6 +180,15 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         catch {
             print("error fetch failed ")
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
     
     override func viewDidLoad() {
@@ -172,9 +209,9 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
          //
         
-        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addAssignViewController.donePicker))
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
-        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(addAssignViewController.cancelPicker))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
         
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
@@ -183,7 +220,16 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         courseNameTextField.inputView = picker
         courseNameTextField.inputAccessoryView = toolBar
+        
+
+        
+        
+        
+        
+        
     }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -222,6 +268,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
 
         
     }
+    
     
     //these two functions will handle the done and the cancel buttons on the courses picker
     func donePicker(){

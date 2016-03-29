@@ -24,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         buildingTitle.text = "Directions to \(buildingName)"
         NSUserDefaults.standardUserDefaults().removeObjectForKey("building")
         open.target = self.revealViewController()
-        open.action = #selector(SWRevealViewController.revealToggle(_:))
+        open.action = Selector("revealToggle:")
         
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
