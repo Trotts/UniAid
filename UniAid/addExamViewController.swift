@@ -26,7 +26,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         sender.inputView = datePickerView
         datePickerView.addTarget(self, action: #selector(addExamViewController.handleDatePicker(_:)), forControlEvents: UIControlEvents.ValueChanged)
-        
+
     }
     
     //function to handle time
