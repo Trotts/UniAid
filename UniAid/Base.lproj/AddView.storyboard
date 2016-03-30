@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cWO-Mr-pRy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cWO-Mr-pRy">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -572,8 +573,25 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="po6-gU-VxU">
+                                <rect key="frame" x="132" y="20" width="151" height="30"/>
+                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="View Assignments">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zJR-4O-fJ5">
+                                <rect key="frame" x="107" y="345" width="200" height="200"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zJR-4O-fJ5" secondAttribute="height" multiplier="15:8" constant="-175" id="aLo-a1-JRt"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="7CH-eV-8HA" appends="YES" id="Nrg-On-Lw7"/>
+                                </connections>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-Yj-DZV">
-                                <rect key="frame" x="74" y="426" width="267" height="30"/>
+                                <rect key="frame" x="74" y="572" width="267" height="30"/>
                                 <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Assignment">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -581,13 +599,6 @@
                                 <connections>
                                     <action selector="addAssignButton:" destination="XgK-hy-utf" eventType="touchUpInside" id="Ax6-Zr-qac"/>
                                 </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="po6-gU-VxU">
-                                <rect key="frame" x="132" y="20" width="151" height="30"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="View Assignments">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -598,10 +609,14 @@
                             <constraint firstItem="LZX-jE-G8A" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="JzT-k5-8bJ"/>
                             <constraint firstItem="mI7-dd-Bda" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="OpG-Io-Ol5"/>
                             <constraint firstItem="mI7-dd-Bda" firstAttribute="top" secondItem="W1I-V3-Js1" secondAttribute="bottom" constant="27" id="P4r-jS-hNt"/>
+                            <constraint firstItem="zJR-4O-fJ5" firstAttribute="centerX" secondItem="LZX-jE-G8A" secondAttribute="centerX" id="RY4-QK-JuV"/>
+                            <constraint firstItem="zJR-4O-fJ5" firstAttribute="centerX" secondItem="po6-gU-VxU" secondAttribute="centerX" id="TfO-55-lPb"/>
                             <constraint firstItem="W1I-V3-Js1" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="ZCA-s7-ZEr"/>
+                            <constraint firstItem="zJR-4O-fJ5" firstAttribute="top" secondItem="LZX-jE-G8A" secondAttribute="bottom" constant="8" symbolic="YES" id="d36-kJ-aME"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mI7-dd-Bda" secondAttribute="trailing" constant="53" id="dq0-yu-8Al"/>
-                            <constraint firstItem="1sU-Yj-DZV" firstAttribute="top" secondItem="LZX-jE-G8A" secondAttribute="bottom" constant="89" id="iWP-Ah-dmf"/>
+                            <constraint firstItem="1sU-Yj-DZV" firstAttribute="top" secondItem="LZX-jE-G8A" secondAttribute="bottom" constant="235" id="iWP-Ah-dmf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W1I-V3-Js1" secondAttribute="trailing" constant="53" id="o1Y-p7-FxN"/>
+                            <constraint firstItem="1sU-Yj-DZV" firstAttribute="top" secondItem="zJR-4O-fJ5" secondAttribute="bottom" constant="27" id="ppr-UF-Ov9"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LZX-jE-G8A" secondAttribute="trailing" constant="53" id="wKo-xV-3IV"/>
                             <constraint firstItem="W1I-V3-Js1" firstAttribute="top" secondItem="fEk-9M-PMr" secondAttribute="bottom" constant="178" id="yKc-wx-kxL"/>
                         </constraints>
@@ -611,9 +626,15 @@
                         <outlet property="assignNameTextField" destination="W1I-V3-Js1" id="Mxi-nJ-xdo"/>
                         <outlet property="courseNameTextField" destination="LZX-jE-G8A" id="AZI-vh-R8W"/>
                         <outlet property="dueDateTextField" destination="mI7-dd-Bda" id="khY-n9-azS"/>
+                        <outlet property="photoImageView" destination="zJR-4O-fJ5" id="Jrn-PB-Wze"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUa-3M-a63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="7CH-eV-8HA">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="XgK-hy-utf" id="H3s-Jp-Jn7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2866" y="786"/>
         </scene>
@@ -658,6 +679,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="defaultPhoto" width="540" height="540"/>
         <image name="menu" width="24" height="24"/>
     </resources>
 </document>
