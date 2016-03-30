@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="3xd-Er-pOJ" secondAttribute="trailing" constant="68" id="21D-Sw-vcp"/>
                             <constraint firstItem="Q5a-Kj-Njb" firstAttribute="top" secondItem="Vz8-0K-qNe" secondAttribute="bottom" constant="216" id="9pg-LY-Yla"/>
@@ -246,7 +246,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dueDateTextField:" destination="fEi-iH-oEf" eventType="editingDidEnd" id="z3g-Dl-4oU"/>
+                                    <action selector="dueDateTextField:" destination="fEi-iH-oEf" eventType="editingDidBegin" id="yKt-EP-fZA"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHq-5S-wXZ">
@@ -279,7 +279,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="5OD-Ke-5pY" secondAttribute="trailing" constant="53" id="4Qj-Xw-Kdh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2YN-5g-cx9" secondAttribute="trailing" constant="53" id="EnV-h1-vGs"/>
@@ -419,7 +419,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="timeToTextField:" destination="iHb-Dz-Ui5" eventType="editingDidEnd" id="QKD-O8-268"/>
+                                    <action selector="timeToTextField:" destination="iHb-Dz-Ui5" eventType="editingDidBegin" id="HJd-2G-Edg"/>
+                                    <outlet property="delegate" destination="iHb-Dz-Ui5" id="ArB-H7-BRh"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time From" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="25b-xf-ubc">
@@ -427,7 +428,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="timeFromTextField:" destination="iHb-Dz-Ui5" eventType="editingDidEnd" id="tLS-ru-mOT"/>
+                                    <action selector="timeFromTextField:" destination="iHb-Dz-Ui5" eventType="editingDidBegin" id="dcw-GV-Ji2"/>
+                                    <outlet property="delegate" destination="iHb-Dz-Ui5" id="RVB-fs-Jkh"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Days of the week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EBt-a4-ADV">
@@ -448,7 +450,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Vpw-AF-BrA" firstAttribute="leading" secondItem="iHm-rL-CKw" secondAttribute="trailing" constant="69" id="04p-vP-qor"/>
                             <constraint firstItem="Xle-26-EWB" firstAttribute="top" secondItem="hdA-mM-xNk" secondAttribute="bottom" constant="5" id="0AF-MM-gfK"/>
@@ -555,7 +557,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="dueDateTextField:" destination="XgK-hy-utf" eventType="editingDidEnd" id="8W5-hS-wM1"/>
+                                    <action selector="dueDateTextField:" destination="XgK-hy-utf" eventType="editingDidBegin" id="XhG-Zn-42c"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZX-jE-G8A">
@@ -588,7 +590,7 @@
                                 </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1sU-Yj-DZV" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="3e4-GG-n9p"/>
                             <constraint firstItem="LZX-jE-G8A" firstAttribute="top" secondItem="mI7-dd-Bda" secondAttribute="bottom" constant="22" id="Ec4-Ez-ahr"/>
@@ -623,7 +625,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="sectionIndexBackgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="hoq-kR-KHx">
                             <rect key="frame" x="0.0" y="64" width="414" height="97"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -636,7 +638,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="40"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.98101244929999998" blue="0.85716547840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

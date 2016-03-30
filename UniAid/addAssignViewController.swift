@@ -22,10 +22,31 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     @IBOutlet weak var dueDateTextField: UITextField!
     
     
+    
     @IBAction func dueDateTextField(sender: UITextField) {
+
+        //
+        //done and cancel button
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTime")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTime")
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+        
+        
+        
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         sender.inputView = datePickerView
+        sender.inputAccessoryView = toolBar
         datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         
     }
@@ -38,6 +59,14 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         dueDateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
     
+    func donePickerTime(){
+        dueDateTextField.resignFirstResponder()
+    }
+    
+    func cancelPickerTime(){
+        dueDateTextField.text = ""
+        dueDateTextField.resignFirstResponder()
+    }
     
     
     
@@ -56,7 +85,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     
     // returns the # of rows in each component..
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-       print("picker 1 first")
+        
         if returnCourses.count > 0 {
             return returnCourses.count
         }
@@ -79,9 +108,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        print("picker 3 first")
-        
+      
         if returnCourses.count > 0 {
             return returnCourses[row]
         }
@@ -116,23 +143,25 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         do {
             try context.save()
-            let alert = UIAlertController(title: "Assignment Added", message: "Assignment was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
-            let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
+            //inform the user that it has been saved successfully
+            let simpleAlert = UIAlertController(title: "Success", message: "Assignment was added", preferredStyle: UIAlertControllerStyle.Alert)
             
+            //show it
+            //showViewController(simpleAlert, sender: self);
+            self.presentViewController(simpleAlert, animated: true, completion: nil)
             
-            alert.addAction(confirmAdd)
-            
-            
-            showViewController(alert, sender: self)
+            //let it appear for two minutes
+            let delay = 2.0 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue(), {
+                simpleAlert.dismissViewControllerAnimated(true, completion: nil)
+            })
             
             //clear text fields
             assignNameTextField.text = ""
             dueDateTextField.text = ""
             courseNameTextField.text = ""
-            
-            
-            
             
             
         }
@@ -142,6 +171,9 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         
         
+        /************************************************/
+         /* For Testing purpose only, we retrieve the data */
+         /************************************************/
         
         //retrive data
         //do that by creating a request
@@ -167,12 +199,6 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
                     print(result.valueForKey("dueDate")!)
                     print(result.valueForKey("course")!)
                     
-                    
-                    
-                    
-                    
-                    
-                    
                 }
             }
             
@@ -181,13 +207,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
             print("error fetch failed ")
         }
         
-        
-        
-        
-        
-        
-        
-        
+    
         
     }
     
@@ -220,10 +240,6 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         
         courseNameTextField.inputView = picker
         courseNameTextField.inputAccessoryView = toolBar
-        
-
-        
-        
         
         
         
@@ -276,7 +292,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     func cancelPicker(){
-        //courseNameTextField.text = ""
+        courseNameTextField.text = ""
         courseNameTextField.resignFirstResponder()
     }
 
