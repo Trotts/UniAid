@@ -45,7 +45,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         
     }
-    
+    //
     //function to handle time
     func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
