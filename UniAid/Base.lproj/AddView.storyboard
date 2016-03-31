@@ -580,9 +580,10 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zJR-4O-fJ5">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zJR-4O-fJ5">
                                 <rect key="frame" x="107" y="345" width="200" height="200"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="zJR-4O-fJ5" secondAttribute="height" multiplier="1:1" id="0CS-Ee-P3s"/>
                                     <constraint firstAttribute="width" secondItem="zJR-4O-fJ5" secondAttribute="height" multiplier="15:8" constant="-175" id="aLo-a1-JRt"/>
                                 </constraints>
                             </imageView>
@@ -600,13 +601,17 @@
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1sU-Yj-DZV" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="3e4-GG-n9p"/>
+                            <constraint firstItem="zJR-4O-fJ5" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="87" id="AFk-ZY-j1X"/>
                             <constraint firstItem="LZX-jE-G8A" firstAttribute="top" secondItem="mI7-dd-Bda" secondAttribute="bottom" constant="22" id="Ec4-Ez-ahr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1sU-Yj-DZV" secondAttribute="trailing" constant="53" id="GaL-q0-Dd1"/>
                             <constraint firstItem="LZX-jE-G8A" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="JzT-k5-8bJ"/>
+                            <constraint firstItem="zJR-4O-fJ5" firstAttribute="top" secondItem="LZX-jE-G8A" secondAttribute="bottom" constant="8" id="Mbh-Sn-TNv"/>
                             <constraint firstItem="mI7-dd-Bda" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="OpG-Io-Ol5"/>
                             <constraint firstItem="mI7-dd-Bda" firstAttribute="top" secondItem="W1I-V3-Js1" secondAttribute="bottom" constant="27" id="P4r-jS-hNt"/>
                             <constraint firstItem="W1I-V3-Js1" firstAttribute="leading" secondItem="TLX-lm-g7j" secondAttribute="leadingMargin" constant="54" id="ZCA-s7-ZEr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mI7-dd-Bda" secondAttribute="trailing" constant="53" id="dq0-yu-8Al"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zJR-4O-fJ5" secondAttribute="trailing" constant="87" id="gBf-0Z-Qg8"/>
+                            <constraint firstItem="1sU-Yj-DZV" firstAttribute="top" secondItem="zJR-4O-fJ5" secondAttribute="bottom" constant="27" id="hIA-gV-dJh"/>
                             <constraint firstItem="1sU-Yj-DZV" firstAttribute="top" secondItem="LZX-jE-G8A" secondAttribute="bottom" constant="235" id="iWP-Ah-dmf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W1I-V3-Js1" secondAttribute="trailing" constant="53" id="o1Y-p7-FxN"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LZX-jE-G8A" secondAttribute="trailing" constant="53" id="wKo-xV-3IV"/>
