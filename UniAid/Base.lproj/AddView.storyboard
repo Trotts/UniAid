@@ -582,10 +582,14 @@
                             </button>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="infinite" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="zJR-4O-fJ5">
                                 <rect key="frame" x="107" y="345" width="200" height="200"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="zJR-4O-fJ5" secondAttribute="height" multiplier="1:1" id="0CS-Ee-P3s"/>
                                     <constraint firstAttribute="width" secondItem="zJR-4O-fJ5" secondAttribute="height" multiplier="15:8" constant="-175" id="aLo-a1-JRt"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Tn1-17-N6U" appends="YES" id="928-Z4-E9f"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-Yj-DZV">
                                 <rect key="frame" x="74" y="572" width="267" height="30"/>
@@ -623,9 +627,15 @@
                         <outlet property="assignNameTextField" destination="W1I-V3-Js1" id="Mxi-nJ-xdo"/>
                         <outlet property="courseNameTextField" destination="LZX-jE-G8A" id="AZI-vh-R8W"/>
                         <outlet property="dueDateTextField" destination="mI7-dd-Bda" id="khY-n9-azS"/>
+                        <outlet property="photoImageView" destination="zJR-4O-fJ5" id="3k5-jZ-NUe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DUa-3M-a63" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Tn1-17-N6U">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="XgK-hy-utf" id="PNW-2Z-GGj"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2866" y="786"/>
         </scene>
