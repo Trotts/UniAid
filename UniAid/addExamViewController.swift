@@ -20,15 +20,32 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     @IBOutlet weak var dueDateTextField: UITextField!
     
-    
     @IBAction func dueDateTextField(sender: UITextField) {
+        
+        //done and cancel button
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.Default
+        toolBar.translucent = true
+        toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTime")
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTime")
+        
+        
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.userInteractionEnabled = true
+    
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.DateAndTime
         sender.inputView = datePickerView
+        sender.inputAccessoryView = toolBar
+
         datePickerView.addTarget(self, action: Selector("handleDatePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         
     }
-    
+    //
     //function to handle time
     func handleDatePicker(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
@@ -37,6 +54,14 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         dueDateTextField.text = dateFormatter.stringFromDate(sender.date)
     }
     
+    func donePickerTime(){
+        dueDateTextField.resignFirstResponder()
+    }
+    
+    func cancelPickerTime(){
+        dueDateTextField.text = ""
+        dueDateTextField.resignFirstResponder()
+    }
 
         
     
@@ -48,8 +73,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         getCourses()
         picker.delegate = self
         picker.dataSource = self
-        
-         //
+  
         
         //the following will be used to display the courses picker view with a "done" and a "cancel" buttons
         let toolBar = UIToolbar()
@@ -66,15 +90,11 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
-        
+
         
         courseNameTextField.inputView = picker
         courseNameTextField.inputAccessoryView = toolBar
-        
-        
-       
-        
-        
+     
         
     }
     
@@ -98,7 +118,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     
     // returns the # of rows in each component..
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        print("picker 1 first")
+        
         if returnCourses.count > 0 {
             return returnCourses.count
         }
@@ -121,8 +141,6 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        print("picker 3 first")
         
         if returnCourses.count > 0 {
             return returnCourses[row]
@@ -164,15 +182,21 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         do {
             try context.save()
-            let alert = UIAlertController(title: "Exam Added", message: "Exam was added Successfully", preferredStyle: UIAlertControllerStyle.Alert)
             
-            let confirmAdd = UIAlertAction(title: "Great", style: UIAlertActionStyle.Cancel , handler: nil)
+            //inform the user that it has been saved successfully
+            let simpleAlert = UIAlertController(title: "Success", message: "Exam was added", preferredStyle: UIAlertControllerStyle.Alert)
             
+            //show it
+            //showViewController(simpleAlert, sender: self);
+            self.presentViewController(simpleAlert, animated: true, completion: nil)
             
-            alert.addAction(confirmAdd)
-            
-            
-            showViewController(alert, sender: self)
+            //let it appear for two minutes
+            let delay = 2.0 * Double(NSEC_PER_SEC)
+            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            dispatch_after(time, dispatch_get_main_queue(), {
+                simpleAlert.dismissViewControllerAnimated(true, completion: nil)
+            })
+
             
             //clear text fields
             examNameTextField.text = ""
@@ -190,7 +214,11 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         
         
         
+        /************************************************/
+        /* For Testing purpose only, we retrieve the data */
+        /************************************************/
 
+         
         //retrive data
         //do that by creating a request
         let request = NSFetchRequest(entityName: "Exam")
@@ -216,11 +244,6 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
                     print(result.valueForKey("course")!)
                     
                     
-                    
-                    
-                    
-                    
-                    
                 }
             }
             
@@ -229,16 +252,11 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
             print("error fetch failed ")
         }
         
-
-        
-        
-        
-        
-        
-        
         
     }
-    //return courses
+    
+    
+    //function to return courses
     func getCourses() {
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -277,7 +295,7 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
     
     func cancelPicker(){
-        //courseNameTextField.text = ""
+        courseNameTextField.text = ""
         courseNameTextField.resignFirstResponder()
     }
 
