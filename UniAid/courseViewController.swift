@@ -47,16 +47,15 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     do
     {
       let resault : NSArray = try context.executeFetchRequest(request)
-      if(resault.count > 0)
-      {
-        for res in resault
-        {
-          courseInfo.append(res.valueForKey("name") as! String)
-          courseInfo.append(res.valueForKey("number") as! String)
-          courseInfo.append(res.valueForKey("profName") as! String)
-          courseInfo.append(res.valueForKey("profEmail") as! String)
-          courseInfo.append(res.valueForKey("location") as! String)
-        }
+      if(resault.count > 0){
+        
+        let courseData = resault [0] as! NSManagedObject
+        
+        courseInfo.append(courseData.valueForKey("name") as! String)
+        courseInfo.append(courseData.valueForKey("number") as! String)
+        courseInfo.append(courseData.valueForKey("profName") as! String)
+        courseInfo.append(courseData.valueForKey("profEmail") as! String)
+        courseInfo.append(courseData.valueForKey("location") as! String)
       }
       else
       {
@@ -83,4 +82,6 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     
     return cell
   }
+
+
 }
