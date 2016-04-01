@@ -3,6 +3,7 @@
 //  Project-UniAid
 //
 //  Created by Amr Zokari on 2016-03-13.
+//  Edited by Loai L. Felemban
 //  Copyright © 2016 Amr Zokari. All rights reserved.
 //
 
@@ -16,26 +17,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
   @IBOutlet var open: UIBarButtonItem!
   @IBOutlet var details: UITableView!
  
-  let ReuseIdentifierCourseCell = "CourseInfoCell"
-  var managedObjectContext: NSManagedObjectContext!
-  
-  lazy var fetchedResultsController: NSFetchedResultsController = {
-    // initialize fetch request
-    let fetchRequest = NSFetchRequest(entityName: "Course")
-    
-    // Add Sort
-    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-    
-    fetchRequest.sortDescriptors = [sortDescriptor]
-    
-    // init fetch result
-    let fetchResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: self.managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
-    
-    // Configure
-    fetchResultsController.delegate = self
-    
-    return fetchResultsController
-  }()
+  var courseInfo = [String]()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,13 +30,6 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
         open.action = Selector("revealToggle:")
         self.details.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-   
-    do {
-      try self.fetchedResultsController.performFetch()
-    } catch {
-      let fetchError = error as NSError
-      print("\(fetchError), \(fetchError.userInfo)")
-    }
   }
 
   override func didReceiveMemoryWarning() {
@@ -64,41 +39,48 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
 
   func getData(){
     let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
-    managedObjectContext = appDel.managedObjectContext
+    let context: NSManagedObjectContext = appDel.managedObjectContext
+    
+    
+    let request = NSFetchRequest(entityName: "Course")
+    request.returnsObjectsAsFaults = false
+    do
+    {
+      let resault : NSArray = try context.executeFetchRequest(request)
+      if(resault.count > 0)
+      {
+        for res in resault
+        {
+          courseInfo.append(res.valueForKey("name") as! String)
+          courseInfo.append(res.valueForKey("number") as! String)
+          courseInfo.append(res.valueForKey("profName") as! String)
+          courseInfo.append(res.valueForKey("profEmail") as! String)
+          courseInfo.append(res.valueForKey("location") as! String)
+        }
+      }
+      else
+      {
+        print("error1")
+      }
+    }
+    catch {
+      print("error fetch failed ")
+    }
   }
 
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    if let sections = fetchedResultsController.sections {
-      return sections.count
-    }
-    return 0
+    return 1
   }
   
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    if let sections = fetchedResultsController.sections {
-      let currentSection = sections[section]
-      return currentSection.numberOfObjects
-    }
-    return 0
+    return courseInfo.count
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.details.dequeueReusableCellWithIdentifier("CourseInfoCell", forIndexPath: indexPath) as! CourseInfo
    
-    configureCell(cell, atIndexPath: indexPath)
+    cell.courseInfo.text = courseInfo[indexPath.row]
     
     return cell
-  }
-  
-  func configureCell(cell: CourseInfo, atIndexPath indexPath: NSIndexPath) {
-    let data = fetchedResultsController.objectAtIndexPath(indexPath)
-    
-    if let courseName = data.valueForKey("name") as? String {
-      cell.name.text = courseName
-    }
-    
-    if let courseNumber = data.valueForKey("number") as? String {
-      cell.number.text = courseNumber
-    }
   }
 }

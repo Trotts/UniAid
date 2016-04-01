@@ -73,15 +73,15 @@ class displayCoursesTableViewController: UITableViewController {
 //    }
  
 //  performSegueWithIdentifier("segue", sender: self)
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-    if segue.identifier == "segue"{
-      let courseDetailView = UIStoryboard(name: "CourseDetailsView", bundle: NSBundle.mainBundle())
-      let destination = courseDetailView.instantiateViewControllerWithIdentifier("CourseDetailView")
-      navigationController?.pushViewController(destination, animated: true)
-    }
-    
-  }
-    
+//  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+//    if segue.identifier == "segue"{
+//      let courseDetailView = UIStoryboard(name: "CourseDetailsView", bundle: NSBundle.mainBundle())
+//      let destination = courseDetailView.instantiateViewControllerWithIdentifier("CourseDetailView")
+//      navigationController?.pushViewController(destination, animated: true)
+//    }
+//    
+//  }
+  
     //return courses
     func getCourses() {
         

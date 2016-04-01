@@ -9,23 +9,19 @@
 import UIKit
 
 class CourseInfo: UITableViewCell {
-    @IBOutlet var name: UILabel!
-  @IBOutlet var number: UILabel!
+  @IBOutlet var courseInfo: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let view = UIView()
-        view.backgroundColor = UIColor.orangeColor()
-        selectedBackgroundView = view
-        
-        
-    }
+  override func awakeFromNib() {
+    super.awakeFromNib()
+    let view = UIView()
+    view.backgroundColor = UIColor.orangeColor()
+    selectedBackgroundView = view
+  }
     
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+  override func setSelected(selected: Bool, animated: Bool) {
+    super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
-    }
-
+    // Configure the view for the selected state
+  }
 }

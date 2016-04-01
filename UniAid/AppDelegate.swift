@@ -24,22 +24,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let naviBgImage:UIImage = UIImage(named: "naviBgImage.png")!
 //        UINavigationBar.appearance().setBackgroundImage(naviBgImage, forBarMetrics: .Default)
       
-//      // fetch the course storyboard
-//      let courseInfoStoryboard = UIStoryboard(name: "CourseDetailsView", bundle: nil)
-//      
-//      // Instantiate Root Navi Controller
-//      let rootNavigationController = courseInfoStoryboard.instantiateViewControllerWithIdentifier("CourseDetailView")
-//      
-//      // Configure View Controler
-//      let courseInfoViewController = (rootNavigationController as! SWRevealViewController).frontViewController as! courseViewController
-//      
-////      if let courseInfoViewController = courseInfoViewController {
-//      courseInfoViewController.managedObjectContext = self.managedObjectContext
-////      }
-//      
-//      // Configure Window
-//      window?.rootViewController = rootNavigationController
-      
         return true
     }
     
