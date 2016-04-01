@@ -333,11 +333,23 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
      /*******************************************************************************/
     
     func textFieldDidBeginEditing(textField: UITextField) {
-        animateViewMoving(true, moveValue: 100)
+        if (textField == profNameTextField || textField == profEmailTextField) {
+            animateViewMoving(true, moveValue: 130)
+        }
+        
+        if (textField == timeToTextField){
+            animateViewMoving(true, moveValue: 30)
+        }
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        animateViewMoving(false, moveValue: 100)
+        if (textField == profNameTextField || textField == profEmailTextField) {
+            animateViewMoving(false, moveValue: 130)
+        }
+        
+        if (textField == timeToTextField){
+            animateViewMoving(false, moveValue: 30)
+        }
     }
 
 
@@ -353,9 +365,17 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     
+    
     /***************************************************************/
    
     
+    //function to handle keyboard disappearing
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+    }
     
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -590,8 +610,6 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         picker.delegate = self
         picker.dataSource = self
        
-        
-        
         //the following will be used to display the buildings picker view with a "done" and a "cancel" buttons
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default

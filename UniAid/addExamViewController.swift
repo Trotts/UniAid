@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate   {
+class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate  {
     
     
     @IBOutlet weak var examNameTextField: UITextField!
@@ -64,7 +64,13 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     }
 
         
-    
+    //Function to handle keyboard disappearing
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
