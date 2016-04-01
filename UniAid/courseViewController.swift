@@ -49,7 +49,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
       let resault : NSArray = try context.executeFetchRequest(request)
       if(resault.count > 0){
         
-        let courseData = resault [0] as! NSManagedObject
+        let courseData = resault [NSUserDefaults.standardUserDefaults().valueForKey("rowNum") as! Int ] as! NSManagedObject
         
         courseInfo.append(courseData.valueForKey("name") as! String)
         courseInfo.append(courseData.valueForKey("number") as! String)
