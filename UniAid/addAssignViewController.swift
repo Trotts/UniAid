@@ -10,7 +10,7 @@
 import UIKit
 import CoreData
 
-class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
    
     @IBOutlet weak var assignNameTextField: UITextField!
@@ -124,6 +124,16 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         }
     }
 
+    
+    //Function to handle keyboard disappearing
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+        
+    }
+    
+    
     // Functions for Add Button
     @IBAction func addAssignButton(sender: AnyObject) {
         
