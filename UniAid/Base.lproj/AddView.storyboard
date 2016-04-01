@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -661,6 +662,9 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="aLv-cB-gPn" kind="presentation" identifier="SegueAddCoursesView" id="FCC-Vl-lm0"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -677,6 +681,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JA-jK-16G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3389" y="-967"/>
+        </scene>
+        <!--CourseDetailsView-->
+        <scene sceneID="Jjz-tH-YEQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="aLv-cB-gPn" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MFC-ze-pFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3767.5" y="-1195"/>
         </scene>
     </scenes>
     <resources>

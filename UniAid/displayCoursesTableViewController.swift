@@ -12,7 +12,7 @@ import CoreData
 class displayCoursesTableViewController: UITableViewController {
     
 
-    
+   let ReuseIdentifierCourseInfo = "CourseInfoCell"
     
    var returnCourses = [String]()
     
@@ -65,62 +65,23 @@ class displayCoursesTableViewController: UITableViewController {
         
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.performSegueWithIdentifier("viewCourse", sender: self)
-
+//    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//      let courseDetailView = UIStoryboard(name: "CourseDetailsView", bundle: NSBundle.mainBundle())
+//      let destination = courseDetailView.instantiateViewControllerWithIdentifier("CourseDetailView")
+//      navigationController?.pushViewController(destination, animated: true)
+//
+//    }
+ 
+//  performSegueWithIdentifier("segue", sender: self)
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+    if segue.identifier == "segue"{
+      let courseDetailView = UIStoryboard(name: "CourseDetailsView", bundle: NSBundle.mainBundle())
+      let destination = courseDetailView.instantiateViewControllerWithIdentifier("CourseDetailView")
+      navigationController?.pushViewController(destination, animated: true)
     }
     
-    /*
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print(returnCourses)
-        
-        
-        
-        if (segue.identifier == "viewCourse"){
-            var newViewController: viewCourseDetails = segue.destinationViewController as! viewCourseDetails
-            // let indexPath = self.tableView.indexPathForSelectedRow!
-            
-           // newViewController.titleTry = "amr"
-            
-            
-            
-            
-            
-            // indexPath is set to the path that was tapped
-            
-           // let indexPath = self.tableView.indexPathForSelectedRow!
-            print("index path")
-            //print(indexPath)
-            // titleString is set to the title at the row in the objects array.
-            
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-            
-                let titleString = self.returnCourses[indexPath.row]
-                newViewController.titleTry = titleString
-                self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-            }
-           /* else {
-                let titleString = "amr"
-                newViewController.titleTry = titleString
-                self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-
-            }
-          */
-            
-            
-            // the titleStringViaSegue property of NewViewController is set.
-            //newViewController.titleTry = titleString
-           // self.tableView.deselectRowAtIndexPath(indexPath, animated: true)
-            
-
-            
-            
-            
-        }
-    }
+  }
     
-    */
     //return courses
     func getCourses() {
         
