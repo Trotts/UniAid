@@ -36,6 +36,9 @@
 		3DFAFD3B1CA1F64D00BB2FD7 /* courseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DFAFD3A1CA1F64D00BB2FD7 /* courseViewController.swift */; };
 		7C763C2B1CAE297D00B5D544 /* CourseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C763C2A1CAE297D00B5D544 /* CourseInfo.swift */; };
 		7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */; };
+		7CCF5E051CAF40C5009FC651 /* editCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E041CAF40C5009FC651 /* editCourse.swift */; };
+		7CCF5E071CAF6BE8009FC651 /* assignmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */; };
+		7CCF5E091CAF6BFD009FC651 /* examsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */; };
 		7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD51CA496A000EB1705 /* NotesViewController.swift */; };
 		7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD61CA496A000EB1705 /* TableViewController.swift */; };
 		7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E114AD91CA496BB00EB1705 /* Notes.storyboard */; };
@@ -96,6 +99,9 @@
 		3DFAFD3A1CA1F64D00BB2FD7 /* courseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseViewController.swift; sourceTree = "<group>"; };
 		7C763C2A1CAE297D00B5D544 /* CourseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseInfo.swift; sourceTree = "<group>"; };
 		7CCAD7AE1C9E124C0065DEEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CourseDetailsView.storyboard; sourceTree = "<group>"; };
+		7CCF5E041CAF40C5009FC651 /* editCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editCourse.swift; sourceTree = "<group>"; };
+		7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assignmentsListViewController.swift; sourceTree = "<group>"; };
+		7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = examsListViewController.swift; sourceTree = "<group>"; };
 		7E114AD51CA496A000EB1705 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		7E114AD61CA496A000EB1705 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E114AD91CA496BB00EB1705 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
@@ -243,6 +249,9 @@
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
 				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
+				7CCF5E041CAF40C5009FC651 /* editCourse.swift */,
+				7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */,
+				7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -396,9 +405,12 @@
 				3DFAFD3B1CA1F64D00BB2FD7 /* courseViewController.swift in Sources */,
 				3DDAD4551CA5D67000C11372 /* addExamViewController.swift in Sources */,
 				3DFAFD391CA1F63B00BB2FD7 /* Project_UniAid.xcdatamodeld in Sources */,
+				7CCF5E071CAF6BE8009FC651 /* assignmentsListViewController.swift in Sources */,
 				3DDAD4531CA5D32B00C11372 /* AddViewController.swift in Sources */,
+				7CCF5E051CAF40C5009FC651 /* editCourse.swift in Sources */,
 				7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */,
 				24119A451C9C432800843F96 /* MapViewController.swift in Sources */,
+				7CCF5E091CAF6BFD009FC651 /* examsListViewController.swift in Sources */,
 				3DDAD45B1CA5DB6A00C11372 /* displayCoursesTableViewController.swift in Sources */,
 				3DDAD4571CA5D85A00C11372 /* addCourseViewController.swift in Sources */,
 				7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */,

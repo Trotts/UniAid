@@ -1,33 +1,25 @@
 //
-//  displayCoursesTableViewController.swift
-//  Project-UniAid
+//  examsListViewController.swift
+//  UniAid
 //
-//  Created by Amr Zokari on 2016-03-24.
-//  Copyright © 2016 Amr Zokari. All rights reserved.
+//  Created by Loai L. Felemban on 2016-04-01.
+//  Copyright © 2016 igor epshtein. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class displayCoursesTableViewController: UITableViewController {
+class ExamsListViewController: UITableViewController {
     
-   var returnCourses = [String]()
+   var returnExams = [String]()
     
     //var returnCourses = ["Apple", "oranage"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       getCourses()
-        //picker.delegate = self
-        //picker.dataSource = self
-        
-        
-        
-        //courseLocationTextField.inputView = picker
-        
-        
-        
+       getExams()
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,23 +34,20 @@ class displayCoursesTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
-        
-        
-        
-        
-        if returnCourses.count > 0 {
-            cell.textLabel?.text = returnCourses[indexPath.row]
+      
+        if returnExams.count > 0 {
+            cell.textLabel?.text = returnExams[indexPath.row]
         }
         else {
-            cell.textLabel?.text = "No courses to display"
+            cell.textLabel?.text = "No Exams to display"
         }
         
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if returnCourses.count > 0 {
-            return returnCourses.count
+        if returnExams.count > 0 {
+            return returnExams.count
         }
         else {
             return 1
@@ -67,7 +56,7 @@ class displayCoursesTableViewController: UITableViewController {
     }
     
     //return courses
-    func getCourses() {
+    func getExams() {
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -77,18 +66,18 @@ class displayCoursesTableViewController: UITableViewController {
         
         //retrive data
         //do that by creating a request
-        let request = NSFetchRequest(entityName: "Course")
+        let request = NSFetchRequest(entityName: "Exam")
         request.returnsObjectsAsFaults = false
         
         do {
             
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
-                
-                for result in results as! [NSManagedObject] {
-                    returnCourses.append(result.valueForKey("name") as! String)
-                    
-                }
+              let examData = results [NSUserDefaults.standardUserDefaults().valueForKey("rowNum") as! Int ] as! NSManagedObject
+              
+              returnExams.append(examData.valueForKey("course") as! String)
+              returnExams.append(examData.valueForKey("dueDate") as! String)
+              returnExams.append(examData.valueForKey("name") as! String)
             }
             
         }
@@ -96,13 +85,5 @@ class displayCoursesTableViewController: UITableViewController {
             print("error fetch failed ")
         }
         
-        
     }
-    
-
-    
-    
-    
-
-
 }

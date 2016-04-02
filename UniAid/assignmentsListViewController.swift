@@ -1,33 +1,23 @@
 //
-//  displayCoursesTableViewController.swift
-//  Project-UniAid
+//  assignmentsListViewController.swift
+//  UniAid
 //
-//  Created by Amr Zokari on 2016-03-24.
-//  Copyright © 2016 Amr Zokari. All rights reserved.
+//  Created by Loai L. Felemban on 2016-04-01.
+//  Copyright © 2016 igor epshtein. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class displayCoursesTableViewController: UITableViewController {
+class AssignmentListViewController: UITableViewController {
     
-   var returnCourses = [String]()
-    
-    //var returnCourses = ["Apple", "oranage"]
+   var returnAssignments = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-       getCourses()
-        //picker.delegate = self
-        //picker.dataSource = self
-        
-        
-        
-        //courseLocationTextField.inputView = picker
-        
-        
-        
+       getAssignments()
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -46,19 +36,19 @@ class displayCoursesTableViewController: UITableViewController {
         
         
         
-        if returnCourses.count > 0 {
-            cell.textLabel?.text = returnCourses[indexPath.row]
+        if returnAssignments.count > 0 {
+            cell.textLabel?.text = returnAssignments[indexPath.row]
         }
         else {
-            cell.textLabel?.text = "No courses to display"
+            cell.textLabel?.text = "No Assignments to display"
         }
         
         return cell
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if returnCourses.count > 0 {
-            return returnCourses.count
+        if returnAssignments.count > 0 {
+            return returnAssignments.count
         }
         else {
             return 1
@@ -67,7 +57,7 @@ class displayCoursesTableViewController: UITableViewController {
     }
     
     //return courses
-    func getCourses() {
+    func getAssignments() {
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
@@ -77,18 +67,19 @@ class displayCoursesTableViewController: UITableViewController {
         
         //retrive data
         //do that by creating a request
-        let request = NSFetchRequest(entityName: "Course")
+        let request = NSFetchRequest(entityName: "Assignment")
         request.returnsObjectsAsFaults = false
         
         do {
             
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
-                
-                for result in results as! [NSManagedObject] {
-                    returnCourses.append(result.valueForKey("name") as! String)
-                    
-                }
+              
+              let assignmentData = results [NSUserDefaults.standardUserDefaults().valueForKey("rowNum") as! Int ] as! NSManagedObject
+              
+              returnAssignments.append(assignmentData.valueForKey("course") as! String)
+              returnAssignments.append(assignmentData.valueForKey("dueDate") as! String)
+              returnAssignments.append(assignmentData.valueForKey("name") as! String)
             }
             
         }
@@ -98,11 +89,4 @@ class displayCoursesTableViewController: UITableViewController {
         
         
     }
-    
-
-    
-    
-    
-
-
 }

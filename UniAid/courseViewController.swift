@@ -79,6 +79,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     let cell = self.details.dequeueReusableCellWithIdentifier("CourseInfoCell", forIndexPath: indexPath) as! CourseInfo
    
     cell.courseInfo.text = courseInfo[indexPath.row]
+    cell.selectionStyle = UITableViewCellSelectionStyle.None
     
     return cell
   }
