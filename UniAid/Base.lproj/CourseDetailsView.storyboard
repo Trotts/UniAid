@@ -140,7 +140,7 @@
                         <color key="backgroundColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.80483450469999995" blue="0.37578036809999998" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="hbB-Ye-jXe">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="hbB-Ye-jXe">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hbB-Ye-jXe" id="F2i-qb-WrM">
