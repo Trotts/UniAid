@@ -184,7 +184,7 @@
                         <color key="backgroundColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.96267777681350708" green="0.85110825300216675" blue="0.037387195974588394" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="M0k-8J-m2i">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="M0k-8J-m2i">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="M0k-8J-m2i" id="A0S-Iz-45W">
@@ -251,10 +251,10 @@
             </objects>
             <point key="canvasLocation" x="1137.5" y="-775"/>
         </scene>
-        <!--CourseDetailsView-->
+        <!--AddView-->
         <scene sceneID="gV0-LS-kEz">
             <objects>
-                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="XDZ-Kh-0mm" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddView" id="XDZ-Kh-0mm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQ5-RB-rgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1118.5" y="-677"/>
