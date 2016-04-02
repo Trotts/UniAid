@@ -34,7 +34,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Notes" id="zxc-S4-Zj6">
+                    <navigationItem key="navigationItem" title="Your Notes" id="zxc-S4-Zj6">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="cKW-qe-91f"/>
                         <barButtonItem key="rightBarButtonItem" image="plusbutton" id="XDS-RO-SrK">
                             <connections>
@@ -147,7 +147,7 @@
                         <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Home" id="IgC-jZ-0di">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Calendar" id="IgC-jZ-0di">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IgC-jZ-0di" id="V5M-Hk-ejQ">
@@ -160,7 +160,7 @@
                                     <segue destination="lyR-A6-OGr" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Ch6-ix-xz4"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Map" id="Wr5-bG-TN3">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="Wr5-bG-TN3">
                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wr5-bG-TN3" id="JFe-EY-5im">
@@ -169,8 +169,11 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="sv5-to-zbf" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Kea-oj-V3U"/>
+                                </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notes" id="fsN-3Y-jiY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="fsN-3Y-jiY">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fsN-3Y-jiY" id="v1w-Z9-VIf">
@@ -179,25 +182,9 @@
                                     <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Record" id="Roq-JB-5Sn">
-                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Roq-JB-5Sn" id="Akw-zj-Nlm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="u7h-FN-ahS">
-                                <rect key="frame" x="0.0" y="204" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u7h-FN-ahS" id="FCu-ug-AnX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="ofa-3x-QpD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="sZy-cd-28d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -218,6 +205,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thI-Fi-Bst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-440" y="-477"/>
+        </scene>
+        <!--Notes-->
+        <scene sceneID="Lx6-fi-vm0">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Notes" id="sv5-to-zbf" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9om-KZ-YXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-437" y="-434"/>
+        </scene>
+        <!--CourseDetailsView-->
+        <scene sceneID="Cpb-2m-GB1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="ofa-3x-QpD" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rpg-jz-Iha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-398" y="-385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PgD-kP-DEq">
