@@ -58,6 +58,14 @@
             </objects>
             <point key="canvasLocation" x="1766" y="225"/>
         </scene>
+        <!--CourseDetailsView-->
+        <scene sceneID="dh2-o5-WVj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="7qX-2M-PWp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5n-DV-3vI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771.5" y="324"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="Y6S-ep-j2v">
             <objects>
@@ -104,6 +112,7 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="courseName" destination="ISJ-2h-W4n" id="b2N-HP-DfI"/>
+                                            <segue destination="7qX-2M-PWp" kind="custom" identifier="mainDit" customClass="SWRevealViewControllerSeguePushController" id="byx-ox-l8u"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
