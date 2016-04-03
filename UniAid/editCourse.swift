@@ -365,6 +365,8 @@ class EditCourseViewController: UIViewController, UIPickerViewDataSource, UIPick
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
       
+        buildings.sortInPlace()
+        
         showInfo()
         picker.delegate = self
         picker.dataSource = self
