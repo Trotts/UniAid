@@ -223,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9q-wQ-Wbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-1065"/>
+            <point key="canvasLocation" x="1763" y="-1065"/>
         </scene>
         <!--Main-->
         <scene sceneID="aAb-vM-bxt">
@@ -231,7 +231,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="0SM-Jx-3am" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHe-xk-7ZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="-1379"/>
+            <point key="canvasLocation" x="2126" y="-1387"/>
         </scene>
         <!--Notes-->
         <scene sceneID="pgh-hy-edR">
@@ -239,7 +239,7 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="DGA-Pf-Y6t" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MGw-Ck-yuT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2131.5" y="-1220"/>
+            <point key="canvasLocation" x="2126" y="-1336"/>
         </scene>
         <!--AddView-->
         <scene sceneID="Ez8-ew-Q2w">
@@ -247,7 +247,7 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="oJD-pe-dah" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdB-1P-ctS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2163" y="-1153"/>
+            <point key="canvasLocation" x="2138" y="-1293"/>
         </scene>
         <!--Edit Course View Controller-->
         <scene sceneID="JfH-bF-a3E">
@@ -488,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMZ-ZF-ooj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3089" y="-897"/>
+            <point key="canvasLocation" x="3003" y="-893"/>
         </scene>
         <!--Exams List View Controller-->
         <scene sceneID="heV-dK-Nbz">
@@ -589,7 +589,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg5-Nu-Yj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3567" y="-155"/>
+            <point key="canvasLocation" x="3484" y="-155"/>
         </scene>
     </scenes>
     <resources>
