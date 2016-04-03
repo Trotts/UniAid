@@ -108,10 +108,10 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
             animation.layer.cornerRadius = 12
             self.animation.layer.masksToBounds = true
             todayLabel.text="No courses for today!"
-            let imageData = NSData(contentsOfURL: NSBundle.mainBundle().URLForResource("student_happy_with_te_a_ha", withExtension: "gif")!)
+            let imageData = NSData(contentsOfURL: NSBundle.mainBundle().URLForResource("smile", withExtension: "gif")!)
             let imageGif = UIImage.gifWithData(imageData!)
             let imageView = UIImageView(image: imageGif)
-            imageView.frame = CGRect(x: 0.0, y: 0.0, width: 414.0, height: 402.0)
+            imageView.frame = CGRect(x: 60.0, y: 0.0, width: 300.0, height: 402.0)
             animation.addSubview(imageView)
         }
         var tempIndex = 0
