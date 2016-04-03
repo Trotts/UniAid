@@ -400,6 +400,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        buildings.sortInPlace()
         //Create Builder Picker
         picker.delegate = self
         picker.dataSource = self
