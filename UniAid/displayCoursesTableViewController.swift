@@ -77,6 +77,7 @@ class displayCoursesTableViewController: UITableViewController {
         }
     }
   
+  // Delete Button Slide
   override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
     if editingStyle == UITableViewCellEditingStyle.Delete{
       print("Delete this")
