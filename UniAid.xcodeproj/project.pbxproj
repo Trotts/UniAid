@@ -19,13 +19,13 @@
 		241406401C6BC0FF00DD19DF /* UniAidTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414063F1C6BC0FF00DD19DF /* UniAidTests.swift */; };
 		2414064B1C6BC0FF00DD19DF /* UniAidUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */; };
 		246A28FF1CB142FC00FF718E /* gifFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 246A28FE1CB142FC00FF718E /* gifFramework.swift */; };
-		246A29011CB1430600FF718E /* student_happy_with_te_a_ha.gif in Resources */ = {isa = PBXBuildFile; fileRef = 246A29001CB1430600FF718E /* student_happy_with_te_a_ha.gif */; };
 		24A816A81CA1A58800EE4705 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A816A71CA1A58800EE4705 /* Course.swift */; };
 		24AAE6D31CA5CCEE00E44EC3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AAE6D21CA5CCEE00E44EC3 /* UIKit.framework */; };
 		24B0FEDD1CA1B250003D4F8E /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDC1CA1B250003D4F8E /* Building.swift */; };
 		24B0FEDF1CA1B272003D4F8E /* Cordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */; };
 		24B8516E1CA7542900541B16 /* DirectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B8516D1CA7542900541B16 /* DirectionCell.swift */; };
 		24EAF1CC1CA23F63005F5B31 /* CourceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */; };
+		24F5F9881CB1B9B3005B3AB4 /* smile.gif in Resources */ = {isa = PBXBuildFile; fileRef = 24F5F9871CB1B9B3005B3AB4 /* smile.gif */; };
 		24FCC2C61C971BFA0041D492 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */; };
 		24FCC2C81C971F750041D492 /* BackTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24FCC2C71C971F750041D492 /* BackTableVC.swift */; };
 		3DDAD4511CA5D01200C11372 /* AddView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DDAD44F1CA5D01200C11372 /* AddView.storyboard */; };
@@ -83,13 +83,13 @@
 		2414064A1C6BC0FF00DD19DF /* UniAidUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniAidUITests.swift; sourceTree = "<group>"; };
 		2414064C1C6BC0FF00DD19DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		246A28FE1CB142FC00FF718E /* gifFramework.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gifFramework.swift; sourceTree = "<group>"; };
-		246A29001CB1430600FF718E /* student_happy_with_te_a_ha.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = student_happy_with_te_a_ha.gif; sourceTree = "<group>"; };
 		24A816A71CA1A58800EE4705 /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		24AAE6D21CA5CCEE00E44EC3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		24B0FEDC1CA1B250003D4F8E /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		24B0FEDE1CA1B272003D4F8E /* Cordinates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cordinates.swift; sourceTree = "<group>"; };
 		24B8516D1CA7542900541B16 /* DirectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DirectionCell.swift; sourceTree = "<group>"; };
 		24EAF1CB1CA23F63005F5B31 /* CourceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourceCell.swift; sourceTree = "<group>"; };
+		24F5F9871CB1B9B3005B3AB4 /* smile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = smile.gif; sourceTree = "<group>"; };
 		24FCC2C31C971BFA0041D492 /* UniAid-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UniAid-Bridging-Header.h"; sourceTree = "<group>"; };
 		24FCC2C41C971BFA0041D492 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		24FCC2C51C971BFA0041D492 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		241406291C6BC0FF00DD19DF /* UniAid */ = {
 			isa = PBXGroup;
 			children = (
-				246A29001CB1430600FF718E /* student_happy_with_te_a_ha.gif */,
+				24F5F9871CB1B9B3005B3AB4 /* smile.gif */,
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
 				7E67D5CC1CAA099300710E6E /* ViewControllers */,
 				24B851711CA761B100541B16 /* StoryBoards */,
@@ -371,12 +371,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
+				24F5F9881CB1B9B3005B3AB4 /* smile.gif in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
 				7CDE5FE41CB1ACCB001F7AEF /* coursesListViewController.storyboard in Resources */,
 				3DDAD4511CA5D01200C11372 /* AddView.storyboard in Resources */,
 				7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
-				246A29011CB1430600FF718E /* student_happy_with_te_a_ha.gif in Resources */,
 				7CCAD7AF1C9E124C0065DEEC /* CourseDetailsView.storyboard in Resources */,
 				24119A481C9C473200843F96 /* Map.storyboard in Resources */,
 			);
