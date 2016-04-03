@@ -13,157 +13,88 @@ import CoreData
 class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate, UITextFieldDelegate {
     
     
-    //textfields
+    // Textfields
     @IBOutlet weak var courseNameTextField: UITextField!
-    
-    @IBOutlet weak var courseNumTextField: UITextField! 
-   
+    @IBOutlet weak var courseNumTextField: UITextField!
     @IBOutlet weak var courseLocationTextField: UITextField!
-
     @IBOutlet weak var profNameTextField: UITextField!
-    
     @IBOutlet weak var profEmailTextField: UITextField!
-    
-    
-    //switches
+    // Switches
     @IBOutlet weak var mondaySwitch: UISwitch!
-    
     @IBOutlet weak var tuesdaySwitch: UISwitch!
-   
     @IBOutlet weak var wednesdaySwitch: UISwitch!
-    
     @IBOutlet weak var thursdaySwitch: UISwitch!
-    
     @IBOutlet weak var fridaySwitch: UISwitch!
     
     
+    // MARK: Day Switches Handlers
     
-    
-    //handle switches for each day
-    //Monday switch changed
+    // Monday
     @IBAction func mondaySwitchChanged(sender: AnyObject) {
-        
         if mondaySwitch.on {
-            print("Monday changed to on")
-           
-          
             if !daysSelectedArr.contains("Monday") {
                 daysSelectedArr.append("Monday")
             }
-            
         }
-        
-        
         else {
             if daysSelectedArr.contains("Monday"){
                 let indexReturn = daysSelectedArr.indexOf("Monday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
-             print("Monday changed to off")
         }
-        
-        //for testing purpose
-        print("Array:")
-        print(daysSelectedArr)
     }
     
-    //Tuesday switch changed
+    // Tuesday
     @IBAction func tuesdaySwitchChanged(sender: AnyObject) {
         if tuesdaySwitch.on {
-            print("Tuesday changed to on")
-            
-            
             if !daysSelectedArr.contains("Tuesday") {
                 daysSelectedArr.append("Tuesday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Tuesday"){
                 let indexReturn = daysSelectedArr.indexOf("Tuesday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
-            print("Tuesday changed to off")
         }
-        
-        //for testing purpose
-        print("Array:")
-        print(daysSelectedArr)
     }
     
-    //Wednesday switch changed
+    // Wednesday
     @IBAction func wednesdaySwitchChanged(sender: AnyObject) {
         if wednesdaySwitch.on {
-            print("Wednesday changed to on")
-            
-            
             if !daysSelectedArr.contains("Wednesday") {
                 daysSelectedArr.append("Wednesday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Wednesday"){
                 let indexReturn = daysSelectedArr.indexOf("Wednesday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
-            print("Wednesday changed to off")
         }
-        
-        //for testing purpose
-        print("Array:")
-        print(daysSelectedArr)
-
     }
     
-    //Thursday switch changed
+    // Thursday
     @IBAction func thursdaySwitchChanged(sender: AnyObject) {
         if thursdaySwitch.on {
-            print("Thursday changed to on")
-            
-            
             if !daysSelectedArr.contains("Thursday") {
                 daysSelectedArr.append("Thursday")
             }
-            
         }
-            
-            
         else {
             if daysSelectedArr.contains("Thursday"){
                 let indexReturn = daysSelectedArr.indexOf("Thursday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
-            print("Thursday changed to off")
         }
-        
-        //for testing purpose
-        print("Array:")
-        print(daysSelectedArr)
     }
     
-    //Friday switch changed
+    // Friday
     @IBAction func fridaySwitchChanged(sender: AnyObject) {
         if fridaySwitch.on {
-            print("Friday changed to on")
-            
-            
             if !daysSelectedArr.contains("Friday") {
                 daysSelectedArr.append("Friday")
             }
-            
         }
             
             
@@ -171,18 +102,11 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             if daysSelectedArr.contains("Friday"){
                 let indexReturn = daysSelectedArr.indexOf("Friday")
                 daysSelectedArr.removeAtIndex(indexReturn!)
-                
             }
-            
-            print("Friday changed to off")
         }
-        
-        //for testing purpose
-        print("Array:")
-        print(daysSelectedArr)
     }
     
-    //This function will be used to reset the switches after a user's input is done
+    // Reset switches after the user resets
     @IBAction func resetClicked() {
         mondaySwitch.setOn(false, animated: true);
         tuesdaySwitch.setOn(false, animated: true);
@@ -191,57 +115,36 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         fridaySwitch.setOn(false, animated: true);
     }
     
- 
-  
-    //use this to keep the days of the course
+    // Records the days for a course
     var daysSelectedArr = [String]()
-    
+    // List of Dal Buildings
     var buildings = ["Dentistry Building","Goldberg Computer Science Building","Howe Hall","Boulden Building","Burbidge Building","Chase Building","Chemical Engineering","Chemistry","Kenneth C. Rowe Management Building","Killam Library","Life Sciences Centre","Marion McCain Arts and Social Sciences","Mona Campbell Building","Dalhousie Arts Centre","Dalplex","Sir James Dunn Building","Student Union Building","Weldon Law Building","Tupper Building"]
-   
-    
-    //picker for the location
+    // Picker for the location
     var picker = UIPickerView()
     
     
     
-    
-    //Time of classes code starts here
-    
-    /*********************************************************************/
-    // pickers for time
-    /*********************************************************************/
-    
-    
+    // MARK: Time Switches Handlers
     @IBOutlet weak var timeFromTextField: UITextField!
-    
     @IBOutlet weak var timeToTextField: UITextField!
     
-    
-    
-    //functions to handle time - from
+    // From Time Function
     @IBAction func timeFromTextField(sender: UITextField) {
-        
-        
-   
-        //done and cancel button
+        // Create Done and Cancel Buttons
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
         toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeFor")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeFor")
         
-        
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
 
-        
-        //handle the time
-        
+        // Create date Picker View
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Time
         sender.inputView = datePickerView
@@ -250,47 +153,40 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         datePickerView.addTarget(self, action: Selector("handleFromTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
     }
     
+    // Handles the From Time Picker
     func handleFromTimePicker(sender: UIDatePicker) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .NoStyle
         timeFormatter.timeStyle = .ShortStyle
         timeFromTextField.text = timeFormatter.stringFromDate(sender.date)
     }
-    
+    // What to do when the From Time is picked
     func donePickerTimeFor(){
         timeFromTextField.resignFirstResponder()
     }
-    
+    // What to do when the From Time is Cancelled out of
     func cancelPickerTimeFor(){
         timeFromTextField.text = ""
         timeFromTextField.resignFirstResponder()
     }
-    
-    
-    
-    //
-    //functions to handle time - to
+   
+    // To Time Function
     @IBAction func timeToTextField(sender: UITextField) {
-       
-        
-        //done and cancel button
+        // Create Done and Cancel Buttons
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
         toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         
-        
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeTo")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeTo")
         
-        
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
    
-        
-        //handle the time
+        // Create Date Picker View
         let datePickerView  : UIDatePicker = UIDatePicker()
         datePickerView.datePickerMode = UIDatePickerMode.Time
         sender.inputView = datePickerView
@@ -298,63 +194,54 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
 
         datePickerView.addTarget(self, action: Selector("handleToTimePicker:"), forControlEvents: UIControlEvents.ValueChanged)
         
-       // timeToTextField.endEditing(true)
-        
     }
     
-    
+    // Handles the To Time Picker
     func handleToTimePicker(sender: UIDatePicker) {
         let timeFormatter = NSDateFormatter()
         timeFormatter.dateStyle = .NoStyle
         timeFormatter.timeStyle = .ShortStyle
         timeToTextField.text = timeFormatter.stringFromDate(sender.date)
-        
     }
     
-    
+    // What to do when To Date Picker is picked
     func donePickerTimeTo(){
         timeToTextField.resignFirstResponder()
     }
-    
+    // What to do when the To Date Picker is cancelled out of
     func cancelPickerTimeTo(){
         timeToTextField.text = ""
         timeToTextField.resignFirstResponder()
     }
     
+
+    // MARK: Page Sliding Functions
     
-    //end of time functions and pickers
-    
-    
-    
-    
-    
-    /*******************************************************************************/
-    //functions to handle the page sliding up/down when time picker appear/disappear
-     /*******************************************************************************/
-    
+    // Function to slide the page if text box below the keyboard boundry is selected
     func textFieldDidBeginEditing(textField: UITextField) {
+        // Prof Name and Prof Email Text Fields
         if (textField == profNameTextField || textField == profEmailTextField) {
             animateViewMoving(true, moveValue: 130)
         }
-        
+        // Time To Text Field
         if (textField == timeToTextField){
             animateViewMoving(true, moveValue: 30)
         }
     }
-    
+    // Function to slide back down when finished
     func textFieldDidEndEditing(textField: UITextField) {
+        // Prod Name and Prof Email Text Fields
         if (textField == profNameTextField || textField == profEmailTextField) {
             animateViewMoving(false, moveValue: 130)
         }
-        
+        // Time To Text Field
         if (textField == timeToTextField){
             animateViewMoving(false, moveValue: 30)
         }
     }
 
-
+    // Controls the movement of the View
     func animateViewMoving (up:Bool, moveValue :CGFloat){
-        
         let movementDuration:NSTimeInterval = 0.3
         let movement:CGFloat = ( up ? -moveValue : moveValue)
         UIView.beginAnimations( "animateView", context: nil)
@@ -364,64 +251,50 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         UIView.commitAnimations()
     }
     
+  
+    // MARK: Keyboard Handler
     
-    
-    /***************************************************************/
-   
-    
-    //function to handle keyboard disappearing
+    // Remove keyboard on end
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         return true
         
     }
-    
-    
+    // Number of components in the View (1 - keyboard)
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
     
-    
-    
-    // returns the # of rows in each component..
+    // Returns the # of rows in each component
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
             return buildings.count
        
     }
-    
+    // Populates the text for the building rows
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
             courseLocationTextField.text = buildings[row]
     }
-    
+    // Return building names
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
             return buildings[row]
     }
     
+    // MARK: Add a Course Button Handler
     
-    
-    //Add a cousre action
+    // Get the Date of the class from the user and store them
     @IBAction func addCourseButton(sender: AnyObject) {
-        
-        //get the dates of the class from the user and store them inside a var (string)
         var daysSelected = ""
-        
         for r in daysSelectedArr {
             daysSelected += r + "."
         }
         
-        
-        //we will use appDelegate to connect to our core data
-        //this is the default app delegate
+        // Connect to Core Data
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        //create a context
-        //a handler for us to be able to access the database
+        // Create a context (a handler for us to be able to access the database)
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
-        //add user to db
-      //first we need to describe our entity that we would want to enter our user to
-        
+        // Add class to Database
         let profEmail = profEmailTextField.text
         let profName = profNameTextField.text
         let courseName = courseNameTextField.text
@@ -432,22 +305,16 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         let timeTo = timeToTextField.text
         
         
+        // User Input Validation
         
-        
-        // ------------------
-        
-        /*    validate input of user     */
-        
-        // first step: start by making sure that all fields are entered, if not then show alert and return
+        // First: Start by making sure that all fields are entered, if not then show alert and return
         if (profName == "" || courseName == "" || courseNum == "" || courseLocation == "" || schedule.isEmpty || timeFrom == "" || timeTo == ""){
-            
+            // Create error
             let emptyAlert = UIAlertController(title: "Empty Fields", message: "Please enter all fields", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            //show it
-            //showViewController(simpleAlert, sender: self);
+            // Show error
             self.presentViewController(emptyAlert, animated: true, completion: nil)
             
-            //let it appear for two minutes
+            // Appear for two minutes without user cancelling
             let delay = 2.0 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             dispatch_after(time, dispatch_get_main_queue(), {
@@ -456,16 +323,15 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             return
         }
         
-        //second step: make sure that the email is correct and in the right format, if not then show alert and return
+        // Second: Make sure that the email is correct and in the right format, if not then show alert and return
         if !isValidEmail(profEmailTextField.text!)
         {
+            // Create error
             let simpleAlert = UIAlertController(title: "Wrong Email", message: "Please enter a correct email address", preferredStyle: UIAlertControllerStyle.Alert)
-            
-            //show it
-            //showViewController(simpleAlert, sender: self);
+            // Show error
             self.presentViewController(simpleAlert, animated: true, completion: nil)
             
-            //let it appear for two minutes
+            // Appear for two minutes without user cancelling
             let delay = 2.0 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             dispatch_after(time, dispatch_get_main_queue(), {
@@ -474,10 +340,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             return
         }
         
-        
-        
-        
-        //finally: if the previous two steps successed then put everything inside the database
+        // Finally: If the previous two steps successed then put everything inside the database
         do {
           
             let newCourse = NSEntityDescription.insertNewObjectForEntityForName("Course", inManagedObjectContext: context)
@@ -494,24 +357,20 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             
             try context.save()
             
-            //inform the user that it has been saved successfully
+            // Inform the user that it has been saved successfully
             let simpleAlert = UIAlertController(title: "Success", message: "Course was added", preferredStyle: UIAlertControllerStyle.Alert)
             
-            //show it
-            //showViewController(simpleAlert, sender: self);
+            // Confirmation
             self.presentViewController(simpleAlert, animated: true, completion: nil)
             
-            //let it appear for two minutes
+            // Appear for two minutes without user cancelling
             let delay = 2.0 * Double(NSEC_PER_SEC)
             let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             dispatch_after(time, dispatch_get_main_queue(), {
                 simpleAlert.dismissViewControllerAnimated(true, completion: nil)
             })
 
-            
-            //clear the text fields
-            
-            
+            // Clear the text fields for new course addition
             courseNameTextField.text = ""
             courseNumTextField.text = ""
             courseLocationTextField.text = ""
@@ -520,118 +379,47 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
             profNameTextField.text = ""
             profEmailTextField.text = ""
             resetClicked()
-            
-            
-            
-            
-            //done saving the input to the database
-            /***************************************************************************************/
-            
-            
-            
-            
-            /***************************************************************************************/
-            /*    This is just for testing purpose, retrieve the data after storing it to check     */
-            /***************************************************************************************/
-            
-            
-            //retrive data
-            //do that by creating a request
-            let request = NSFetchRequest(entityName: "Course")
-            
-            //u need this to actually return the data itself and not just info about it
-            request.returnsObjectsAsFaults = false
-            
-            do {
-                //now we need a var to store data that we get back from it
-                let results = try context.executeFetchRequest(request)
-                
-                
-                if results.count > 0 {
-                    print("Number ourses found")
-                    print(results.count)
-                    
-                    //by defualt results will contain ... therefore cast it
-                    for result in results as! [NSManagedObject] {
-                        
-                        //now we can access the info
-                        print(result.valueForKey("name")!)
-                        print(result.valueForKey("number")!)
-                        print(result.valueForKey("location")!)
-                        print(result.valueForKey("days")!)
-                        print(result.valueForKey("timeFrom")!)
-                        print(result.valueForKey("timeTo")!)
-                        print(result.valueForKey("profName")!)
-                        print(result.valueForKey("profEmail")!)
-                       
-                        
-                    }
-                }
-                
-            }
-            catch {
-                print("error fetch failed ")
-            }
-            
-            
-        //otherwise (if there was problems saving the data) catch it and print that
-            
         }
         catch {
-            print("there was a problem")
+            print("There was a problem with user input")
             
         }
-
-        
-        // ------------------
-        
-        
-        
     }
     
-    
-    
-    //this function will validate email
+    // Email validation
     func isValidEmail(testStr:String) -> Bool {
-        
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
         let range = testStr.rangeOfString(emailRegEx, options:.RegularExpressionSearch)
         let result = range != nil ? true : false
         return result
-        
     }
     
     
+    // MARK: Required Functions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-      
         
+        //Create Builder Picker
         picker.delegate = self
         picker.dataSource = self
-       
-        //the following will be used to display the buildings picker view with a "done" and a "cancel" buttons
+        
+        // Display Building Picker
         let toolBar = UIToolbar()
         toolBar.barStyle = UIBarStyle.Default
         toolBar.translucent = true
         toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
     
-        
         let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "donePicker")
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelPicker")
 
-        
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
 
-        
         courseLocationTextField.inputView = picker
         courseLocationTextField.inputAccessoryView = toolBar
-        
-       
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -640,11 +428,11 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
     }
     
     
-    //these two functions will handle the done and the cancel buttons on the buildings picker
+    // Handle Done Button
     func donePicker(){
         courseLocationTextField.resignFirstResponder()
     }
-    
+    // Handle Cancel Button
     func cancelPicker(){
         courseLocationTextField.text = ""
         courseLocationTextField.resignFirstResponder()

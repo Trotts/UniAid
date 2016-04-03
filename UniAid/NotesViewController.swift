@@ -13,18 +13,19 @@ protocol NoteViewDelegate {
 
 class NotesViewController: UIViewController, UITextViewDelegate, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     
-    //For the Notes
+    // For the Notes
     var delegate : NoteViewDelegate?
     @IBOutlet weak var txtBody : UITextView!
     @IBOutlet weak var btnDoneEditing: UIBarButtonItem!
     var strBodyText : String!
     
-    //For the Recorder
+    // For the Recorder
     @IBOutlet weak var RecordButton: UIButton!
     @IBOutlet weak var PlayButton: UIButton!
     var soundRecorder :  AVAudioRecorder!
     var soundPlayer : AVAudioPlayer!
     var fileName = "audioFile.m4a"
+    
     
     //MARK: General Functions
     override func viewDidLoad() {
@@ -50,15 +51,16 @@ class NotesViewController: UIViewController, UITextViewDelegate, AVAudioPlayerDe
         }
     }
     
-    //MARK: Notes Functions
     
-    //Sets the color of the Hide Keyboard button when keyboard is up
+    // MARK: Notes Functions
+    
+    // Sets the color of the Hide Keyboard button when keyboard is up
     func textViewDidBeginEditing(textView: UITextView) {
         self.btnDoneEditing.tintColor = UIColor(red: 255.0/255.0, green:
             205.0/255.0, blue: 096.0/255.0, alpha: 1) 
     }
     
-    //Set title for note
+    // Set title for note
     func textViewDidChange(textView: UITextView) {
         //Separate the body into multiple sections
         let components = self.txtBody.text.componentsSeparatedByString("\n")
@@ -129,7 +131,7 @@ class NotesViewController: UIViewController, UITextViewDelegate, AVAudioPlayerDe
         }
     }
     
-    //Play Button
+    // Play Button
     @IBAction func PlayRecord(sender: UIButton){
         // When Play button is hit, start playing file, change to Stop, disable Record Button
         if sender.titleLabel?.text == "Play"{
@@ -169,6 +171,4 @@ class NotesViewController: UIViewController, UITextViewDelegate, AVAudioPlayerDe
         RecordButton.enabled = true
         PlayButton.setTitle("Play", forState: .Normal)
     }
-
-    
 }

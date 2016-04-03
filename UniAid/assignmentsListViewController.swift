@@ -18,35 +18,28 @@ class AssignmentListViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
        getAssignments()
-      
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
         // Dispose of any resources that can be recreated.
     }
-    
+    // Set number of rows
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         NSUserDefaults.standardUserDefaults().setValue(indexPath.row, forKey: "rowNum")
     }
-    
+    // Populate the cells
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell!
-        
-        
-        
-        
         if returnAssignments.count > 0 {
             cell.textLabel?.text = returnAssignments[indexPath.row]
         }
         else {
             cell.textLabel?.text = "No Assignments to display"
         }
-        
         return cell
     }
-    
+    // Return number of cells
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if returnAssignments.count > 0 {
             return returnAssignments.count
@@ -54,25 +47,20 @@ class AssignmentListViewController: UITableViewController {
         else {
             return 1
         }
-        
     }
     
-    //return courses
+    // Return assignments
     func getAssignments() {
         
         let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
-        //create a context
-        //a handler for us to be able to access the database
+        // Create a context (a handler for us to be able to access the database)
         let context: NSManagedObjectContext = appDel.managedObjectContext
         
-        //retrive data
-        //do that by creating a request
+        // Retrive data
         let request = NSFetchRequest(entityName: "Assignment")
         request.returnsObjectsAsFaults = false
-        
         do {
-            
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
               
@@ -82,12 +70,9 @@ class AssignmentListViewController: UITableViewController {
               returnAssignments.append(assignmentData.valueForKey("dueDate") as! String)
               returnAssignments.append(assignmentData.valueForKey("name") as! String)
             }
-            
         }
         catch {
-            print("error fetch failed ")
+            print("Error fetch failed ")
         }
-        
-        
     }
 }

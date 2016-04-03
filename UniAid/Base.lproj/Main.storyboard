@@ -84,6 +84,10 @@
                                 <color key="separatorColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="OKQ-2o-3Oc">
+                                    <rect key="frame" x="0.0" y="204" width="414" height="402"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="72" id="Xte-iy-2I2" customClass="CourceCell" customModule="UniAid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="114" width="414" height="72"/>
@@ -162,8 +166,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
                     <connections>
+                        <outlet property="animation" destination="OKQ-2o-3Oc" id="5yV-ki-C7k"/>
                         <outlet property="open" destination="v0j-1M-g0C" id="jUo-te-E4F"/>
                         <outlet property="tableView" destination="k7O-Ol-Dx9" id="LjH-lL-NPg"/>
                         <outlet property="todayLabel" destination="CKT-bx-R1D" id="zgq-kD-p55"/>
