@@ -349,6 +349,7 @@ class EditCourseViewController: UIViewController, UIPickerViewDataSource, UIPick
         catch {
             print("There was a problem saving to the Database")
         }
+      
   }
     
     // Validate the email
