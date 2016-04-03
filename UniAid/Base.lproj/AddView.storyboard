@@ -86,7 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s92-rM-MlA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="-218"/>
+            <point key="canvasLocation" x="2361" y="192"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="KAi-lQ-tLm">
@@ -170,7 +170,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSP-SF-cYO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856" y="-1041"/>
+            <point key="canvasLocation" x="1825" y="-697"/>
         </scene>
         <!--Main-->
         <scene sceneID="AoH-HC-WMe">
@@ -178,7 +178,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="Fl3-I5-XdS" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nzm-uM-5SS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2378" y="-1374"/>
+            <point key="canvasLocation" x="2180" y="-941"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Sbh-G7-EuG">
@@ -186,15 +186,15 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="jQ6-CW-kP1" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez6-Dp-8kM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="-1242"/>
+            <point key="canvasLocation" x="2183" y="-898"/>
         </scene>
-        <!--CourseDetailsView-->
+        <!--AddView-->
         <scene sceneID="vZy-9s-mTc">
             <objects>
-                <viewControllerPlaceholder storyboardName="CourseDetailsView" id="btn-cB-BoE" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="AddView" id="btn-cB-BoE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQt-Gb-afc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326.5" y="-1120"/>
+            <point key="canvasLocation" x="2192" y="-853"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qJa-wP-XxL">
@@ -215,7 +215,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mOP-tJ-ouA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1849" y="668"/>
+            <point key="canvasLocation" x="1825" y="192"/>
         </scene>
         <!--Add Exam View Controller-->
         <scene sceneID="0Fj-EE-k0O">
@@ -300,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MBw-0w-9r2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2855" y="-69"/>
+            <point key="canvasLocation" x="3447" y="451"/>
         </scene>
         <!--Add Course View Controller-->
         <scene sceneID="up3-7S-TiJ">
@@ -541,7 +541,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TDQ-vC-D0N" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2778" y="-1049"/>
+            <point key="canvasLocation" x="2886" y="-769"/>
         </scene>
         <!--Add Assign View Controller-->
         <scene sceneID="0sT-gc-xBI">
@@ -647,7 +647,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2866" y="786"/>
+            <point key="canvasLocation" x="2886" y="838"/>
         </scene>
         <!--Display Courses Table View Controller-->
         <scene sceneID="xlL-qf-zf9">
@@ -690,7 +690,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5JA-jK-16G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3389" y="-967"/>
+            <point key="canvasLocation" x="3447" y="-399"/>
         </scene>
         <!--CourseDetailsView-->
         <scene sceneID="Jjz-tH-YEQ">
@@ -698,7 +698,7 @@
                 <viewControllerPlaceholder storyboardName="CourseDetailsView" id="aLv-cB-gPn" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFC-ze-pFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3767.5" y="-1195"/>
+            <point key="canvasLocation" x="3823" y="-399"/>
         </scene>
     </scenes>
     <resources>

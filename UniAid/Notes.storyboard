@@ -51,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aa2-Il-NEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-196" y="527"/>
+            <point key="canvasLocation" x="-200" y="648"/>
         </scene>
         <!--Main-->
         <scene sceneID="tne-QT-ifu">
@@ -112,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="334" y="527"/>
+            <point key="canvasLocation" x="366" y="648"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="Epr-mW-FEt">
@@ -204,7 +204,7 @@
                 <viewControllerPlaceholder storyboardName="Main" id="lyR-A6-OGr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thI-Fi-Bst" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-440" y="-477"/>
+            <point key="canvasLocation" x="-434" y="-485"/>
         </scene>
         <!--Notes-->
         <scene sceneID="Lx6-fi-vm0">
@@ -212,7 +212,7 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="sv5-to-zbf" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9om-KZ-YXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-437" y="-434"/>
+            <point key="canvasLocation" x="-431" y="-438"/>
         </scene>
         <!--AddView-->
         <scene sceneID="Cpb-2m-GB1">
@@ -220,7 +220,7 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="ofa-3x-QpD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpg-jz-Iha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-398" y="-385"/>
+            <point key="canvasLocation" x="-422" y="-391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PgD-kP-DEq">

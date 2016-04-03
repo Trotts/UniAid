@@ -104,7 +104,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1447" y="492"/>
+            <point key="canvasLocation" x="1355" y="492"/>
         </scene>
         <!--Reveal View Controller-->
         <scene sceneID="9Y7-00-vUE">
@@ -204,7 +204,7 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="iyV-Gn-uoW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5xh-BE-iMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1107.5" y="-618"/>
+            <point key="canvasLocation" x="1116" y="-641"/>
         </scene>
         <!--AddView-->
         <scene sceneID="B3d-S0-CWz">
@@ -212,7 +212,7 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="gXA-Tu-UMX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6n-LJ-BFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1146" y="-551"/>
+            <point key="canvasLocation" x="1125" y="-599"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOE-YR-qsa">
