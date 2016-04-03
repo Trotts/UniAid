@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -60,10 +62,11 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="65" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="otK-mT-0AY">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="500" id="GXJ-HS-5az"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CourseInfoCell" editingAccessoryType="detailButton" textLabel="Ng1-Ba-BbZ" detailTextLabel="bZy-HL-fUi" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="FZ7-0C-WS7" customClass="CourseInfo" customModule="UniAid" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="414" height="65"/>
@@ -73,22 +76,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Course Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ng1-Ba-BbZ">
-                                                    <rect key="frame" x="15" y="6" width="163" height="39"/>
+                                                    <rect key="frame" x="15" y="11" width="88" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bZy-HL-fUi">
-                                                    <rect key="frame" x="15" y="45" width="21" height="14"/>
+                                                    <rect key="frame" x="15" y="32" width="29" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="courseInfo" destination="Ng1-Ba-BbZ" id="K27-6y-Nwd"/>
                                         </connections>
@@ -98,25 +102,42 @@
                                     <outlet property="dataSource" destination="ww8-te-qgF" id="8Ns-63-l7D"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mD-do-1fT">
-                                <rect key="frame" x="40" y="616" width="93" height="30"/>
-                                <state key="normal" title="Test &amp; Exams"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mD-do-1fT">
+                                <rect key="frame" x="51" y="616" width="114" height="39"/>
+                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="0T3-Sb-cCx"/>
+                                    <constraint firstAttribute="width" constant="114" id="tLe-9n-H0w"/>
+                                </constraints>
+                                <state key="normal" title="Test &amp; Exams">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="wPA-8g-kRm" kind="show" id="ogJ-Cu-TWa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz5-cI-Hs7">
-                                <rect key="frame" x="294" y="616" width="89" height="30"/>
-                                <state key="normal" title="Assignments"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz5-cI-Hs7">
+                                <rect key="frame" x="260" y="616" width="101" height="39"/>
+                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Assignments">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="Oy7-50-UVe" kind="show" id="uV4-CU-0ea"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="wz5-cI-Hs7" firstAttribute="baseline" secondItem="9mD-do-1fT" secondAttribute="firstBaseline" id="5cM-yt-FnT"/>
+                            <constraint firstItem="9mD-do-1fT" firstAttribute="top" secondItem="wz5-cI-Hs7" secondAttribute="top" id="Bj5-gY-DjW"/>
                             <constraint firstItem="otK-mT-0AY" firstAttribute="top" secondItem="3bu-i9-cv5" secondAttribute="top" id="Ga1-2O-kTP"/>
+                            <constraint firstItem="wz5-cI-Hs7" firstAttribute="leading" secondItem="9mD-do-1fT" secondAttribute="trailing" constant="95" id="Inw-Fd-Mjr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wz5-cI-Hs7" secondAttribute="trailing" constant="33" id="NHh-7I-A0d"/>
                             <constraint firstAttribute="trailing" secondItem="otK-mT-0AY" secondAttribute="trailing" id="NRf-fi-q0G"/>
+                            <constraint firstItem="POo-vF-0Cu" firstAttribute="top" secondItem="9mD-do-1fT" secondAttribute="bottom" constant="37" id="Qqa-UV-6kC"/>
+                            <constraint firstItem="wz5-cI-Hs7" firstAttribute="firstBaseline" secondItem="9mD-do-1fT" secondAttribute="baseline" id="RRE-LQ-PO5"/>
+                            <constraint firstItem="9mD-do-1fT" firstAttribute="leading" secondItem="3bu-i9-cv5" secondAttribute="leadingMargin" constant="31" id="kxB-5x-8N5"/>
                             <constraint firstItem="otK-mT-0AY" firstAttribute="leading" secondItem="3bu-i9-cv5" secondAttribute="leading" id="lJb-pc-dWK"/>
                         </constraints>
                     </view>
@@ -495,7 +516,7 @@
                                             <rect key="frame" x="15" y="0.0" width="364" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -514,7 +535,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OfM-Ml-FWj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3089" y="577"/>
+            <point key="canvasLocation" x="3003" y="572"/>
         </scene>
         <!--Assignment List View Controller-->
         <scene sceneID="WNR-jO-NPc">
@@ -542,14 +563,14 @@
                                             <rect key="frame" x="15" y="13" width="32" height="20"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xaY-qg-ndV">
                                             <rect key="frame" x="15" y="33" width="41" height="14"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
