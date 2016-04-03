@@ -46,7 +46,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E1S-DC-rfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-155"/>
+            <point key="canvasLocation" x="1763" y="-155"/>
         </scene>
         <!--Course View Controller-->
         <scene sceneID="sS5-Q3-yOo">
@@ -113,7 +113,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="wPA-8g-kRm" kind="show" id="ogJ-Cu-TWa"/>
+                                    <segue destination="wPA-8g-kRm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="ogJ-Cu-TWa"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wz5-cI-Hs7">
@@ -123,7 +123,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Oy7-50-UVe" kind="show" id="uV4-CU-0ea"/>
+                                    <segue destination="Oy7-50-UVe" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uV4-CU-0ea"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -150,7 +150,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Edit Course"/>
                                 <connections>
-                                    <segue destination="JTI-up-DjO" kind="show" id="UAI-Do-tfG"/>
+                                    <segue destination="JTI-up-DjO" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="UAI-Do-tfG"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -223,7 +223,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9q-wQ-Wbg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786" y="-1069"/>
+            <point key="canvasLocation" x="1786" y="-1065"/>
         </scene>
         <!--Main-->
         <scene sceneID="aAb-vM-bxt">
@@ -500,13 +500,13 @@
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="kH2-19-0yV">
-                            <rect key="frame" x="0.0" y="64" width="414" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="iCV-rJ-pXx" rowHeight="41" style="IBUITableViewCellStyleDefault" id="auY-BH-sdm">
-                                <rect key="frame" x="0.0" y="128" width="414" height="41"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="41"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="auY-BH-sdm" id="j8g-wS-j5P">
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="40"/>
@@ -547,13 +547,13 @@
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="CtP-mw-WwP">
-                            <rect key="frame" x="0.0" y="64" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" textLabel="0OU-SX-LuM" detailTextLabel="xaY-qg-ndV" rowHeight="61" style="IBUITableViewCellStyleSubtitle" id="7sE-c5-Js2">
-                                <rect key="frame" x="0.0" y="92" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sE-c5-Js2" id="ugt-YO-9LT">
                                     <rect key="frame" x="0.0" y="0.0" width="381" height="60"/>
