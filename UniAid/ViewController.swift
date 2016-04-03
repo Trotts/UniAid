@@ -14,6 +14,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
 //        deleteAllData("Course")
+        NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "fromMain")
         fatchData()
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
@@ -97,6 +98,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         }
     }
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(studentCorses.count == 0)
         {
@@ -124,12 +126,12 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].BuildingName, forKey: "buildingName")
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].Course, forKey: "Course")
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].CourseNumber, forKey: "CourseNumber")
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].scheduale, forKey: "scheduale")
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].Prof, forKey: "Prof")
-        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].ProfEmail, forKey: "ProfEmail")
+        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].BuildingName, forKey: "location")
+        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].Course, forKey: "name")
+        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].CourseNumber, forKey: "number")
+        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].Prof, forKey: "profName")
+        NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].ProfEmail, forKey: "profEmail")
+        NSUserDefaults.standardUserDefaults().setInteger(1, forKey: "fromMain")
 
     }
     

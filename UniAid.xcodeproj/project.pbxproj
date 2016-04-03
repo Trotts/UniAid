@@ -242,16 +242,16 @@
 				3DDAD4581CA5D8FB00C11372 /* addAssignViewController.swift */,
 				3DDAD4561CA5D85A00C11372 /* addCourseViewController.swift */,
 				3DDAD4521CA5D32B00C11372 /* AddViewController.swift */,
-				3DFAFD3A1CA1F64D00BB2FD7 /* courseViewController.swift */,
 				7E114AD51CA496A000EB1705 /* NotesViewController.swift */,
 				7E114AD61CA496A000EB1705 /* TableViewController.swift */,
 				3DDAD4541CA5D67000C11372 /* addExamViewController.swift */,
 				24FCC2C71C971F750041D492 /* BackTableVC.swift */,
-				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
 				24119A441C9C432800843F96 /* MapViewController.swift */,
 				7CCF5E041CAF40C5009FC651 /* editCourse.swift */,
 				7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */,
 				7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */,
+				2414062C1C6BC0FF00DD19DF /* ViewController.swift */,
+				3DFAFD3A1CA1F64D00BB2FD7 /* courseViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";

@@ -19,6 +19,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
   @IBOutlet var details: UITableView!
  
   var courseInfo = [String]()
+  var dataTitle = ["Course Name","Course Number","Professor Name","Professor Email","Location"]
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -49,14 +50,25 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     {
       let resault : NSArray = try context.executeFetchRequest(request)
       if(resault.count > 0){
-        
-        let courseData = resault [NSUserDefaults.standardUserDefaults().valueForKey("rowNum") as! Int ] as! NSManagedObject
-        
-        courseInfo.append(courseData.valueForKey("name") as! String)
-        courseInfo.append(courseData.valueForKey("number") as! String)
-        courseInfo.append(courseData.valueForKey("profName") as! String)
-        courseInfo.append(courseData.valueForKey("profEmail") as! String)
-        courseInfo.append(courseData.valueForKey("location") as! String)
+        if(NSUserDefaults.standardUserDefaults().valueForKey("fromMain") as! Int == 1)
+        {
+            courseInfo.append(NSUserDefaults.standardUserDefaults().valueForKey("name") as! String)
+            courseInfo.append(NSUserDefaults.standardUserDefaults().valueForKey("number") as! String)
+            courseInfo.append(NSUserDefaults.standardUserDefaults().valueForKey("profName") as! String)
+            courseInfo.append(NSUserDefaults.standardUserDefaults().valueForKey("profEmail") as! String)
+            courseInfo.append(NSUserDefaults.standardUserDefaults().valueForKey("location") as! String)
+           
+        }
+        else
+        {
+            let courseData = resault [NSUserDefaults.standardUserDefaults().valueForKey("rowNum") as! Int ] as! NSManagedObject
+            
+            courseInfo.append(courseData.valueForKey("name") as! String)
+            courseInfo.append(courseData.valueForKey("number") as! String)
+            courseInfo.append(courseData.valueForKey("profName") as! String)
+            courseInfo.append(courseData.valueForKey("profEmail") as! String)
+            courseInfo.append(courseData.valueForKey("location") as! String)
+        }
       }
       else
       {
@@ -80,6 +92,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     let cell = self.details.dequeueReusableCellWithIdentifier("CourseInfoCell", forIndexPath: indexPath) as! CourseInfo
    
     cell.courseInfo.text = courseInfo[indexPath.row]
+    cell.detailTextLabel?.text = dataTitle[indexPath.row]
     cell.selectionStyle = UITableViewCellSelectionStyle.None
     
     return cell
