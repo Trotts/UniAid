@@ -6,7 +6,6 @@
 //  Edited by Loai L. Felemban
 //  Copyright © 2016 Amr Zokari. All rights reserved.
 //
-//
 
 import UIKit
 import CoreData

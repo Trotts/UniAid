@@ -235,6 +235,14 @@
             </objects>
             <point key="canvasLocation" x="-422" y="-327"/>
         </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="ABM-FJ-zMZ">
+            <objects>
+                <viewControllerPlaceholder id="W1n-Pg-fZT" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qBC-gn-X7r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-485.5" y="-82"/>
+        </scene>
         <!--coursesListViewController-->
         <scene sceneID="l1A-7Z-tGx">
             <objects>
