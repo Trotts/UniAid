@@ -41,6 +41,7 @@
 		7CCF5E051CAF40C5009FC651 /* editCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E041CAF40C5009FC651 /* editCourse.swift */; };
 		7CCF5E071CAF6BE8009FC651 /* assignmentsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */; };
 		7CCF5E091CAF6BFD009FC651 /* examsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */; };
+		7CDE5FE41CB1ACCB001F7AEF /* coursesListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CDE5FE21CB1ACCB001F7AEF /* coursesListViewController.storyboard */; };
 		7E114AD71CA496A000EB1705 /* NotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD51CA496A000EB1705 /* NotesViewController.swift */; };
 		7E114AD81CA496A000EB1705 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E114AD61CA496A000EB1705 /* TableViewController.swift */; };
 		7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E114AD91CA496BB00EB1705 /* Notes.storyboard */; };
@@ -106,6 +107,7 @@
 		7CCF5E041CAF40C5009FC651 /* editCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = editCourse.swift; sourceTree = "<group>"; };
 		7CCF5E061CAF6BE8009FC651 /* assignmentsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = assignmentsListViewController.swift; sourceTree = "<group>"; };
 		7CCF5E081CAF6BFD009FC651 /* examsListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = examsListViewController.swift; sourceTree = "<group>"; };
+		7CDE5FE31CB1ACCB001F7AEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/coursesListViewController.storyboard; sourceTree = "<group>"; };
 		7E114AD51CA496A000EB1705 /* NotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewController.swift; sourceTree = "<group>"; };
 		7E114AD61CA496A000EB1705 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7E114AD91CA496BB00EB1705 /* Notes.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Notes.storyboard; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				24119A461C9C473200843F96 /* Map.storyboard */,
 				2414062E1C6BC0FF00DD19DF /* Main.storyboard */,
 				3DDAD44F1CA5D01200C11372 /* AddView.storyboard */,
+				7CDE5FE21CB1ACCB001F7AEF /* coursesListViewController.storyboard */,
 				7CCAD7AD1C9E124C0065DEEC /* CourseDetailsView.storyboard */,
 			);
 			name = StoryBoards;
@@ -369,6 +372,7 @@
 			files = (
 				241406351C6BC0FF00DD19DF /* LaunchScreen.storyboard in Resources */,
 				241406321C6BC0FF00DD19DF /* Assets.xcassets in Resources */,
+				7CDE5FE41CB1ACCB001F7AEF /* coursesListViewController.storyboard in Resources */,
 				3DDAD4511CA5D01200C11372 /* AddView.storyboard in Resources */,
 				7E114ADA1CA496BB00EB1705 /* Notes.storyboard in Resources */,
 				241406301C6BC0FF00DD19DF /* Main.storyboard in Resources */,
@@ -496,6 +500,14 @@
 				7CCAD7AE1C9E124C0065DEEC /* Base */,
 			);
 			name = CourseDetailsView.storyboard;
+			sourceTree = "<group>";
+		};
+		7CDE5FE21CB1ACCB001F7AEF /* coursesListViewController.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7CDE5FE31CB1ACCB001F7AEF /* Base */,
+			);
+			name = coursesListViewController.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

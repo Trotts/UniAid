@@ -216,7 +216,7 @@
                                     <segue destination="aVI-Is-NHB" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="uqM-Tk-vKF"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="17U-ed-kvO">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course List" id="17U-ed-kvO">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="17U-ed-kvO" id="Xsy-Up-wbt">
@@ -226,7 +226,20 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="XDZ-Kh-0mm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Pkg-Ql-cZm"/>
+                                    <segue destination="z6q-iX-U8Z" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bbi-Lz-EX6"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="z4p-Vc-1XS">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z4p-Vc-1XS" id="qwj-VX-YVU">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="XDZ-Kh-0mm" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="68A-Fq-07W"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -263,7 +276,7 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="XDZ-Kh-0mm" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IQ5-RB-rgV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1126" y="-737"/>
+            <point key="canvasLocation" x="1126" y="-605"/>
         </scene>
         <!--Notes-->
         <scene sceneID="q3c-9r-hpS">
@@ -271,7 +284,15 @@
                 <viewControllerPlaceholder storyboardName="Notes" id="aVI-Is-NHB" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UG-Cd-E2r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1117" y="-691"/>
+            <point key="canvasLocation" x="1117" y="-723"/>
+        </scene>
+        <!--coursesListViewController-->
+        <scene sceneID="emc-WD-VmW">
+            <objects>
+                <viewControllerPlaceholder storyboardName="coursesListViewController" id="z6q-iX-U8Z" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgr-es-YQE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1179.5" y="-668"/>
         </scene>
     </scenes>
     <resources>

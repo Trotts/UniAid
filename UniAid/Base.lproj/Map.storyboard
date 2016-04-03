@@ -165,7 +165,7 @@
                                     <segue destination="iyV-Gn-uoW" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="lk7-7q-y16"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="Ly9-SH-fGh">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course List" id="Ly9-SH-fGh">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ly9-SH-fGh" id="9pe-OC-riV">
@@ -175,7 +175,20 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="gXA-Tu-UMX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="6cK-7h-lym"/>
+                                    <segue destination="6ym-49-AcY" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="nhf-mo-Ibi"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="t4b-V8-ULd">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t4b-V8-ULd" id="2HL-UP-Dii">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="gXA-Tu-UMX" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="nMB-tH-yFt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,13 +219,21 @@
             </objects>
             <point key="canvasLocation" x="1116" y="-641"/>
         </scene>
+        <!--coursesListViewController-->
+        <scene sceneID="YUg-kG-I74">
+            <objects>
+                <viewControllerPlaceholder storyboardName="coursesListViewController" id="6ym-49-AcY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNK-oi-yjq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1178.5" y="-587"/>
+        </scene>
         <!--AddView-->
         <scene sceneID="B3d-S0-CWz">
             <objects>
                 <viewControllerPlaceholder storyboardName="AddView" id="gXA-Tu-UMX" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E6n-LJ-BFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="-599"/>
+            <point key="canvasLocation" x="1125" y="-532"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OOE-YR-qsa">

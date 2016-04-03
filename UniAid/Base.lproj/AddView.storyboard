@@ -56,7 +56,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="nHN-0y-yLw" kind="show" id="QBX-XT-EGX"/>
+                                    <segue destination="s8K-bx-b2p" kind="show" id="QBX-XT-EGX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,7 +147,7 @@
                                     <segue destination="jQ6-CW-kP1" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="xbG-80-ebL"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="gkU-q1-HNG">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course List" id="gkU-q1-HNG">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gkU-q1-HNG" id="dIx-z0-mNf">
@@ -157,7 +157,20 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="btn-cB-BoE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="h3d-Tb-xE6"/>
+                                    <segue destination="Jjc-5E-bhk" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="dHA-Tb-BDc"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="rRW-hL-xri">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rRW-hL-xri" id="j2o-9Q-nZ8">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="btn-cB-BoE" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="lwI-rV-Zki"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -194,7 +207,15 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="btn-cB-BoE" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQt-Gb-afc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2192" y="-853"/>
+            <point key="canvasLocation" x="2192" y="-801"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="CPd-6T-eOW">
+            <objects>
+                <viewControllerPlaceholder id="Jjc-5E-bhk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ttX-Hg-N2t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2231.5" y="-851"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qJa-wP-XxL">
@@ -649,49 +670,6 @@
             </objects>
             <point key="canvasLocation" x="2886" y="838"/>
         </scene>
-        <!--Display Courses Table View Controller-->
-        <scene sceneID="xlL-qf-zf9">
-            <objects>
-                <tableViewController id="nHN-0y-yLw" customClass="displayCoursesTableViewController" customModule="UniAid" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="41" sectionHeaderHeight="28" sectionFooterHeight="28" id="VIy-Kd-CaZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="hoq-kR-KHx">
-                            <rect key="frame" x="0.0" y="64" width="414" height="36"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="41" id="u41-Fv-xHz">
-                                <rect key="frame" x="0.0" y="128" width="414" height="41"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u41-Fv-xHz" id="eGU-hE-8dY">
-                                    <rect key="frame" x="0.0" y="0.0" width="381" height="40"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <segue destination="aLv-cB-gPn" kind="presentation" identifier="SegueAddCoursesView" id="FCC-Vl-lm0"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="nHN-0y-yLw" id="s1Q-8I-m4w"/>
-                            <outlet property="delegate" destination="nHN-0y-yLw" id="s9r-HH-tuK"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="ems-5k-fsc"/>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5JA-jK-16G" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3447" y="-399"/>
-        </scene>
         <!--CourseDetailsView-->
         <scene sceneID="Jjz-tH-YEQ">
             <objects>
@@ -699,6 +677,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MFC-ze-pFD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3823" y="-399"/>
+        </scene>
+        <!--coursesListViewController-->
+        <scene sceneID="ME9-7Y-tIB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="coursesListViewController" id="s8K-bx-b2p" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qd0-km-0F0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3447" y="-399"/>
         </scene>
     </scenes>
     <resources>

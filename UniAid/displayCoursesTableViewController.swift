@@ -11,8 +11,10 @@ import UIKit
 import CoreData
 
 class displayCoursesTableViewController: UITableViewController {
-    
-   var returnCourses = [String]()
+  
+  @IBOutlet var open: UIBarButtonItem!
+
+  var returnCourses = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -173,7 +173,7 @@
                                     <segue destination="sv5-to-zbf" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Kea-oj-V3U"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="fsN-3Y-jiY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course List" id="fsN-3Y-jiY">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fsN-3Y-jiY" id="v1w-Z9-VIf">
@@ -183,7 +183,20 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="ofa-3x-QpD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="sZy-cd-28d"/>
+                                    <segue destination="UYq-Dq-fgL" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="byX-yH-pQa"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="KYm-eR-ksP">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KYm-eR-ksP" id="T58-Qi-mYe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <segue destination="ofa-3x-QpD" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="Mvo-dq-bdA"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -220,7 +233,15 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="ofa-3x-QpD" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rpg-jz-Iha" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-422" y="-391"/>
+            <point key="canvasLocation" x="-422" y="-327"/>
+        </scene>
+        <!--coursesListViewController-->
+        <scene sceneID="l1A-7Z-tGx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="coursesListViewController" id="UYq-Dq-fgL" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwr-jQ-Tsp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-368.5" y="-385"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="PgD-kP-DEq">

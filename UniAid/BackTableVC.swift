@@ -13,7 +13,7 @@ class BackTableVC: UITableViewController {
     var TableArray = [String]()
     override func viewDidLoad() {
         // Identifiers of the Cells
-        TableArray = ["Home","Notes", "Courses"]
+        TableArray = ["Home","Notes", "Course List", "Add Course"]
     }
     // Return number of cells to populate
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -183,7 +183,7 @@
                                     <segue destination="DGA-Pf-Y6t" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="G95-GL-d9F"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Courses" id="yd0-ZJ-2bc">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Course List" id="yd0-ZJ-2bc">
                                 <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yd0-ZJ-2bc" id="weL-WH-9dB">
@@ -192,7 +192,19 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.94901960784313721" green="0.83137254901960789" blue="0.23921568627450981" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
-                                    <segue destination="oJD-pe-dah" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="6mv-9j-hGF"/>
+                                    <segue destination="SYk-qC-0kI" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="V2x-ei-y6h"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="nFl-hV-KvD">
+                                <rect key="frame" x="0.0" y="160" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFl-hV-KvD" id="Iko-aI-GGL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.83137254900000002" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="oJD-pe-dah" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="JyY-CU-x9C"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -230,7 +242,15 @@
                 <viewControllerPlaceholder storyboardName="AddView" id="oJD-pe-dah" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdB-1P-ctS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2138" y="-1293"/>
+            <point key="canvasLocation" x="2138" y="-1215"/>
+        </scene>
+        <!--coursesListViewController-->
+        <scene sceneID="hYf-oY-hOS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="coursesListViewController" id="SYk-qC-0kI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8oJ-h0-2XB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2188.5" y="-1275"/>
         </scene>
         <!--Edit Course View Controller-->
         <scene sceneID="JfH-bF-a3E">
@@ -244,7 +264,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyv-m6-L5I">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vyv-m6-L5I">
                                 <rect key="frame" x="103" y="83" width="208" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -252,7 +272,7 @@
                                     <outlet property="delegate" destination="JTI-up-DjO" id="X6S-9B-YNY"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERr-cQ-Hxp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Course Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ERr-cQ-Hxp">
                                 <rect key="frame" x="103" y="121" width="208" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -260,7 +280,7 @@
                                     <outlet property="delegate" destination="JTI-up-DjO" id="sWy-NP-pAs"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDH-Yf-hle">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pDH-Yf-hle">
                                 <rect key="frame" x="103" y="159" width="208" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
