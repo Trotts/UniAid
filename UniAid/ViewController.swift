@@ -7,11 +7,13 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     @IBOutlet var open: UIBarButtonItem!
     @IBOutlet var tableView: UITableView!
     
+    @IBOutlet var animation: UIImageView!
     var studentCorses = [Course]()
     var todayCourses = [Course]()
     var directionCor = Cordinates(latitude: 0.0, longtitude: 0.0)
     var dayToday = ""
     var intDay = 0
+    var myImages = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,6 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         open.action = Selector("revealToggle:")
         self.tableView.contentInset = UIEdgeInsetsMake(40, 0, 0, 0)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-        
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,11 +100,19 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         }
     }
     
+    
     // Populates the table with the courses for today
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(studentCorses.count == 0 || intDay < 2 || intDay > 6)
         {
+            animation.layer.cornerRadius = 12
+            self.animation.layer.masksToBounds = true
             todayLabel.text="No courses for today!"
+            let imageData = NSData(contentsOfURL: NSBundle.mainBundle().URLForResource("student_happy_with_te_a_ha", withExtension: "gif")!)
+            let imageGif = UIImage.gifWithData(imageData!)
+            let imageView = UIImageView(image: imageGif)
+            imageView.frame = CGRect(x: 0.0, y: 0.0, width: 414.0, height: 402.0)
+            animation.addSubview(imageView)
         }
         var tempIndex = 0
         var dayToday = getTodayDayString(intDay) as! String
