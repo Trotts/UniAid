@@ -226,7 +226,7 @@
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <segue destination="z6q-iX-U8Z" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="bbi-Lz-EX6"/>
+                                    <segue destination="z6q-iX-U8Z" kind="custom" customClass="SWRevealViewControllerSeguePushController" id="RLZ-Ba-9V2"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Add Course" id="z4p-Vc-1XS">

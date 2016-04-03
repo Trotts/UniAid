@@ -52,7 +52,7 @@
                                 <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="CourseInfoCell" editingAccessoryType="detailButton" textLabel="Ng1-Ba-BbZ" detailTextLabel="bZy-HL-fUi" rowHeight="65" style="IBUITableViewCellStyleSubtitle" id="FZ7-0C-WS7" customClass="CourseInfo" customModule="UniAid" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="92" width="414" height="65"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="65"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FZ7-0C-WS7" id="rNH-mu-XFP">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
@@ -405,6 +405,7 @@
                                 </state>
                                 <connections>
                                     <action selector="saveButton:" destination="JTI-up-DjO" eventType="touchUpInside" id="7AG-bR-f6j"/>
+                                    <segue destination="ww8-te-qgF" kind="show" id="IP4-IR-4Py"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -503,13 +504,13 @@
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="kH2-19-0yV">
-                            <rect key="frame" x="0.0" y="64" width="414" height="36"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="36"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="iCV-rJ-pXx" rowHeight="41" style="IBUITableViewCellStyleDefault" id="auY-BH-sdm">
-                                <rect key="frame" x="0.0" y="128" width="414" height="41"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="41"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="auY-BH-sdm" id="j8g-wS-j5P">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -550,13 +551,13 @@
                         <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="CtP-mw-WwP">
-                            <rect key="frame" x="0.0" y="64" width="414" height="0.0"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.46274509800000002" green="0.70980392160000005" blue="0.70588235290000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="0OU-SX-LuM" rowHeight="61" style="IBUITableViewCellStyleDefault" id="7sE-c5-Js2">
-                                <rect key="frame" x="0.0" y="92" width="414" height="61"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="61"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7sE-c5-Js2" id="ugt-YO-9LT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -612,4 +613,7 @@
     <resources>
         <image name="menu" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="IP4-IR-4Py"/>
+    </inferredMetricsTieBreakers>
 </document>
