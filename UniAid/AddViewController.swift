@@ -10,12 +10,13 @@ import Foundation
 import UIKit
 
 class addViewController: UIViewController {
+    
     @IBOutlet var open: UIBarButtonItem!
-     //
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //code for swipe in -- needed
+        // Code for NavBar
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())

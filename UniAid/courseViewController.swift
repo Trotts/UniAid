@@ -14,7 +14,7 @@ import CoreData
 
 class courseViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NSFetchedResultsControllerDelegate {
   
-  //Button for NavBar
+  // Button for NavBar
   @IBOutlet var open: UIBarButtonItem!
   @IBOutlet var details: UITableView!
  
@@ -23,8 +23,6 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    
     getData()
     
     // Allows for the inclusion of the Navigation Menu
@@ -39,6 +37,7 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
     // Dispose of any resources that can be recreated.
   }
 
+  // Gets the data stored in NSUserDefault
   func getData(){
     let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
     let context: NSManagedObjectContext = appDel.managedObjectContext
@@ -72,22 +71,24 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
       }
       else
       {
-        print("error1")
+        print("Error: NSUserDefault")
       }
     }
     catch {
-      print("error fetch failed ")
+      print("Error fetch failed ")
     }
   }
-
+ 
+  // Sets the number of sections in the table to 1
   func numberOfSectionsInTableView(tableView: UITableView) -> Int {
     return 1
   }
-  
+  // Retunrs the number of course info
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return courseInfo.count
   }
 
+  // Populates the cells
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.details.dequeueReusableCellWithIdentifier("CourseInfoCell", forIndexPath: indexPath) as! CourseInfo
    

@@ -15,7 +15,6 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        deleteAllData("Course")
         intDay = getDayOfWeek()!
         NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "fromMain")
         fatchData()
@@ -25,13 +24,13 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         
     }
-    //
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // Gets the current day as int
     func getDayOfWeek()->Int? {
         let todayDate = NSDate()
         let myCalendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
@@ -39,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         let weekDay = myComponents?.weekday
         return weekDay
     }
-    
+    // Translate the int to a string
     func getTodayDayString(day: Int) -> String
     {
         switch day{
@@ -51,7 +50,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         default: return "none"
         }
     }
-    
+    // Fetch course data for the current day in the database
     func fatchData()
     {
         let appDel: AppDelegate = (UIApplication.sharedApplication().delegate as! AppDelegate)
@@ -67,20 +66,19 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
                 for res in resault
                 {
                     studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("location") as! String, scheduale: res.valueForKey("days") as! String))
-                    
                 }
             }
             else
             {
-                print("error1")
+                print("Error populating")
             }
         }
         catch {
-            print("error fetch failed ")
+            print("Error fetch failed ")
         }
         
     }
-
+    // Deletes all data in an entry
     func deleteAllData(entity: String)
     {
         let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
@@ -101,7 +99,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         }
     }
     
-    
+    // Populates the table with the courses for today
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if(studentCorses.count == 0 || intDay < 2 || intDay > 6)
         {
@@ -135,7 +133,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         return tempIndex
     }
     
-    
+    // Returns the cells for the table
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CourceCell
         
@@ -150,6 +148,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
         return cell
     }
     
+    // Set the course details to user defaults for moving between Views
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         NSUserDefaults.standardUserDefaults().setValue(studentCorses[indexPath.row].BuildingName, forKey: "location")
@@ -164,7 +163,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         
     }
-    
+    // Handles the slider for Directions
     func tableView(tableView: UITableView, editActionsForRowAtIndexPath indexPath: NSIndexPath) -> [UITableViewRowAction]?
     {
         let directions = UITableViewRowAction(style: .Normal, title: "Directions") { (action: UITableViewRowAction!, indexpath:NSIndexPath!) -> Void in

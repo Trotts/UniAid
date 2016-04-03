@@ -1,3 +1,11 @@
+//
+//  MapViewController.swift
+//  UniAid
+//
+//  Created by igor epshtein on 2016-03-14.
+//  Copyright © 2016 igor epshtein. All rights reserved.
+//
+
 import UIKit
 import MapKit
 import CoreLocation
@@ -16,7 +24,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
     var destination: MKMapItem = MKMapItem()
     var dirArray = [String]()
     
-    //
+    // MARK: General Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +47,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: Map Functions
+    
+    // Gets current coordinate from GPS
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        
+    
         myPosition = newLocation.coordinate
         
         let span = MKCoordinateSpanMake(0.002, 0.002)
@@ -50,10 +61,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         
     }
     
+    // Gets the directions to the building from current location
      func getDir() {
-        
         let locCoord = CLLocationCoordinate2D(latitude: cordi.Latitude, longitude: cordi.Longtitude)
-        
         let annotation = MKPointAnnotation()
         
         annotation.coordinate = locCoord
@@ -77,12 +87,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
             }
             else
             {
+                // Display Route on the map
                 let overlays = self.map.overlays
                 self.map.removeOverlays(overlays)
-                
                 for route in response!.routes as [MKRoute] {
                     self.map.addOverlay(route.polyline, level: MKOverlayLevel.AboveRoads)
-                    
                     for next in route.steps {
                         self.dirArray.append(next.instructions)
                     }
@@ -94,6 +103,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         }
     }
     
+    // Function to handle the creation of the route on the map
     func mapView(mapView: MKMapView!, rendererForOverlay overlay: MKOverlay!) -> MKOverlayRenderer!
     {
         let drew = MKPolylineRenderer(overlay: overlay)
@@ -101,12 +111,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         drew.lineWidth = 3.0
         return drew
     }
-    
+    // Return the number of directions
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dirArray.count
     }
     
-    
+    // Populate the directions list
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tb.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! DirectionCell
         
@@ -116,5 +126,4 @@ class MapViewController: UIViewController, CLLocationManagerDelegate,UITableView
         cell.layer.borderColor = UIColor.clearColor().CGColor
         return cell
     }
-    
 }
