@@ -8,12 +8,15 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     @IBOutlet var tableView: UITableView!
     
     var studentCorses = [Course]()
+    var todayCourses = [Course]()
     var directionCor = Cordinates(latitude: 0.0, longtitude: 0.0)
     var dayToday = ""
+    var intDay = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 //        deleteAllData("Course")
+        intDay = getDayOfWeek()!
         NSUserDefaults.standardUserDefaults().setInteger(0, forKey: "fromMain")
         fatchData()
         open.target = self.revealViewController()
@@ -63,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
             {
                 for res in resault
                 {
-                    studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("location") as! String, scheduale: "Sunday"))
+                    studentCorses.append(Course(course: res.valueForKey("name") as! String, courseNum: res.valueForKey("number") as! String, prof: res.valueForKey("profName") as! String, profEmail: res.valueForKey("profEmail") as! String, buildingName: res.valueForKey("location") as! String, scheduale: res.valueForKey("days") as! String))
                     
                 }
             }
@@ -100,21 +103,44 @@ class ViewController: UIViewController, UITableViewDelegate ,UITableViewDataSour
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if(studentCorses.count == 0)
+        if(studentCorses.count == 0 || intDay < 2 || intDay > 6)
         {
             todayLabel.text="No courses for today!"
         }
-        return studentCorses.count
+        var tempIndex = 0
+        var dayToday = getTodayDayString(intDay) as! String
+
+        for (var i = 0; i<studentCorses.count; i++)
+        {
+            let sched = studentCorses[i].scheduale
+            var fullsched = [String]()
+            if(sched.containsString("."))
+            {
+                fullsched = sched.componentsSeparatedByString(".")
+                
+            }
+            else
+            {
+                fullsched.append(sched)
+            }
+            for(var k=0; k < fullsched.count ; k += 1)
+            {
+                if(dayToday == fullsched[k])
+                {
+                    tempIndex += 1
+                    todayCourses.append(studentCorses[i])
+                }
+            }
+        }
+        return tempIndex
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! CourceCell
-        let temp = getDayOfWeek()!
-        dayToday = getTodayDayString(temp)
         
-            var courseName = studentCorses[indexPath.row].Course
-            let courseNum = String(studentCorses[indexPath.row].CourseNumber)
+            var courseName = todayCourses[indexPath.row].Course
+            let courseNum = String(todayCourses[indexPath.row].CourseNumber)
             courseName.appendContentsOf(" ")
             courseName.appendContentsOf(courseNum)
             cell.courseName.text = courseName
