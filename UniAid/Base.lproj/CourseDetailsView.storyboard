@@ -24,29 +24,12 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <segue destination="cIu-Tl-cc1" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="a1j-nM-zs5"/>
-                        <segue destination="6i0-Uq-qtR" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="glJ-rR-JDY"/>
+                        <segue destination="xaP-my-nsy" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="3aN-Vs-1DB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nE-bK-mhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1237.5" y="-623.23943661971828"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="joH-Hj-WiF">
-            <objects>
-                <navigationController id="6i0-Uq-qtR" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1kP-gn-Y8b">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ww8-te-qgF" kind="relationship" relationship="rootViewController" id="7Hy-dt-Aec"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="E1S-DC-rfp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1763" y="-155"/>
+            <point key="canvasLocation" x="1233" y="-602"/>
         </scene>
         <!--Course View Controller-->
         <scene sceneID="sS5-Q3-yOo">
@@ -590,6 +573,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dg5-Nu-Yj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3484" y="-155"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="U1R-Jq-jh3">
+            <objects>
+                <navigationController id="xaP-my-nsy" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZWM-kk-wPW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="uRW-L2-tye">
+                        <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="ww8-te-qgF" kind="relationship" relationship="rootViewController" id="33h-ha-cEg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQO-eF-WIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1763" y="-155"/>
         </scene>
     </scenes>
     <resources>
