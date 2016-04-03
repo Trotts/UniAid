@@ -92,8 +92,8 @@ class courseViewController: UIViewController, UITableViewDataSource, UITableView
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = self.details.dequeueReusableCellWithIdentifier("CourseInfoCell", forIndexPath: indexPath) as! CourseInfo
    
+    cell.textLabel?.text = dataTitle[indexPath.row]
     cell.courseInfo.text = courseInfo[indexPath.row]
-    cell.detailTextLabel?.text = dataTitle[indexPath.row]
     cell.selectionStyle = UITableViewCellSelectionStyle.None
     
     return cell
