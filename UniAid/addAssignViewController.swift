@@ -13,6 +13,7 @@ import CoreData
 class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
    
+    @IBOutlet var assignment: UIButton!
     @IBOutlet weak var assignNameTextField: UITextField!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var courseNameTextField: UITextField!
@@ -54,8 +55,12 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         // Create buttons for toolbar
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTime")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                           forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTime")
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                    forState: UIControlState.Normal)
         // Set the toolbar
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -175,6 +180,7 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assignment.layer.cornerRadius = 12
         getCourses()
         picker.delegate = self
         picker.dataSource = self
@@ -186,8 +192,12 @@ class addAssignViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.tintColor = UIColor(red: 76/255, green: 217/255, blue: 100/255, alpha: 1)
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                           forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
         courseNameTextField.inputView = picker

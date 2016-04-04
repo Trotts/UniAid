@@ -21,7 +21,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvC-sg-D18">
                                 <rect key="frame" x="131" y="338" width="152" height="32"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Exam">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -31,7 +31,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qaN-PH-04E">
                                 <rect key="frame" x="131" y="399" width="152" height="32"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Assignment">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -41,7 +41,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5a-Kj-Njb">
                                 <rect key="frame" x="131" y="280" width="152" height="32"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Course">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -51,7 +51,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3xd-Er-pOJ">
                                 <rect key="frame" x="89" y="557" width="237" height="31"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.9626777768" green="0.85110825300000004" blue="0.037387195970000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="View List of Courses">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -81,6 +81,10 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="assignment" destination="qaN-PH-04E" id="YlH-jf-6ap"/>
+                        <outlet property="course" destination="Q5a-Kj-Njb" id="WGH-sh-NWx"/>
+                        <outlet property="exam" destination="dvC-sg-D18" id="aIm-xU-LeP"/>
+                        <outlet property="list" destination="3xd-Er-pOJ" id="fE8-Td-4Uy"/>
                         <outlet property="open" destination="KsH-se-3o3" id="Lqd-cA-Fby"/>
                     </connections>
                 </viewController>
@@ -273,7 +277,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OD-Ke-5pY">
                                 <rect key="frame" x="74" y="404" width="267" height="30"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Exam">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -316,6 +320,7 @@
                     <connections>
                         <outlet property="courseNameTextField" destination="AHq-5S-wXZ" id="cFD-aA-moC"/>
                         <outlet property="dueDateTextField" destination="2YN-5g-cx9" id="fYs-XI-pPY"/>
+                        <outlet property="exam" destination="5OD-Ke-5pY" id="l1g-oZ-pih"/>
                         <outlet property="examNameTextField" destination="PqN-i5-Sik" id="fbe-qw-0cd"/>
                     </connections>
                 </viewController>
@@ -469,7 +474,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGv-1h-hF8">
                                 <rect key="frame" x="129" y="620" width="156" height="53"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Add Course">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -546,6 +551,7 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="addCourse" destination="aGv-1h-hF8" id="VEc-yn-86I"/>
                         <outlet property="courseLocationTextField" destination="GJn-kr-RPF" id="O3Z-Fo-YFY"/>
                         <outlet property="courseNameTextField" destination="cMB-Ec-0YI" id="NM1-Vf-UZr"/>
                         <outlet property="courseNumTextField" destination="0Yo-qB-1eb" id="2fk-Wp-Z4Q"/>
@@ -624,7 +630,7 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sU-Yj-DZV">
                                 <rect key="frame" x="74" y="572" width="267" height="30"/>
-                                <color key="backgroundColor" red="0.82339743590000003" green="0.82339743590000003" blue="0.82339743590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.42745098040000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add Assignment">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -656,6 +662,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="assignNameTextField" destination="W1I-V3-Js1" id="Mxi-nJ-xdo"/>
+                        <outlet property="assignment" destination="1sU-Yj-DZV" id="cBH-yv-a2S"/>
                         <outlet property="courseNameTextField" destination="LZX-jE-G8A" id="AZI-vh-R8W"/>
                         <outlet property="dueDateTextField" destination="mI7-dd-Bda" id="khY-n9-azS"/>
                         <outlet property="photoImageView" destination="zJR-4O-fJ5" id="3k5-jZ-NUe"/>

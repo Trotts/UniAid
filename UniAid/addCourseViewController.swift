@@ -12,6 +12,7 @@ import CoreData
 
 class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIAlertViewDelegate, UITextFieldDelegate {
     
+    @IBOutlet var addCourse: UIButton!
     
     // Textfields
     @IBOutlet weak var courseNameTextField: UITextField!
@@ -138,8 +139,12 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeFor")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                          forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeFor")
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -180,8 +185,12 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTimeTo")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                          forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTimeTo")
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -400,6 +409,7 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addCourse.layer.cornerRadius = 12
         buildings.sortInPlace()
         //Create Builder Picker
         picker.delegate = self
@@ -413,9 +423,12 @@ class addCourseViewController: UIViewController, UIPickerViewDataSource, UIPicke
         toolBar.sizeToFit()
     
         let doneButton = UIBarButtonItem(title: "Done", style: .Plain, target: self, action: "donePicker")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                          forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .Plain, target: self, action: "cancelPicker")
-
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
 

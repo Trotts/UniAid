@@ -11,6 +11,8 @@ import CoreData
 
 class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate  {
     
+    @IBOutlet var exam: UIButton!
+    
     // Text Field Creation
     @IBOutlet weak var examNameTextField: UITextField!
     @IBOutlet weak var courseNameTextField: UITextField!
@@ -25,8 +27,12 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePickerTime")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                          forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPickerTime")
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
@@ -69,6 +75,8 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
     // MARK: General Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        exam.layer.cornerRadius = 12
         // Create Course Picker
         getCourses()
         picker.delegate = self
@@ -81,9 +89,12 @@ class addExamViewController: UIViewController, UIPickerViewDataSource, UIPickerV
         toolBar.sizeToFit()
         
         let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: "donePicker")
+        doneButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                          forState: UIControlState.Normal)
         let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
         let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItemStyle.Plain, target: self, action: "cancelPicker")
-        
+        cancelButton.setTitleTextAttributes([NSFontAttributeName : UIFont.boldSystemFontOfSize(20.0),NSForegroundColorAttributeName : UIColor.orangeColor(),NSBackgroundColorAttributeName:UIColor.blackColor()],
+                                            forState: UIControlState.Normal)
         toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
         toolBar.userInteractionEnabled = true
 

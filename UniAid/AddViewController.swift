@@ -11,11 +11,19 @@ import UIKit
 
 class addViewController: UIViewController {
     
+    @IBOutlet var course: UIButton!
+    @IBOutlet var exam: UIButton!
+    @IBOutlet var assignment: UIButton!
+    @IBOutlet var list: UIButton!
+   
     @IBOutlet var open: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        course.layer.cornerRadius = 12
+        exam.layer.cornerRadius = 12
+        assignment.layer.cornerRadius = 12
+        list.layer.cornerRadius = 12
         // Code for NavBar
         open.target = self.revealViewController()
         open.action = Selector("revealToggle:")
@@ -26,7 +34,8 @@ class addViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    
 
     
     
