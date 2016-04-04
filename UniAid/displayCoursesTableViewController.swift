@@ -68,7 +68,13 @@ class displayCoursesTableViewController: UITableViewController {
             let results = try context.executeFetchRequest(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
-                    returnCourses.append(result.valueForKey("name") as! String)
+                    
+                    var courseName = result.valueForKey("name") as! String
+                    let courseNum = result.valueForKey("number") as! String
+                    courseName.appendContentsOf(" ")
+                    courseName.appendContentsOf(courseNum)
+                    
+                    returnCourses.append(courseName)
                 }
             }
         }

@@ -246,8 +246,8 @@
 		7E67D5CC1CAA099300710E6E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				246A28FE1CB142FC00FF718E /* gifFramework.swift */,
 				3DDAD45A1CA5DB6A00C11372 /* displayCoursesTableViewController.swift */,
+				246A28FE1CB142FC00FF718E /* gifFramework.swift */,
 				3DDAD4581CA5D8FB00C11372 /* addAssignViewController.swift */,
 				3DDAD4561CA5D85A00C11372 /* addCourseViewController.swift */,
 				3DDAD4521CA5D32B00C11372 /* AddViewController.swift */,
