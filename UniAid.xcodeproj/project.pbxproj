@@ -168,7 +168,7 @@
 		241406291C6BC0FF00DD19DF /* UniAid */ = {
 			isa = PBXGroup;
 			children = (
-				24F5F9871CB1B9B3005B3AB4 /* smile.gif */,
+				7EF41BEE1CB2A0BE0056BCD7 /* GIFs */,
 				2414062A1C6BC0FF00DD19DF /* AppDelegate.swift */,
 				7E67D5CC1CAA099300710E6E /* ViewControllers */,
 				24B851711CA761B100541B16 /* StoryBoards */,
@@ -263,6 +263,14 @@
 				3DFAFD3A1CA1F64D00BB2FD7 /* courseViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7EF41BEE1CB2A0BE0056BCD7 /* GIFs */ = {
+			isa = PBXGroup;
+			children = (
+				24F5F9871CB1B9B3005B3AB4 /* smile.gif */,
+			);
+			name = GIFs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
