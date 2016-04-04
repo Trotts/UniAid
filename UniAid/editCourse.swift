@@ -334,7 +334,7 @@ class EditCourseViewController: UIViewController, UIPickerViewDataSource, UIPick
             try context.save()
             
             // Inform the user that course has been saved successfully
-            let simpleAlert = UIAlertController(title: "Success", message: "Course was Saved", preferredStyle: UIAlertControllerStyle.Alert)
+            let simpleAlert = UIAlertController(title: "Success", message: "Course was Edited", preferredStyle: UIAlertControllerStyle.Alert)
             
             // Show alert
             self.presentViewController(simpleAlert, animated: true, completion: nil)
